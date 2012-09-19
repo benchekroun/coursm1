@@ -1,0 +1,6 @@
+var1 a;
+pred pair(var1 x) = ex2 X: (0 in X) & (x in X) & (all1 y: ((y > 0) & (y <= x)) => ((y in X) <=> ((y-1) notin X)));
+
+pred pairSet(var2 X) = all1 x: (x in X) => pair(x);
+
+pairSet({0, 2, 4});
