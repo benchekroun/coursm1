@@ -1,0 +1,6 @@
+
+
+
+pred multiple3(var2 X) = (ex2 A: (ex2 B: (ex2 C: (all1 a: (all1 b: (all1 c: ((a in X) => ((a in A) & (a notin B) & (a notin C))) & ((b in X) => ((b notin A) & (b in B) & (b not in C))) & ((c in X) => ((c notin A) & (c notin B) & (c in C))) & (a < b) & (b < c) ))))));
+
+multiple3({0, 1, 2});

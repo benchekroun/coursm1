@@ -1,0 +1,2 @@
+
+verif(var2 Xa, var2 Xb) = (empty in Xa) & all1 n( 
