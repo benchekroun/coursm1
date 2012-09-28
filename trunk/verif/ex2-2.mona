@@ -1,0 +1,18 @@
+var2 Xa, Xb;
+
+pred Tmax(var1 x, var2 X) = 
+     x in X &
+     (all1 y:((y in X) => (y <= x) ));
+
+pred mot(var2 Xa, var2 Xb) = 
+      (Xb ~= {}) & (0 in Xb) &
+      (Xa inter Xb) = empty &
+      (1 in Xa) & 
+      (ex1 y: (Tmax(y,Xa union Xb) & y in Xb) &
+      (all1 x: (
+      (x in Xa) => ((x < y) )
+      )
+      )
+)
+      ;
+mot(Xa,Xb);

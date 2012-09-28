@@ -1,2 +1,15 @@
+var2 Xa, Xb;
 
-verif(var2 Xa, var2 Xb) = (empty in Xa) & all1 n( 
+pred Tmax(var1 x, var2 X) = 
+     x in X &
+     (all1 y:((y in X) => (y <= x) ));
+
+#mot de la forme a*b
+pred mot(var2 Xa, var2 Xb) = 
+     (Xb ~= {}) &
+     (ex1 m: Tmax(m, Xa union Xb) &
+     (m in Xb) &
+     (all1 x: (
+     (x in Xa) => (x < m) )));
+
+mot(Xa,Xb);
