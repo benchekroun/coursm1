@@ -1,0 +1,34 @@
+# commentaire
+
+pred init(var2 Xlaitue, var2 Xchevre, var2 Xloup, var2 Xfermier) = 
+     0 notin Xlaitue &
+     0 notin Xchevre & 
+     0 notin Xloup &
+     0 notin Xfermier;
+
+pred fin(var1 t, var2 Xlaitue, var2 Xchevre, var2 Xloup, Var2 XFermier) =
+     t in Xlaitue &
+     t in Xchevre &
+     t in Xloup &
+     t in Xfermier;
+
+pred situationGeographiqueCorrecte(var2 X, var2 Y, var2 Xfermier) =
+     all1 x:((x in X & x in Y) => x in Xfermier);
+ # & ((x notin X & x notin Y) => x notin Xfermier));
+
+pred pasDeSituationInterdite(var2 Xlaitue, var2 Xchevre, var2 Xloup, var2 Xfermier) = 
+     situationGeoGraphiqueCorrecte(Xlaitue,Xchevre,Xfermier) &
+     situationGeographiqueCorrecte(Xchevre,Xloup,Xfermier);
+
+
+     # decuple quetres fois ,t in/notin Y et t in/notin Z
+     
+pred fermierEtUnIndividu(var1 t, var2 X, var2 Y, var2 Z, var2 XFermier) =
+     ((((t in xFermier) & ((t-1) notin Xfermier)) => ((t in X) & ((t-1) notin X)))|
+     (((t notin xFermier) & ((t-1) in Xfermier)) => ((t notin X) & ((t-1) in X)))) &
+     (((t in Y) => ((t-1) in y)) | ((t notin Y) => (t-1 notin Y))) & (((t in Z) => ((t-1) in Z)) | ((t notin Z) => (t-1 notin Z))) ;
+
+pred fermierSeul(t,Xlaitue,Xchevre,Xloup,Xfermier) =
+     ~fermierEtUnIndividu(t,Xlaitue,Xchevre,Xloup,Xfermier) &
+     ~fermierEtUnIndividu(t,Xchevre,Xlaitue,Xloup,Xfermier) &
+     ~fermierEtUnIndividu(t,Xloup,Xchevre,Xlaitue,Xfermier);
