@@ -23,7 +23,7 @@ dernier2([T|Q]):- dernier2(Q).
 
 % 7-reconnaitre si X est element de L
 element(T,[T|_]).
-element(X,[T|Q]):- element(X,Q).
+element(X,[T|Q]):- X \== T, element(X,Q).
 
 % 8-compte le nombre d'elements de L
 compte([],0).
@@ -38,6 +38,20 @@ nieme(1,[X|_],X).
 nieme(N,[T|Q],X):- nieme(Y,Q,X),N is Y+1.
 
 % 11-compte le nombre d'occurence d'un objet
-occurence([],X,0).
+occurence([],_,0).
 occurence([X|Q],X,N):- occurence(Q,X,Z), N is Z+1.
-occurence([T|Q],X,N):- occurence(Q,X,N).
+occurence([T|Q],X,N):- X \== T, occurence(Q,X,N).
+% mettre une coupure quelque part pour eviter les rappels de l'arbre
+
+
+
+% enlever(X,L1,L2) L2 = L1\{X}.
+
+enlever(X,[X|Q],Q).
+enlever(X,[T|Q],[T|L]):-  enlever(X,Q,L).
+
+
+% 12-Vrai si L& est sous ensemble de L2
+ssens([],_).
+ssens([T|Q],Lres):- element(T,Lres), enlever(T,Lres,L3), ssens(Q,L3).
+
