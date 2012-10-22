@@ -1,0 +1,59 @@
+var2 A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P;
+
+pred ensembleCorrect(var2 X) =
+all1 x:(x in X => ((x>=1)&(x<=4))); 
+
+pred Singleton(var2 X) = 
+     X ~= empty &
+ex1 x:((x in X) =>  all1 y:((y in X)=>(y=x)));
+
+pred ligneCorrecte(var2 X1, var2 X2, var2 X3, var2 X4) =
+     ensembleCorrect(X1 union X2 union X3 union X4) &
+     Singleton(X1)&
+     Singleton(X2)&
+     Singleton(X3)&
+     Singleton(X4)&
+     ((X1 inter X2) = empty)&
+     ((X1 inter X3) = empty)&
+     ((X1 inter X4) = empty)&
+     ((X2 inter X3)= empty)&	
+     ((X2 inter X4) = empty)&
+     ((X4 inter X3)= empty)&
+     all1 x:(
+     	  (x in X1 => x notin (X2 union X3 union X4))&
+	  (x in X2 => x notin (X1 union X3 union X4))&
+	  (x in X3 => x notin (X2 union X1 union X4))&
+	  (x in X4 => x notin (X2 union X3 union X1))
+     	  );
+
+pred colonneCorrecte(var2 X1, var2 X2, var2 X3, var2 X4) = 
+     ligneCorrecte(X1,X2,X3,X4);
+
+pred petitCarreCorrect(var2 X1, var2 X2, var2 X3, var2 X4) = 
+     ligneCorrecte(X1,X2,X3,X4);
+
+pred grillesSolutions(var2 A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) =
+# lignes
+ligneCorrecte(A,B,C,D)&
+ligneCorrecte(E,F,G,H)&
+ligneCorrecte(I,J,K,L)&
+ligneCorrecte(M,N,O,P)
+&
+# colonne
+colonneCorrecte(A,E,I,M)&
+colonneCorrecte(B,F,J,N)&
+colonneCorrecte(C,G,K,O)&
+colonneCorrecte(D,H,L,P)
+&
+# carres
+petitCarreCorrect(A,B,E,F)&
+petitCarreCorrect(C,D,G,H)&
+petitCarreCorrect(I,J,M,N)&
+petitCarreCorrect(K,L,O,P)
+;
+
+pred grillePartielleAvecLesCasesAFDJKNOConnues(var2 A,F,D,J,K,N,O) =
+ ex2 B,C,E,G,H,I,L,M,P:(grillesSolutions(A,B,C,D,E,F,G,H,I,L,J,K,M,N,O,P));
+
+
+grillePartielleAvecLesCasesAFDJKNOConnues(A,F,D,J,K,N,O);
