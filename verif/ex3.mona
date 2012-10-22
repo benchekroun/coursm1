@@ -13,7 +13,7 @@ pred fin(var1 t, var2 Xlaitue, var2 Xchevre, var2 Xloup, var2 Xfermier) =
      t in Xfermier;
 
 pred situationGeographiqueCorrecte(var2 X, var2 Y, var2 Xfermier) =
-     all1 x:(((x in X & x in Y) => x in Xfermier) | ((x notin X & x notin Y) => x notin Xfermier));
+     all1 x:(((x in X & x in Y) <=> x in Xfermier) | ((x notin X & x notin Y) <=> x notin Xfermier));
 
 pred pasDeSituationInterdite(var2 Xlaitue, var2 Xchevre, var2 Xloup, var2 Xfermier) = 
      situationGeographiqueCorrecte(Xlaitue,Xchevre,Xfermier) &
@@ -42,12 +42,10 @@ pred bouger(var1 t, var2 X) =
      ((t in X)=>((t-1) notin X)) | ((t notin X)=>((t-1)in X));
 
  pred voyageCorrect(var1 t, var2 Xlaitue, var2 Xchevre, var2 Xloup, var2 Xfermier) = 
-      (fermierSeul(t,Xlaitue,Xchevre,Xloup,Xfermier)) |
-      (  (fermierEtUnIndividu(t,Xlaitue,Xchevre,Xloup,Xfermier))|
-     
-     (fermierEtUnIndividu(t,Xchevre,Xlaitue,Xloup,Xfermier))  |
-     ( 
-     (fermierEtUnIndividu(t,Xloup,Xchevre,Xlaitue,Xfermier)) );
+      fermierSeul(t,Xlaitue,Xchevre,Xloup,Xfermier)|
+      fermierEtUnIndividu(t,Xlaitue,Xchevre,Xloup,Xfermier)|
+     fermierEtUnIndividu(t,Xchevre,Xlaitue,Xloup,Xfermier)|
+     fermierEtUnIndividu(t,Xloup,Xchevre,Xlaitue,Xfermier);
 
 pred laitueChevreLoup(var2 Xlaitue, var2 Xchevre, var2 Xloup, var2 Xfermier) =
      init(Xlaitue,Xchevre,Xloup,Xfermier) & 

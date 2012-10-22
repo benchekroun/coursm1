@@ -55,3 +55,6 @@ enlever(X,[T|Q],[T|L]):-  enlever(X,Q,L).
 ssens([],_).
 ssens([T|Q],Lres):- element(T,Lres), enlever(T,Lres,L3), ssens(Q,L3).
 
+% 13-aplatir liste
+aplatir([],[]).
+aplatir([[L]|[[LL]]]):- aplatir(LL,L2), append(L,L2,L1).
