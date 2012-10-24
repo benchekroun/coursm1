@@ -29,8 +29,38 @@ p(5,2,4).
 
 % bagof(Z,(X,Y)^p(X,Y,Z),Sac) met dans une liste toutes les valeur de Z , mais retire X et Y).
 
-% si le but echoue, bagof echoue , alros que findall renvoi une liste vide.
-
-myfindall
-
+% si le but echoue, bagof echoue , alors que findall renvoi une liste vide.
 % rajouter un but avec assert
+:- dynamic(ok_pour/1).
+myfindall(X,BUT,Sac):-
+	resoudre(X,BUT),
+	rassembler([],Sac).
+	call(BUT), /* X instancé */
+	assertz(ok_pour(X)),
+	fail.
+myfindall(_,_,_).
+myfindall(X,_,[X|L]):- ok_pour(X), retract(ok_pour(X)).
+
+p(X,Y) :- q(X),r(X,Y).
+p(d,d1).
+
+q(a).
+q(b).
+q(c).
+
+r(b,b1).
+r(c,c1).
+r(a,a1).
+r(a,a2).
+r(a,a3).
+
+/*
+Donnez les solutions du but p(X,Y).
+*/
+
+
+
+p1(X,Y) :- q(X),r(X,Y),!. /* meme question que sur le but p(X,Y). */
+p2(X,Y) :- q(X), ! ,r(X,Y). /* meme question que sur le but p(X,Y). */
+p3(X,Y) :- ! , q(X),r(X,Y). /* meme question que sur le but p(X,Y). */
+p3(d,d1).
