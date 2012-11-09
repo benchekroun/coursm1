@@ -64,3 +64,14 @@ p1(X,Y) :- q(X),r(X,Y),!. /* meme question que sur le but p(X,Y). */
 p2(X,Y) :- q(X), ! ,r(X,Y). /* meme question que sur le but p(X,Y). */
 p3(X,Y) :- ! , q(X),r(X,Y). /* meme question que sur le but p(X,Y). */
 p3(d,d1).
+
+/*
+dérivée
+*/
+derive(C,X,0):-!,number(C).
+derive(X,X,1):- !.
+derive(X^N,N*X^M):- !,M is N-1.
+derive(F+G,X,Fp+Gp):- !,derive(F,X,Fp),derive(G,X,Gp).
+derive(A*F,X,A*Fp):- !,derive(F,X,Fp).  
+derive(1/F,X,Gp/(G*G)):- !,derive(G,X,Gp).
+derive(F*G,X,R):- !, derive(F,X,Fp),derive(G,X,Gp),derive(Fp*G+F*Gp,X,R).
