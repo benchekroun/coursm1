@@ -1,0 +1,73 @@
+# fonction qui vérifie la parité
+pred pair(var1 x)=
+ex2 N :
+    0 in N &
+    x in N &  
+    (all1 y : (y>0 & y<=x) => (y in N <=> y-1 notin N));
+ 
+pred contigu(var2 A) =
+all1 x :
+     (x in A) => (all1 y : (y>=0 & y<=x) => y in A);
+ 
+#(a)*b
+pred q1(var2 Xa, var2 Xb) =
+ex2 Q0, Q1: #partition des X0..Xn
+(
+        contigu(Q0 union Q1)
+        & contigu (Xa union Xb)
+        & (Q0 inter Q1)={}
+        & (Xa inter Xb)={}
+#etat initial
+        & 0 in Q0
+#definir toutes les transitions
+        & all1 x :
+        (
+                x in (Xa union Xb) =>
+                        (x in Q0 =>
+                                (x in Xa => (x + 1) in Q0)
+                          & (x in Xb => (x + 1) in Q1))         # si on lit un b
+                 
+                  & (x in Q1 =>
+                                x notin (Xa union Xb))
+        )
+        & ex1 m: m = max(Xa union Xb)
+        & m + 1 in Q1   #sortie
+);
+ 
+#b(a)+b
+pred q2 (var2 Xa, var2 Xb)=
+ex2 Q0, Q1, Q2, Q3 :
+#partitions
+(
+        contigu(Q0 union Q1 union Q2 union Q3)
+        & empty(Q0 inter Q1)
+        & empty(Q0 inter Q2)
+        & empty(Q0 inter Q3)
+        & empty(Q1 inter Q2)
+        & empty(Q1 inter Q3)
+        & empty(Q2 inter Q3)
+        &~empty(Xb)
+        &~empty(Xa)
+       
+        & contigu (Xa union Xb)
+        & empty (Xa inter Xb)          
+#etat initial
+        & 0 in Q0
+#definir toutes les transitions
+        & all1 x :
+        (
+                x in (Xa union Xb) =>
+                        (x in Q0 =>
+                                ((x in Xb => (x+1) in Q1) & x notin Xa))
+                        & (x in Q1 =>
+                                ((x in Xa => (x+1) in Q2) & x notin Xb))
+ 
+                        & (x in Q2 =>
+                                (x in Xa => (x+1) in Q2)
+                                & (x in Xb => (x+1) in Q3))
+                        & (x in Q3 =>
+                                x notin (Xa union Xb))         
+        )
+        & ex1 m : m=max(Xa union Xb)
+        & m+1 in Q3     #sortie
+);
