@@ -21,3 +21,18 @@ probleme4(Roses,Lilas,Lys,Rhododendrons,Essaim) :-
 	3*(Lilas - Roses) #= Lys,
 	Rhododendrons #= 1,
 	Essaim #= Roses + Lilas + Lys + Rhododendrons.
+
+probleme5(A,B,C,D,E,F,G,H,I) :-
+	fd_domain([A,B,C,D,E,F,G,H,I],1,9),
+	fd_all_different([A,B,C,D,E,F,G,H,I]),
+	% (A/(10*B+C)) + (D/(10*E+F)) + (G/(10*H+I)) #= 1.
+	EF #= 10*E +F,
+	HI #= 10*H +I,
+	BC #= 10*B+C,
+	X #= A*EF*HI,
+	Y #= D*BC*HI,
+	Z #= G*BC*EF,
+	RES #= BC*EF*HI,
+	X+Y+Z #= RES,
+	fd_labeling([A,B,C,D,E,F,G,H,I]).
+
