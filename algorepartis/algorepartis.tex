@@ -1,0 +1,182 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % un package
+\usepackage[T1]{fontenc}      % un second package
+\usepackage[francais]{babel}  % un troisième package
+
+
+\title{Algorithmes Répartis - Jean-Michel Couvreur}
+\author{Alexandre Masson}
+\date{14 Janvier 2013}
+
+\begin{document}
+\maketitle
+\newpage
+\paragraph{Sujets traités}
+\begin{itemize}
+\item Modele synchrone
+\item 
+\end{itemize}
+\paragraph{Évaluation}
+\begin{itemize}
+\item Controle continu
+\begin{itemize}
+\item controle sur table
+\item mini-projet
+\end{itemize}
+\item Controle terminal
+\begin{itemize}
+\item un controle sur table
+\item la nature du sujet sera développée en cours
+\end{itemize}
+\end{itemize}
+
+\section{Modèle Synchrone}
+\paragraph{}Processus sont attachés à des noeuds d'un graphe orienté  et communique par des messages.\\\\Graphe G  = (V,E, n = |V|
+\begin{itemize}
+\item outnbr, innbr
+\item distance(i,j) taille du plus court chemin de i à j
+\item diametre
+\end{itemize}
+M : alphabet des messages plus false pour rien.\\\\ pour tout i dans V, un processus est donnée par
+\begin{itemize}
+\item States: ensemble d'états
+\item start : états initiaux
+\item msgs : states x out-nbrs -> M U {false}
+\item trans: ensemble des transisitions
+\end{itemize}
+Exécution d'un tour ; 
+\begin{itemize}
+\item appliquer msgs pour déterminer les messages à envoyer
+\item envoyer et recevoir les messages, 
+\item Appliquer trans , pour déterminer l'état suivant.
+\end{itemize}
+
+\paragraph{Remarques}
+\begin{itemize}
+\item pas de restriction sur la durée des calculs locaux,
+\item Déterministes,
+\item on peux définir des "états d’arrêt",
+\item Plus tard nous examinerons quelques problèmes : 
+\begin{itemize}
+\item temps de démarrage variable
+\item défaillance
+\item choix aléatoires
+\end{itemize}
+\end{itemize}
+
+\paragraph{Exécution}
+\begin{itemize}
+\item une exécution est un objet mathématique servant à décrire comment un algorithme fonctionne.
+\item Définition: 
+\begin{itemize}
+\item un état global
+\item Messages
+\item exécution : C0,M1,N1,C1,M2,N2,...
+\begin{itemize}
+\item C* : sont des états globaux
+\item M*  : sont les messages envoyés
+\item N*  : sont les messages reçus
+\item Séquence infinie (mais on peut considérer des préfixes finis)
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\newpage
+\section{Problème de l'élection d'un leader}
+\begin{itemize}
+\item Réseau de processus
+\item Vous voulez distinguer un processus , le leader.
+\item Finalement, exactement un processus sera désigné leader
+\item Motivation : le leader peux prendre en charge:
+\begin{itemize}
+\item les communications
+\item coordination des traitements des données (par exemple; dans les protocoles de validation)
+\item Allocation de ressources
+\item etc...
+\end{itemize}
+\end{itemize}
+\paragraph{Cas simple l'anneau}
+\begin{itemize}
+
+
+\item Variantes : \begin{itemize}
+\item bidirectionnel ou unidirectionnel
+\item taille de l'anneau n connu ou inconnu
+\end{itemize}
+\end{itemize}
+
+\paragraph{Nous avons besoin de qqc de plus}
+\begin{itemize}
+\item besoin de distinguer les processus
+\item supposons un UID , s'il connaît
+\item chaque processus démarre en stockant son pid
+\item il sont comparable et pouvoir faire de l'arithmétique simple dessus est un plus
+\item dans le réseau tous les identifiants sont différents
+\end{itemize}
+\paragraph{Un algorithme}
+\begin{itemize}
+\item autors : LeLann , Chang,Roberts
+\item hypothèse 
+\begin{itemize}
+\item comm unidirectionnelle
+\item les proc ne connaissent pas n
+\item comparaison d'UID seulement
+\end{itemize}
+\item Idée: 
+\begin{itemize}
+\item chaque processus envoi son uid dans un message, à relayer étape par étape, autour de l'anneau.
+\item le proc compare l'id reçu avec le sien , et envoi a son voisin le plus grand des deux entre le sien et celui reçu.
+\end{itemize}
+\end{itemize}
+
+\paragraph{Preuve , complexité, terminaison}
+\begin{itemize}
+\item M, l'alphabet de messages : {UID}
+\item état : valeur des variables :
+\begin{itemize}
+\item u : a pour valeur son pid
+\item send, son pid ou false
+\it status : ?  ou leader, initialement ?
+\end{itemize}
+\item start : défini par l'init des variables
+\item msgs : transmet la valeur send à son voisin
+\item trans : défini par le pseudo-code : 
+\begin{itemize}
+\item if incomming = v, a UID, then
+\item \t case :
+\item  v >  u  : send := v;
+\item  v = u  : status := leader
+\item  v<u : no-op
+\item \t endcase
+\end{itemize}
+\end{itemize}
+
+\paragraph{Réduire le nombre de communication}
+\begin{itemize}
+\item autor: Hirschberg,Sinclair
+\item hypothèse : 
+\begin{itemize}
+\item bidirectionnel
+\item les processus ne connaissent pas n
+\item comparaisons d'id seulement
+\end{itemize}
+\item Idée : 
+\begin{itemize}
+\item Stratégie du doublement
+\item Chaque processus envoie son UID dans les deux sens, à des distances de plus en plus grandes (successivement deux fois plus grande à chaque fois)
+\item phase aller : un jeton est ignoré si il atteint un noeud dont l'uid est plus grand
+\item phase retour : tout le monde passe le jeton
+\it un processus débute la phase suivante que si ses deux jetons reviennent.
+\it le processus qui reçoit son propre jeton dans la phase aller est l'élu.
+\end{itemize}
+\end{itemize}
+
+\paragraph{Élection d'un leader}
+\begin{itemize}
+\item Hypothèse
+\begin{itemize}
+\item UID avec comparaisons.
+\item pas d'hypothèse sur la répartition des UID
+\item les processus connaissent un majorant du diamètre
+\end{itemize}
+\end{itemize}
+\end{document}

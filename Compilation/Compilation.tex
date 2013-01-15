@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % un package
+\usepackage[T1]{fontenc}      % un second package
+\usepackage[francais]{babel}  % un troisième package
+
+
+\title{Compilation - Frédéric Dabrowski}
+\author{Alexandre Masson}
+\date{14 Janvier 2013}
+
+\begin{document}
+\maketitle
+\newpage
+\section{Introduction}
+\begin{itemize}
+\item langages de haut niveau : langages itératifs , logiques, spécialisés
+\item il faut trouver un moyen de convertir ces codes en code machine pour les exécuter.
+\item grandes variété de compilateur
+\begin{itemize}
+\item distincts dont la façon dont il ont été construits et la fonction censé 
+\item nombre de passes principalement
+\end{itemize}
+\item Compilateur et Interpréteur : 
+\begin{itemize}
+\item le compilateur traduit un programme dans une autre représentation
+\item les deux programmes sont sémantiquement équivalents
+\item le cout supplémentaire lié à la compilation sera amorti au moment de l'exécution (perte de temps à la compilation pour certaines optimisation , mais gain de temps à l'exécution)
+\end{itemize}
+\end{itemize}
+
+\paragraph{Comparaisons Compilateur et Interprète}
+Interprète
+\begin{itemize}
+\item  + : test immédiats, rapidité de mise au point, convivialité
+\item - : place en mémoire, temps d'exécution
+\end{itemize}
+Compilateur
+\begin{itemize}
+\item + : gestion efficace de la mémoire, tps d'exec, meilleure détection des erreurs
+\item - : plus lourd à mettre en oeuvre , moins souple.
+\end{itemize}
+
+\paragraph{Travail du compilateur}
+\begin{itemize}
+\item l'analyse
+\item la synthèse
+\item objectifs: 
+\begin{itemize}
+\item faire toute les vérif statiques
+\item transformation code source-code source(correct)
+\item traduction
+\it production et optimisation du code machine
+\end{itemize}
+\end{itemize}
+\paragraph{Analyse}
+lexicale : scanner et cibler.\\syntaxique : parser.\\Analyse sémantique
+\paragraph{analyse lexicale}
+suite de caractères : suite de mots\\lit une suite de caractère et construit une suite lexicale(token)
+\paragraph{le cribble}
+Reconnait dans la suite de symbole produite par le scanner
+\paragraph{le parser}
+Reconnait la structure syntaxique.\\L.\\Schéma en BNF.
+
+\paragraph{Analyse sémantique}
+Optimisation indépendante de la plateforme cible et indications sur les risques d'erreur à l'exécution.\\\\ existence possible d'un chemin d'exécution dans lequel une variable est utilisée sans avoir été init.
+\newpage
+\section{Synthèse}
+\paragraph{affectation d'adresses}
+Interviennent des caractéristiques de la machine cible.\\ elles déterminent l'affectation des unités mémoire pour les types élémentaires.\\\\Il y a souvent une contrainte d'adressage au niveau des instructions pour des raisons d'efficacité.
+\paragraph{Génération de code}Il produit les instructions du programme cible.Pour adresser les variables, utilise les adresses calculées lors de l'étape précédente. Garde les valeurs des expressions et des variables dans les registres de la machine autant que possible pour efficacité.//// effectue la sélection de code : meilleur choix possible d'instruction.
+
+\paragraph{les passes du compilateur}
+Une passes correspond à un parcours d'un des niveau de représentation ( source, intermédiaire,...). Plusieurs phases peuvent être regroupées en une seule passe , par exemple les analyses.
+\newpage
+\section{les outils : Lex et Yacc}
+\paragraph{lex et yacc}
+\begin{itemize}
+\item Lex : générateur d'analyseurs lexicaux
+\begin{itemize}
+ \item prend en entrée la définition des unités lexicales
+ \item produit un automate fini déterministe minimal permettant de reconnaître ces unités
+ \item l'automate est produit sous forme d'un prog 
+\end{itemize}
+\item Yacc : générateur d'analyseurs syntaxiques
+\end{itemize}
+\paragraph{Compilation}
+\begin{itemize}
+\item bison -d calc.c
+\item \t produit calc.tab.c 
+\item \t produit calc.h qui contient la définition des codes des unités lexicales, afin qu'elles puissent être partagées
+
+\paragraph{Structure d'un fichier Lex} \%\{\\Partie 1 : déclarations pour le compilateur C\\\\\%\}\\Partie 2  :  définitions régulières\\\\\%\%\\Partie 3 :  règles\\\\partie 4 : fonction C supplémentaires\\\\Les parties 1 et 4 sont optionnelles , en effet on est pas obligé de passer par la partie C\\\\Définir des expressions régulières dans la partie  2 évite les recopie d'expression dans la partie 3 lors de l'utilisation fréquente d'une expression, de plus la possibilité de la nommer est pratique et rend la partie 3 beaucoup plus lisible.\\\\ une règle est de la forme : expressionRégulière {action}. l'élément gauche de la première règle est l'axiome.
+\end{itemize}
+\end{document}
