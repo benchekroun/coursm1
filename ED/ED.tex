@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % un package
+\usepackage[T1]{fontenc}      % un second package
+\usepackage[francais]{babel}  % un troisième package
+
+
+\title{ED- Christel Vrain}
+\author{Alexandre Masson}
+\date{14 Janvier 2013}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\paragraph{} les TDs sont en anglais.
+\section{Motivation}
+\paragraph{}Plein de données, expansion de l'univers digital. différentes étapes : 
+\begin{itemize}
+\item statistique descriptive
+\item Régression : analyser la relation d'une var vec d'autres
+\item Fouille de données  : Classification supervisée ou non, prédiction , recherche de motifs fréquents.\\\\
+\end{itemize}
+\textbf{univ lyon enseignements R}
+\newpage
+\section{Langage R}
+\paragraph{} Langage et environnement pour le calcul statistique et les graphiques.\\ il tes libre.
+
+\paragraph{commande de bases}
+\textbf{Affectation} -> u <- ou assign("x",valeur).\\\\Des Variables : pas de chiffre ou caractère spécial en premier dans le nom, sensible à la casse, certains noms sont déjà pris.\\\\\textbf{structure de données : vecteur numérique} la structure élémentaire est i, vecteur, un nombre est un vecteur, on affecte a une variable un vecteur, avec l'opérateur c(...) en mettant dans c, le contenu du vecteur. l'opérateur [] donne l'élément du tableau , on peux passer  à [] un vecteur de données, il renvoi les valeurs placées à tous les index présents dans le tableau entre [].\\\\\textbf{Arithmétique vectorielle} toutes les opérations telles que sin, et cos, sont appliquées point à point sur tous les variables d'un vecteur. les tableaux sont indexés de 1 à N. la fonction sort(vecteur) est implémentée, ainsi que min et max, et range, length, sum, prod, mean.\\\\\textbf{NaN}  signifie not a number.
+\paragraph{Vecteur Logique} les valeurs sont TRUE,FALSE,NA(not available). Nous avons a disposition des opérateurs logiques tels que <, <=, >, >=, ==, !=. nous avons aussi c1\&c2, c1|c2 et !c1. is.na() teste si X est NA ou NAN, is.nan(x) teste uniquement le nan.
+\paragraph{Vecteur de caractères} les valeurs d'un vecteur doivent etre de meme type : logical , numéric, complex, character (ou raw). la fonction mode(x) renvoie le type des valeurs présentent dans x. on utlise as.character(x) pour transformer les valeurs de x en characters.
+\paragraph{Index des vecteurs} un vecteur, l'opérateur x:y construit un vecteur remplis avec toutes les valeurs entre x et y. l’opérateur  - sur un vecteur renvoie le complémentaire du vecteur. il est possible avec names(vecteur) <- c("chaine", "chaine2",...] pour nommer les index des tableaux.
+\paragraph{Séquences} fonction seq avec au plus 5 arguments : 
+\begin{itemize}
+\item from =
+\item to = 
+\item by = 
+\item length = 
+\item along = vecteur(seul argument si utilisé, créer une séquence de  1 à length(vecteur).
+\end{itemize}
+
+\paragraph{Factor} Utilisé pour étiqueter les données de vecteurs de même longueur., il est ensuite possible d'effectuer des opération en discriminant les valeurs par les étiquettes., tapply permet d'appliquer une fonction (3em param) sur un vecteur(1er param, en utilisant les étiquettes un vecteur d'étiquettes (2nd param).
+\paragraph{Fonctions} définies de la forme nom <- function(arg1,...,argn). les instructions sont séparées par des ;. On a aussi accès aux conditionnelles, et au boucle, mais il faut éviter les boucles, les boucles for, repeat, while(condition) expr, et le break pour terminer les boucles.
+\paragraph{Tableau - Matrices} Un vecteur peut être utilisé comme un tableau à plusieurs dimensions si on lui associe un vecteur de dimension. La fonction dim(vect) <- c(x,y);vect, transforme le vecteur en tableau de lignes et de y colonnes, il remplie ensuite le tableau avec les données du vecteur, en remplissant la première colonne avec autant de valeurs que de lignes, puis la seconde colonne avec la suite, etc...
+\paragraph{Tableaux d'indices} il peux être construit par la fonction array(vecteur, dimension). on a aussi des opérations sur les matrices, soient a et b deux matrice et f une fonction n alors outer applique la fonction et renvoi une matrice de taille la concaténation des taille des deux vecteurs.
+\paragraph{Listes} Collection ordonnée d'objets , appelés composant. Un composant peut être désigne par : \begin{itemize}
+\item son numéro : Liste [[x]]
+\item un nom : List \$name
+\item ATTENTION : List[i:J] retourne une sous liste (avec les noms des composants).
+\end{itemize}
+Les listes sont extensible, il ets possible de rajouter des champs en mettant : List\$nomChamp<-valeur.
+\end{document}
