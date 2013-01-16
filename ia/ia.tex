@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % un package
+\usepackage[T1]{fontenc}      % un second package
+\usepackage[francais]{babel}  % un troisième package
+
+
+\title{IA- Matthieu Exbrayat}
+\author{Alexandre Masson}
+\date{14 Janvier 2013}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Organisation du cours}
+\paragraph{} Cours de 2h le mardi et TD 2 h le mercredi.\\\\
+\section{Introduction}
+\paragraph{Questions} Qu'est ce que les taches suivantes ont en commun ?\\\\
+Concevoir des systèmes capables de faire des choses compliquées.\\Il y a aussi l'aspect ; apprentissage , le système est il capable d'apprendre de lui même et se débrouille tout seul.\\Exemples:\\Concevoir un programme qui vire tout seul les spam dans les mails.\\Concevoir un super navigateur qui s'occupe tout seul de faire les mise à jour logicielle.\\\\Le point commun? Posséder un certain degré d'intelligence.\\D'où grande question qu'est ce que l'intelligence ? 
+\begin{itemize}
+\item Selon Darwin : Ce qui permet l'individu le plus apte, parfaitement adapté a son environnement
+\item Selon Edison : ce qui fonctionne et qui produit de l'argent. 
+\item Selon Turing : ce qui rend difficile la distinction entre une tache réalisée par un être humain ou une machine
+\end{itemize}
+L'IA est une discipline qui systématise et automatise les taches .
+\begin{itemize}
+\item Penser comme un humain
+\item Agir comme un humain
+\item Penser rationnellement
+\item Agir rationnellement
+\end{itemize}
+\paragraph{Penser comme un humain} Il faut comprendre l'esprit Humain.\\Comparaison des différentes étapes d'un programme et du raisonnement humain pour arriver au même problème.\\Science cognitive.
+\paragraph{Agir comme un humain} Test de Turing, on transforme l’ordinateur peut il penser en peut il se comporter intelligemment. Le test est concluent si l'opérateur ne sais pas si la réponse a ses question est donnée par un humain ou une machine
+\paragraph{Penser rationnellement : approche logique}
+\newpage
+\paragraph{Agir rationnellement : agir pour atteindre un objectif}Remplir une mission de la meilleure façon.\\\\Agent : unité qui fonctionne de façon autonome, perçoit son environnement , s'adapte aux changements et est capable d'atteindre un objectif.\\\\Agent Rationnel : agent qui agit pour atteindre le meilleur résultats ou du moins le meilleur résultat espéré.
+\paragraph{Loebner prize} Tous les ans récompense le meilleur système du test de Turing.
+\begin{itemize}
+\item traitement du langage naturel : pouvoir communiquer en un langage naturel.
+\item représentation de connaissances : stocker ce qu'il sait ou ce qu'il perçoit.
+\item raisonnement automatique : utiliser des connaissances pour répondre aux questions.
+\end{itemize}
+
+\paragraph{les Lois de la pensée}Aristote : quels sont les processus de pensée corrects ?\\Plusieurs formes de logique : notation et règles de dérivation pour les pesées , sans relations avec une mécanisation du raisonnement.\\Ligne directe entre math et philo -> IA.\\Problèmes : tous les comportements intelligents ne sont pas le résultats d'un raisonnement logique.\\
+\paragraph{Agent Rationnel} abstrait : un agent est une fonction qui met en correspondance des séquences perceptives P* et des actions A : f : P* -> A.\\\\processus où on ne sais pas tout, ou temps limité trop court pour répondre, donc réponse acceptable mais pas optimale.
+\paragraph{Fondements de l'IA}Elle repose sur plusieurs domaines.\\\\Philosophie : logique et raisonnement.\\\\Mathématiques : représentations formelles et preuves, algorithmes, (in)décidabilité, probabilité.\\\\Psychologie : adaptation, perception et controle moteur, techniques expérimentales.\\\\Linguistique : représentation de connaissances grammaires.\\\\Neurosciences : substrat physique et biologique de l'activité mentale.\\\\Théorie du controle : systèmes asservis, stabilité, concept d'agent optimal.
+
+\section{Histoire de l'IA}\begin{itemize}
+\item 1943 : modélisation de neurones.
+\item 1950's : vision complète de l'IA
+\item 60's : dev des réseaux de neurones.
+\item 70's : développement des systèmes à base de connaissances, faire de l'aide au diagnostic.
+\item fin 80's : hiver de l'IA, l'ia s’effondre
+\item depuis 20 ans : IA évolue et révolutionne sa méthodologie.
+\item plein de fric à se faire dans la Bourse, algorithme qui réagissent au plus vite et essaye d'analyser la bourse pour établir des règles. 
+\end{itemize}
+
+\paragraph{Prédictions et réalité} différence prédictions réalité ;,  60's œil électronique, pas encore fait mais ça avance et s'est encourageant.\\\\ Robot qui font tout, déjà dans les 70's.
+\section{Qu'est ce qu'un problème pour l'IA}Problème qui n'as pas de solution analytique connue, objectif : si l'objectif est hors du possible donner une solution acceptable en temps raisonnable.\\\\Certaines taches aisées pour l'humain sont difficiles pour la machine : tout ce qui a besoin de la sensibilité humaine.
+
+\paragraph{Contenu du cours} 4 approches différentes de la résolution de problèmes en IA
+\begin{itemize}
+\item recherche de solution dans un espace d'états
+\item recherche par raisonnement et en présence d'incertitude
+\item résolution par planification.
+\item résolution par apprentissage automatique
+\end{itemize}
+
+\section{Agents Intelligents}
+\paragraph{Qu'est ce qu'un agent}L'AGENT perçoit des choses de son ENVIRONNEMENT, à laide de SENSORS,  il accompli ensuite sa MISSION, et utilise ses ACCUATORS, pour effecteur des actions.\\\\Définition : entité capable de percevoir son environnement par des capteurs et d'agir sur son environnement à l'aide d’effecteurs (actionneurs). AUTONOMIE , PERCEPTION,ACTION,OBJECTIF, sont les maitres-mots qui définissent l'existence de l'agent.
+\paragraph{spécification d'un agent} le choix d'une action à l'instant t dépend de séquences perceptives .
+\paragraph{Agent rationnel}Basé sur le raisonnement.\\\\Toute option considérées , faire le meilleur choix pour maximiser les chances de succès.\\\\Mesures de performances : réussir la tâches, quantificatino maximale d'un objectif.
+\paragraph{spécifier l'environnement} spécif = probleme, agent ) solution
+\paragraph{PEAS} exemple , conduite automatique 
+\begin{itemize}
+\item P (mesure de performance) : bon endroit, temps, sécurité
+\item E (environnement) : rues, voitures, piétons, météo
+\item A (actions) : tourner , s'arreter , klaxonner, etc...
+\item S (senseurs) : plein.
+\end{itemize}
+\end{document}
