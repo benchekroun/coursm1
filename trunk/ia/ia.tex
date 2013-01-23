@@ -70,13 +70,35 @@ L'IA est une discipline qui systématise et automatise les taches .
 \section{Agents Intelligents}
 \paragraph{Qu'est ce qu'un agent}L'AGENT perçoit des choses de son ENVIRONNEMENT, à laide de SENSORS,  il accompli ensuite sa MISSION, et utilise ses ACCUATORS, pour effecteur des actions.\\\\Définition : entité capable de percevoir son environnement par des capteurs et d'agir sur son environnement à l'aide d’effecteurs (actionneurs). AUTONOMIE , PERCEPTION,ACTION,OBJECTIF, sont les maitres-mots qui définissent l'existence de l'agent.
 \paragraph{spécification d'un agent} le choix d'une action à l'instant t dépend de séquences perceptives .
-\paragraph{Agent rationnel}Basé sur le raisonnement.\\\\Toute option considérées , faire le meilleur choix pour maximiser les chances de succès.\\\\Mesures de performances : réussir la tâches, quantificatino maximale d'un objectif.
-\paragraph{spécifier l'environnement} spécif = probleme, agent ) solution
+\paragraph{Agent rationnel}Basé sur le raisonnement.\\\\Toute option considérées , faire le meilleur choix pour maximiser les chances de succès.\\\\Mesures de performances : réussir la tâches, quantification maximale d'un objectif.
+\paragraph{spécifier l'environnement} spécif = problème, agent ) solution
 \paragraph{PEAS} exemple , conduite automatique 
 \begin{itemize}
 \item P (mesure de performance) : bon endroit, temps, sécurité
 \item E (environnement) : rues, voitures, piétons, météo
-\item A (actions) : tourner , s'arreter , klaxonner, etc...
+\item A (actions) : tourner , arrêter , klaxonner, etc...
 \item S (senseurs) : plein.
 \end{itemize}
+\paragraph{types d'environnement} Observable ou nono , et déterministe ou non., Observable : on a accès à tout moment à l'état complet de l'environnement. Déterministe : on connais l'instant suivant à partir de l'état courant et l'action faite par l'agent.\\\\Épisodique/séquentiel : les états futurs ne dépendent pas des actons effectuées lors de évents précédents.\\\\Statique/dynamique : un environnement ne change pas durant le temps ou l'agent réfléchit.\\\\Discret/continu : environnement discret si le nombre de séquences est fini. Simple agent ou multi-agents. les appli du monde réel sont les plus difficile à mettre en place car l'environnement n’est que partiellement observable, il est séquentiel, dynamique, continu et multi-agent.
+\newpage
+\paragraph{types d'agents}\begin{itemize}
+\item Agent-reflex : presque tout est codé en dur, on applique des règles en fonction de se qu'on observe de l'environnement.
+\item Agent-reflex avec états : on va conserver des états qui vont servir à estimer des états en fonction de se qu'on viens de capter et ainsi que ce que l'on a sauvegardé. Mettre a jour l'état interne dépend de comment l'env change et comment nos action le font évoluer.
+\item Agent avec objectif. le Système va être dans un état donné, et après on regarde toutes les solution dispo et on va choisir celle qui nous rapproche le plus de l'objectif. IL a un objectif que décrit les situations désirées. il combien ces informations avec la résultat pour choisir la bonne action. l'agent devrait être capable de considérer des longues séquences pour atteindre l'objectif : \textbf{recherche} et \textbf{planification}.
+\item Agent avec la fonction d'utilité : parmi la listes des actions proposées celle qui est la plus prometteuse. On est déjà sur des solutions sophistiquées. Il n'est pas capable de s'améliorer lui même.
+\item Agent d'apprentissage : il reçoit des signaux et choisis quoi faire et indique ces décisions. il va ensuite essayer de savoir si ça décision est pertinente. Il a des exemples d’actions et de suites d'actions qu'il a effectuées, il sais si ces actions sont bien choisies ou pas
+\end{itemize}
+IL est nécessaire d'etre capable de stocker des processus qui vont prendre des décisions. La vision PEAS est une modélisation simple. 
+
+\section{Problèmes et algorithmes de recherche}
+\subsection{Agents de résolutions de problèmes}
+\paragraph{Intro aux algorithmes de recherche}Les algorithmes de recherche constituent l'une des approches les plus puissantes pour la résolution de problème en IA.\\\\ Les algo de recherche sont un mécanisme de recherche général de résolution. On sais toujours tout ce qui peux être fait depuis cet état mais on ne peux pas savoir à l'avance si cet état en bon ou pas. On effectue à chaque action un test de solution. On sais a quoi ressemble un état qui peux être une solution, et il est aussi intéressant de savoir comment nous sommes arrivé a la solution. Plusieurs approche possible en largeur ou en profondeur. Exemple : voyage d'un bout à l'autre de la Bulgarie.\\\\Autre exemple  : jeu de taquin : puzzle-8 : on a des cases dans un ordre aléatoire, mais on veux arriver a avoir toutes les cases dans l'ordre.
+\newpage
+\paragraph{Définition d'un problème de recherche} Formalisons un ptit peu ça  : tous les états sont dans un ensemble Q : non vide, il y a parmi ceux la des états initiaux(S). On a aussi un ensemble d'état solutions(G) : définis explicitement, ou implicitement avec des règles de tests. A : un ensemble d'actions . Fonction de successeurs, et parfois une fonction de coût : cela nous permet de pouvoir estimer si une décision est bonne ou pas. Nous avons besoin de définir tous ces éléments pour définir les problèmes de recherche. Exemple :\\Aspirateur : 
+problème assez simple. Solution : séquence d'opération .\\\\Il existe aussi des problèmes plus compliqué , les problèmes contingents :  effet conditionnel des actions, perception fournit des nouvelles infos de l'état courant, la solution est un arbre ou une stratégie. IL existe aussi les problèmes d'exploration : l'exécution révèle les états, besoin d'expérimenter pour trouver la solution.
+\subsection{Formulation d'un problème à état unique}Un problème est défini par 4 éléments : \\état initial : être à Arad.\\Fonction de successeur.\\test : implicite : NoDirt(x), ou explicite : "être à Zerind". Tous les problèmes qui peuvent être  décrits par : un ensemble fini d'états, un ensemble fini d'actions, un sous-ensemble d'états initiaux et solutions, une relation successeur définie sur l'ensemble des actions et qui renvoie vers l'ensemble des états et une fonction de coût qui est positive.
+\subsection{Stratégies : } Elles sont évaluées sur 4 critères : Complétude : si une solution existe, le système va t il l'atteindre.\\complexité en temps : combien de nœuds on est censé explorer. Deux grandes familles, aveugles et heuristiques.
+\paragraph{Stratégies Aveugles}
+
+
 \end{document}
