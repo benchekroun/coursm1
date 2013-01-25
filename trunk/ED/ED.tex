@@ -40,14 +40,44 @@
 \item along = vecteur(seul argument si utilisé, créer une séquence de  1 à length(vecteur).
 \end{itemize}
 
-\paragraph{Factor} Utilisé pour étiqueter les données de vecteurs de même longueur., il est ensuite possible d'effectuer des opération en discriminant les valeurs par les étiquettes., tapply permet d'appliquer une fonction (3em param) sur un vecteur(1er param, en utilisant les étiquettes un vecteur d'étiquettes (2nd param).
+\paragraph{Factor} Utilisé pour étiqueter les données de vecteurs de même longueur., il est ensuite possible d'effectuer des opération en discriminant les valeurs par les étiquettes., tapply permet d'appliquer une fonction (3em param) sur un vecteur(1er param), en utilisant les étiquettes un vecteur d'étiquettes (2nd param).
 \paragraph{Fonctions} définies de la forme nom <- function(arg1,...,argn). les instructions sont séparées par des ;. On a aussi accès aux conditionnelles, et au boucle, mais il faut éviter les boucles, les boucles for, repeat, while(condition) expr, et le break pour terminer les boucles.
-\paragraph{Tableau - Matrices} Un vecteur peut être utilisé comme un tableau à plusieurs dimensions si on lui associe un vecteur de dimension. La fonction dim(vect) <- c(x,y);vect, transforme le vecteur en tableau de lignes et de y colonnes, il remplie ensuite le tableau avec les données du vecteur, en remplissant la première colonne avec autant de valeurs que de lignes, puis la seconde colonne avec la suite, etc...
+\paragraph{Tableau - Matrices} Un vecteur peut être utilisé comme un tableau à plusieurs dimensions si on lui associe un vecteur de dimension. La fonction dim(vect) <- c(x,y); vect, transforme le vecteur en tableau de lignes et de y colonnes, il remplie ensuite le tableau avec les données du vecteur, en remplissant la première colonne avec autant de valeurs que de lignes, puis la seconde colonne avec la suite, etc...
 \paragraph{Tableaux d'indices} il peux être construit par la fonction array(vecteur, dimension). on a aussi des opérations sur les matrices, soient a et b deux matrice et f une fonction n alors outer applique la fonction et renvoi une matrice de taille la concaténation des taille des deux vecteurs.
 \paragraph{Listes} Collection ordonnée d'objets , appelés composant. Un composant peut être désigne par : \begin{itemize}
 \item son numéro : Liste [[x]]
 \item un nom : List \$name
 \item ATTENTION : List[i:J] retourne une sous liste (avec les noms des composants).
 \end{itemize}
-Les listes sont extensible, il ets possible de rajouter des champs en mettant : List\$nomChamp<-valeur.
+Les listes sont extensibles, il est possible de rajouter des champs en mettant : List\$nomChamp<-valeur.
+\paragraph{Data frame} c'est comme une matrice lais avec des modes et attributs différents, les chaines de caractères sont transformées en facteurs.
+\paragraph{Lecture des fichiers} première ligne doit avoir une chaine de caractère par attribut du dataframe, tout les reste est ensuite lu comme attribut, mais les chaines sont considérées comme facteur.
+\newpage
+\paragraph{Réseau de neurones} Introduit dans les 60's. Les observations sont décrites par n variables et une étiquette 1-,1 ou 0,1. Les entrées sont reliées au neurones avec des poids, et l'étiquette c'est le produit scalaire des entrées et des poids, et si elle est plus grande qu'un poids on retourne un sinon zéro. Le neurone sépare donc l'espace en deux demi plan, un ou c'est vrai et un ou c'est faux. on note O pour output. Le perceptron est donc un ensemble de neurones qui sont connectés et où les sorties de neurones sont les entrées d'autres neurones.\\\\Apprendre le perceptron c'est apprendre les poids, on constate que les poids et le seuil ne sont pas du même coté de l'équation, on remplace le b par une entrée x0 toujours égale à 1, et un poids w0 qui devra être égale à b.\\\\\textbf{apprentissage par correction d'erreurs} \begin{verbatim}
+Entrées : un ensemble d'exemples S de R^{n}*0.1
+Sortie : P un perceptron défini par (w0,w1,...,wn)
+Initialiser aléatoirement les poids wi
+Repeter{
+	Pour tout exemple (x1,x2,...,xn) dans S{
+		calculer la sortie o
+		pour tout i, wi <- wi + (c-o)xi
+	}
+jusqu'a convergence }
+\end{verbatim}
+Première question : converge-t-il? il a été montré que si les exemples sont linéairement séparable, il existe donc un hyperplan, il va le trouver. Dans la pratique, on va limiter le nombre de répétition des tours de boucle.\\ 2 critiques pour cet algorithme : \begin{itemize}
+\item : algorithme ne converge que si les données sont linéairement séparables. Donc il converge s'il doit converger.
+\item : pas de garantie sur la droite que l'on trouve, pas de distance maximum.
+\item Cet algorithme s'appelle algorithme par descente de gradient. 
+\end{itemize}
+
+\section{Compléments sur R}
+\subsection{Un peu de terminologie}
+\begin{itemize}
+\item Population: ensemble d'éléments sur lesquels se porte l'analyse
+\item individu : élément de la population
+\item variable : sert à décrire la population
+\item modalité d'une variable : valeur de la variable
+\paragraph{plot} plot(x,y), ou plot(u) avec liste de vecteur, ou matrice 2D
+\paragraph{variables qualitatives} 
+\end{itemize}
 \end{document}

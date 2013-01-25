@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % un package
+\usepackage[T1]{fontenc}      % un second package
+\usepackage[francais]{babel}  % un troisième package
+
+
+\title{ TD IA- Matthieu Exbrayat}
+\author{Alexandre Masson}
+\date{14 Janvier 2013}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Feuille 1}
+\subsection{Exercice 1}
+\paragraph{Question 1 : suite d'actions} Aspirer-Droite-Aspirer-gauche-aspirer
+\paragraph{Question 2 : montrer que la fonction est rationnelle} $\forall$ cases, if sale , aspirer, donc objectif nettoyer toutes les cases.\\oui car définition explicite de l'environnement\\oui, car aucun autre return\\oui car il reçoit position et prop.
+\paragraph{Question 3 : écrire un agent qui fais la même chose mais chaque déplacement coûte un point} 
+\begin{verbatim}
+function Agent-reflex([position,prop]) returns action
+	if position already in base de connaissance
+		NoOp
+	else
+		if Sale return Aspirer
+		else
+			if position = A return droite
+			else
+				return gauche
+\end{verbatim} 
+Mais dans ce cas, il nécessite de garder une variable coût.
+\paragraph{Question 4 : même question mais l'agent connais l'état de toutes les cases}
+\begin{verbatim}
+function Agent-reflex([position,ETAT]) returns action
+	if ETAT[position] = Sale then return Aspirer
+	else{
+			if position = A then {
+				if Etat[B] = Sale then return droite;
+				else return NoOp;
+			}
+			else{
+				if Etat[A] = Sale then return gauche;
+				else return NoOp
+		}
+\end{verbatim}
+\paragraph{Discuter des descriptions possibles dans le cas où une case propre peut redevenir sale et ou l'environnement géographique n'est pas connu} IL faut que l'agent mette a jour sa carte du monde au fur et a mesure, approche exploratoire
+\paragraph{PEAS}
+\begin{itemize}
+\item P : Objectif : cases propres, capteurs données des perceptions correctes, pas de connaissance sur le coût des actions, les actions ont un vrai effet, 
+\item E : deux cases, A et B, A à gauche de B, les cases sont communicantes, les cases peuvent être sales ou propres, environnement évolue de case propre->sale
+\item A : quatre actions: Aspirer, Gauche, Droite, NoOp,
+\item S : 2 capteurs propreté, position.
+\end{itemize}
+
+\section{Feuille 2}
+\subsection{Exercice 1}
+\end{document}

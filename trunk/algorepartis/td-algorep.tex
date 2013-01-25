@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % un package
+\usepackage[T1]{fontenc}      % un second package
+\usepackage[francais]{babel}  % un troisième package
+
+
+\title{TD algo répartis - Nicolas ollinger}
+\author{Alexandre Masson}
+\date{14 Janvier 2013}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{TD1}
+\subsection{Election sur anneau}
+\paragraph{Compositon d'un noeud}
+\begin{itemize}
+\item state: état du processus
+\item start : que faire à l'initialisation
+\item message : Comment à partir de l'état des processus pour envoyer des message, on utilise aussi  $\perp$ pour ne pas envoyer de message ou message vide.
+\item trans : calcul à partir des messages reçus
+\end{itemize}
+\paragraph{} On rappel que tous les processus sont indistinguables (même code dedans) mais on connais quand même leur UID(identifiant  unique par processus). ET les UID sont toujours comparables.
+\paragraph{State : }Variables : 
+\begin{itemize}
+\item U : uid du processus
+\item send : message a envoyer, UID ou $\perp$
+\item status  : {leader ou ?}
+\end{itemize}
+\paragraph{Start : } send = u;
+|\paragraph{Message : } transmettre send à son voisin si send != $\perp$
+\paragraph{trans : } v = message reçu\\si v != $\perp$ \begin{itemize}
+\item case : 
+\item v > u : send := v;
+\item v = u : status = leader;
+\item endcase
+\end{itemize}
+
+\subsubsection{Exercice 1} ajouter l'arret des noeuds maintenant :  
+\paragraph{State : }Variables : 
+\begin{itemize}
+\item U : uid du processus
+\item send : message a envoyer, UID ou $\perp$
+\item status  : {leader ou ? ou sbire}
+\item chief : UID ou ?
+\end{itemize}
+\paragraph{Start : } send = u; chief = status = ?
+|\paragraph{Message : } transmettre send à son voisin si send != $\perp$ : {electionUID} U {recupUID}
+\paragraph{trans : } v = message reçu\\si v != $\perp$ \begin{itemize}
+\item case : 
+\item v = electionw et w > u : send := v; // ici on send election de W du coup.
+\item v = u : statut = leader; send := recu u;
+\item v = reçu u ; arrêt ;
+v= recu w (sous entendu w != u); chef = w, status = sbire
+\item endcase
+\end{itemize}
+\paragraph{prouvons l'invariant de boucle} au temps 2n tous les processus sont arrêtés et\\stratus maxUID = chef\\statusAUTRE = sbire\\chef = maxUID.\\\\
+\textbf{Invariant : }au temps 1<=t<=n, le processus maxUID+t reçoit election maxuid.\\au temps n-1<=t<=2n, le processus maxuid+t reçoit recuMaxuid
+\subsubsection{Exercice 2 : sur un anneau de taille n}nombre total de message des n! scénaris : n! * n : pour le leader\\\\$\alpha$(n) = n(procs)*n!(scenaris)*(1+1/2+1/3+...+1/n)(somme des probabilité que les procs n soit le plus grand parmis ces K voisins, pour k de 1 à n)\\\\nbMessage : $\alpha$(n)/n! = n*$\Sigma$1/k = $\Theta$(nln(n))
+\paragraph{Construisons un exemple} nprocs, avec uid de 0 à n-1 tels que LCR -> $\Theta$(nln(n)) messages.\\ou plutot 2exp(n) processus et $\Theta$(n2exp(n))) messages avec l'UI 2expn -1 à la position (2puissance n)-1.\\\\
+As usual, par récurrence sur n! avec 2exp0 = 1, nécessite 1 message
+\subsubsection{Exercice 3 : VariableSpeeds} 
+\end{document}
