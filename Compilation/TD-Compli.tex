@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % un package
+\usepackage[T1]{fontenc}      % un second package
+\usepackage[francais]{babel}  % un troisième package
+\newcommand{\test}{Ceci est un test de macro avec LaTeX et un backslash : $\backslash$}
+
+\title{TD - Compilation}
+\author{Alexandre Masson}
+\date{14 Janvier 2013}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Exercice 1 : Rappels de théorie des langages}
+\subsection{Définitions}
+\begin{itemize}
+
+\item un alphabet : un ensemble de symboles atomique.
+\item un langage : un ensemble fini (ou infini) de mots reconnu sur un alphabet donné
+\item une grammaire : quadruplet avec , ensemble de symboles terminaux, ensemble de non terminaux, ensemble de règles, axiome de départ.
+
+\end{itemize}
+
+\subsection{la disparition} 
+Soit $\Sigma$={a,...,d,f,...,z}, sire si le mot est dans $\Sigma$* dire si les mots suivants sont dedans : 
+\begin{itemize}
+\item Bonjour : non, il manque les majuscules.
+\item $\epsilon$ : oui , $\epsilon$ (mot vide) $\in$ tout langage.
+\item bonjour : ok.
+\item message : il manque le e minuscule dans l'alphabet.
+\item voici un message : il manque toujours le e minuscule, ainsi que le caractère espace.
+\end{itemize}
+
+\section{Exercice 2 : Compilation}
+\subsection{rappelez les différentes phases d'analyse d'un compilateur}
+\begin{itemize}
+\item lexicale : scanner,
+\item lexicale : cibler,
+\item syntaxique : parser,
+\item Analyse sémantique.
+\end{itemize}
+\subsection{spécification d'analyse lexicale}
+Backus-Naur Form
+\begin{itemize}
+\item PHRASE ::= PHRASE PONCTUATION MOTS | MOTS | $\epsilon$
+\item MOTS ::= CARACTERE MOTS | CARACTERE | $\epsilon$
+\item PONCTUATION ::= . | , | ! | ?
+\item CARACTERE ::= {A..Za..z} 
+\end{itemize}
+
+Lex
+\begin{itemize}
+\item mots [a-df-z]+
+\item ponctuation ,|;|$\backslash$:
+\item point .|$\backslash$!|$\backslash$?
+\item endOfLine $\backslash$$\backslash$n
+\end{itemize}
+\test\\\\
+\newpage
+la fonction yylex() est celle qui va vérifier syntaxiquement le texte analysé, c'est pourquoi à la suite des instructions de reconnaissance de lexèmes, on ajoute des "règles" qui donnen explicitement a lex les instructions C a effectuer dans le cas ou il trouve un lexeme.\\\\On rajoute un [[:blank:]] et rien derriere pour lui faire ignorer les blank (espaces)
+\end{document}
