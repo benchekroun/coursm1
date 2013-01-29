@@ -48,5 +48,58 @@ Est ce que $\phi$\_{p}(x) != $\perp$ \\\\On a montré que IMP-arrêt est indéci
 \end{itemize}
 La calculabilité s'intéresse aux propriétés des fonctions calculables qui sont indépendantes du modèles de calcul considéré
 \section{Machines de Turing} Les MT sont le modèle de calcul de référence du cours. Il s'agit d'un modèle de machine mécanique abstrait.C'est le modèle de référence en complexité. A.M.Turing  : On computable numbers with an application to the Entscheidungproblem.1936
-\subsection{Définitions} LE ruban est coupé en case, quantité finie d'information, on suppose qu'on a un alphabet fini qui nous permet d'écrire dans les cases du ruban, et le contenu d'un case c'est une lettre sur un alphabet fini.\\\\L’opérateur est une flèche qui pointe sur une case, il a le droit de mémoriser une quantité fini d'informations et est dans un certain état, cet état est lui aussi dans un alphabet fini , l'ensemble Q des états, il a différentes opérations possibles : lire et écrire dans la case pointée, il peut aussi changer d'état, il peux déplacer le pointeur vers la gauche ou la droite. Le programme c'est  : quoi faire quand on commence, que faire quand on a un couple état/lettre dans la case.\\\\\textbf{Définition : }Une MT est un octuplet (ensemble d'états(Q),$\Sigma$(alphabet d'entrée/sortie),$\Gamma$,lettre blanche (B), état initial(Q0), un état fini succès(Qoui), un ensemble d'état finaux échec(Qnon) et $\delta$ : la fonction de transition).\\\\\textbf{Définition : } Une configuration d'une MT M est un triplet (q,c,p) $\in$ Q * $\gamma$ exp{Z} x Z.\\\\\textbf{Définition : } Il existe une transition de la configuration (q,v,p) à la configuration (q',c',p') de M, notée \\(q,c,p |-(q',c',p')\\si$\delta$(q,c(p)) = (q',a,d)\\où $\forall$k$\in$Z c'(k)= a si k = p, c(k) sinon, et p'=  p-1 si d = <-, p si d= bas, et p+1 si d= ->\\\\\textbf{Remarque : }Dans une utilisation normale d'une MT le ruban est B presque partout. On préféreras noter uqv une configuration (q,c,p) telle que : u: ce qu'il y a de pas blanc avant la case, q l'état de la MT, et V ce qu'il y a après sur la bande.\\\\\textbf{Définition : } La configuration initiale de M sur l'entrée u $\in$ $\Sigma$* est la configuration q0u.\\\\\textbf{Définition} une configuration acceptante de M est une configuration UqouiV.\\\\\textbf{Définition : }une configuration de refus de M ets une configuration UqnonV.\\\\La machine s'arrete lorsqu'elle atteint un état d’arrêt , c’est a dire l'état acceptant qoui ou l'état de refus qnon.\\\\\textbf{Remarque : }On noteras |-n n transitions successive, |-* = union des transitions(|- 0 l'identité).\\\\\textbf{Définition : }Le langage L(M) d'une MT m est l'ensemble des mots acceptés : L(M) = {u$\in$ $\Sigma$* | q0 u |- * VQuoiW}.\\\\\textbf{Définition : } Un langage est récursivement énumérable s'il est le langage d'une MT M, ie L= L(M).\\\\\textbf{Définition : } Un langage L est récursif s'il est le langage d'un MT qui s'arrete sur toute entité.\\\\\textbf{Exemple : } Langage des palindrome : L{u $\in$ {a,b}* | u est un palindrome} 
+\subsection{Définitions} LE ruban est coupé en case, quantité finie d'information, on suppose qu'on a un alphabet fini qui nous permet d'écrire dans les cases du ruban, et le contenu d'un case c'est une lettre sur un alphabet fini.\\\\L’opérateur est une flèche qui pointe sur une case, il a le droit de mémoriser une quantité fini d'informations et est dans un certain état, cet état est lui aussi dans un alphabet fini , l'ensemble Q des états, il a différentes opérations possibles : lire et écrire dans la case pointée, il peut aussi changer d'état, il peux déplacer le pointeur vers la gauche ou la droite. Le programme c'est  : quoi faire quand on commence, que faire quand on a un couple état/lettre dans la case.\\\\\textbf{Définition : }Une MT est un octuplet (ensemble d'états(Q),$\Sigma$(alphabet d'entrée/sortie),$\Gamma$,lettre blanche (B), état initial(Q0), un état fini succès(Qoui), un ensemble d'état finaux échec(Qnon) et $\delta$ : la fonction de transition).\\\\\textbf{Définition : } Une configuration d'une MT M est un triplet (q,c,p) $\in$ Q * $\gamma$ exp{Z} x Z.\\\\\textbf{Définition : } Il existe une transition de la configuration (q,v,p) à la configuration (q',c',p') de M, notée \\(q,c,p |-(q',c',p')\\si$\delta$(q,c(p)) = (q',a,d)\\où $\forall$k$\in$Z c'(k)= a si k = p, c(k) sinon, et p'=  p-1 si d = <-, p si d= bas, et p+1 si d= ->\\\\\textbf{Remarque : }Dans une utilisation normale d'une MT le ruban est B presque partout. On préféreras noter uqv une configuration (q,c,p) telle que : u: ce qu'il y a de pas blanc avant la case, q l'état de la MT, et V ce qu'il y a après sur la bande.\\\\\textbf{Définition : } La configuration initiale de M sur l'entrée u $\in$ $\Sigma$* est la configuration q0u.\\\\\textbf{Définition} une configuration acceptante de M est une configuration UqouiV.\\\\\textbf{Définition : }une configuration de refus de M ets une configuration UqnonV.\\\\La machine s'arrete lorsqu'elle atteint un état d’arrêt , c’est a dire l'état acceptant qoui ou l'état de refus qnon.\\\\\textbf{Remarque : }On noteras |-n n transitions successive, |-* = union des transitions(|- 0 l'identité).\\\\\textbf{Définition : }Le langage L(M) d'une MT m est l'ensemble des mots acceptés : L(M) = {u$\in$ $\Sigma$* | q0 u |- * VQuoiW}.\\\\\textbf{Définition : } Un langage est récursivement énumérable s'il est le langage d'une MT M, ie L= L(M).\\\\\textbf{Définition : } Un langage L est récursif s'il est le langage d'un MT qui s'arrete sur toute entité.\\\\\textbf{Exemple : } Langage des palindrome : L{u $\in$ {a,b}* | u est un palindrome}.\\\\ \textbf{Définition}un problème est décidable si son langage est récursif.\\exemple : le problème de l'arret :\\ l'entrée : une MT M et u un mot u $\in \Sigma^{*}$. Question Est que $\Phi_{M}(U) != \perp$?\\\\Langage associé : K = {wM,u | $\Phi_{M}(u) != \perp$}
+\paragraph{Définition}
+Une fonction partielle f: $\Sigma* -> \Sigma*$ est calculable si il existe une MT M qui calcule F, c'ets a dire que $\forall u \in \Sigma*$ \begin{itemize}
+\item $q_{0} \vdash^{*} vq_{oui}f(u) si f(u) != \perp$
+\item $\neg q_{0} \vdash^{*} vq_{oui}f(u) si f(u) = \perp$
+\end{itemize}
+\paragraph{Proposition}
+Un langage L $\subseteq \Sigma^{*}$ tes récursif si et seulement si L est récursivement énumérable et L est complémentairement récursivement énumérable \\\\\textbf{Remarque : }L est co-r.e signifie $\Sigma^{*}\backslash L$ est r.e.
+\paragraph{Démonstration} \textbf{dans le sens $\Rightarrow$ }L est récursif donc il existe une MT M totale telle que L(M) = L.\\L est r.e car M reconnaît L.\\ L est Co-r.e car M', copie de M où $q_{oui}$ et $q_{non}$ sont échangés, reconnais $\Sigma^{*}\backslash L$\\\\
+\textbf{Dans le sens $\Leftarrow$ } Soient M une MT qui reconnaît ML et N une MT qui reconnaît $\Sigma^{*}\backslash L$, on construit une MT Z qui , sur une entrée u, simule en parallèle M et N sur l'entrée u. Si M s’arrête alors Z répond oui. Si N s’arrête alors Z répond non. Z est totale et reconnais L.\\\\\textbf{Exercice : } Montrons que L ets récursif si et seulement si $\chi_{L}$ est calculable , où $\forall u \in \Sigma^{*} \chi_{L}(u) = ${OUI si u $\in$ L et NON sinon
+\section{Thèse de Chruch-Turing-Kleene}
+\begin{itemize}
+\item 1936 A.Turing définit le calcul/ par les MT. <- complètement mécanique
+\item 1936 A.Church définit le calcul par la $\lambda-definissibilité$, i.e le $\lambda-calcul$ <- modèle fonctionnel.
+\end{itemize}
+\paragraph{Thèse} La notion intuitive de ce qui est calculable correspond exactement à la notion de fonction calculable par MT.
+\paragraph{Idée : } essayer de construire d'autre modèle de calcul "raisonnables" : la notion de calculables coïncide toujours (en tout cas de  1936 à 2013).
+\section{la machine universelle} 
+\paragraph{Proposition} IL existe une machine de Turing U telle que :\\ $\forall M\forall u$  $\Phi_{U}(<M,u>) = \Phi_{M}(u)$ 
+\paragraph{Proposition} La fonction STEP suivant est calculable. \\\\$\forall M\forall u\in \Sigma^{*} \forall k \in N$ : \\ STEP(<M,u,K>) = 
+\begin{itemize}
+\item TERMINÉ(q,v) si M sur l'entrée u arrête avant k étapes avec sortie v dans l'état q
+\item ENCOURS sinon.
+\end{itemize}
+\paragraph{Principe de fonctionnement de U} Sur l'entrée <M,u> U doit simuler le calcul de M sur l'entrée u. Simuler M c'est lire le ruban , écrire, déplacer la tête , modifier l'état.\\U organise sa mémoire, son ruban , en zones, pour coder \begin{itemize}
+\item l'état de M
+\item le ruban de M
+\item la table de transitions de M
+\end{itemize}
+%penser a rajouter l'image de la mémoire de U qui décrite 29 janvier : 16h36
+\paragraph{} U se contente de chercher l'état et la lettre correcte dans la table des transition, de les remplacer et de déplacer le marqueur.Ajouter des détails techniques pour initialiser et arrêter le calcul.\\STEP fonctionne pareil en limitant le nombre de pas de simulation à k.
+\section{Indécidabilité}
+\paragraph{Proposition} Il existe des langages non récursifs. Preuve par dénombrement  : Il y a $\omega$ MT et $2^{\omega}$ fonctions partielles de $\Sigma^{*} -> \Sigma^{*}$.\\\\ K = { <M,u> | $\Phi_{M}(u) != \bot$}
+\paragraph{Remarque : } K est r.e il suffit d'utiliser U pour tester $\Phi_{M}(u)$.
+\paragraph{Théorème de l’arrêt} K n'est pas récursif, ie le pb de l’arrêt n'est pas décidable.
+\paragraph{Démonstration} Supposons qu'il existe une MT H telle que \\$\forall M\forall u$   $\Phi_{H}(<M,U>)=$
+\begin{itemize}
+\item OUI si $\Phi_{M}(u) \neq \bot$
+\item NON si $\Phi_{M}(u) = \bot$
+\end{itemize}
+On diagonalise H en construisant une MT qui s'appelle D(comme diagonale) qui sur l'entrée M (où M est le code d'une machine) : 
+\begin{itemize}
+\item exécuter H sur l'entrée <M,M>
+\item si H à répondu OUI, on boucle
+\item si H a répondu NON , on s'arrête.
+\end{itemize}
+$\forall M, \Phi_{D}(M)$ =  { $\bot$ si $\Phi_{M}(M) \neq \bot$ , arrêt  si $\Phi_{M}(M) = \bot$}\\\\Donc , si L= D :  $\Phi_{D}(D)$ =  { $\bot$ si $\Phi_{D}(D) \neq \bot$ , arrêt  si $\Phi_{D}(D) = \bot$  : CONTRADICTION !!!\\
+Donc H n'existe pas, K n'est pas récursif, K n'est pas co-r.e.
+\paragraph{Théorème de Rice} Soit P une propriété non triviale des fonctions partielles f: $\Sigma * -> \Sigma *$.\\L'ensemble des machines de Turing qui calculent une fonction qui satisfait P n'est pas récursif. P sélectionne parmis les fonctions partielles un sous-ensemble, non-triviale, indique qu'il existe deux fonction f et g différentes telles que P(f) est vrai et P(g) est faux. { M | P($\Phi_{M}$)} n'est pas récursif.\\exemple de propriété : \begin{itemize}
+\item l'ensemble des fonctions totales
+\item l'ensemble des fonctions définies nulle part
+\item etc...
+\end{itemize}
+\paragraph{Démonstration} Par l'absurde, supposons qu'il existe une propriété non-triviale P dont l'ensemble des MT qui la satisfait est récursif  .Montrons alors que K est récursif.
 \end{document}
