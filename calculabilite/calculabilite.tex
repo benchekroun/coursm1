@@ -1,3 +1,141 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \documentclass{article}
 \usepackage[utf8]{inputenc} % un package
 \usepackage[T1]{fontenc}      % un second package
@@ -101,5 +239,83 @@ Donc H n'existe pas, K n'est pas récursif, K n'est pas co-r.e.
 \item l'ensemble des fonctions définies nulle part
 \item etc...
 \end{itemize}
-\paragraph{Démonstration} Par l'absurde, supposons qu'il existe une propriété non-triviale P dont l'ensemble des MT qui la satisfait est récursif  .Montrons alors que K est récursif.
+
+\paragraph{}
+\begin{center}
+\date{5 Février 2013}
+\end{center}
+Pour toute propriété non triviale sur les fonctions partielles savoir si une MT calcule une fonction qui satisfait est indécidable : cette fonction est triviale , si il existe une fonction f qui la satisfait, et une fonction g : $f \neq g$ qui ne la satisfait pas. Exemple :
+\{ M | P($\Phi_{M}$)\} n'est pas récursif. \{ $ M | \phi_{M} \neq \bot$\}\\
+\begin{center}
+ K = \{ <M,x> | $\Phi_{M}(x) \neq \bot$ \}
+\end{center}  
+\paragraph{Démonstration} Par l'absurde, supposons qu'il existe une propriété non-triviale P calculable par MT $T_{P}$. soit $\bot$ une fonction définie nulle part. Supposons sans perte de généralité, que $\bot \notin$ P et soit S une MT telle que $\Phi_{S} \in$ P.\\\\On construit une machine de Turing F comme suit :
+\begin{itemize}
+\item Sur l'entrée <M,x>
+\begin{itemize}
+\item Soit T le codage de la MT suivante : 
+\begin{itemize}
+\item Sur l'entrée y : 
+\begin{itemize}
+\item simuler M sur l'entrée x.
+\item si M s’arrête , on simule S sur l'entrée y
+\item si S s’arrête, on s’arrête.
+\end{itemize}
+\end{itemize}
+\item Simule $T_{P}$ sur l'entrée T
+\begin{itemize}
+\item Si $T_{P}$ répond OUI, accepter <M,x>
+\item Si $T_{P}$ répond NON, rejeter <M,x>
+\end{itemize}
+\end{itemize}
+\end{itemize}
+F est totale.\\\\
+$\Phi_{F}(<M,x>) =$ \{ OUI si $T_{P}(T)$ = OUI, ie $si \Phi_{M}(x) \neq \bot$ \\ et NON si $T_{P}(T)$, ie si $\Phi_{M}(x)$ = $\bot$\}\\F résout le problème de l’arrêt ! CONTRADICTION\\\\
+
+Les problèmes indécidables sont légion : 
+\begin{itemize}
+\item le typage au second ordre du $\lambda$-calcul;
+\item mortalité des produits de matrices carrées
+\item problème du mot pour les groupes finiment engendrés.
+\item exemple : existence d'une solution entière à une équation polynomiale à coefficient entiers ($10^{ème}$ problème de Hilbert).
+\item Pavabilité du plan par un jeu de tuiles de Wang (tuiles divisées en quater avec des couleurs au coins, pas le droit de les tourner , et on les collent avec deux couleurs identiques aux arrêtes adjacentes);
+\begin{itemize}
+\item entrée : famille de tuiles de Wang T $\subseteq \Sigma^{4}$
+\item Question : T pave-t-il le plan , ie, $\exists c : Z^{2} -> T$ telle que les contraintes soient satisfaites.
+\end{itemize}
+\end{itemize}
+
+\paragraph{Problème de correspondance de Post} 
+\begin{itemize}
+\item entrée : $u_{1}$, $u_{2}$ , ..., $u_{n}$, $v_{1}$, $v_{2}$,...,$v_{n} \in \Sigma^{*}$
+\item question : $\exists (ik)$ $u_{1}$, $u_{2}$ , ..., $u_{n}$ =  $v_{1}$, $v_{2}$,...,$v_{n}$ ?
+\end{itemize}
+\section{Interlude}
+\paragraph{Définition} Une machine linéairement bornée (MTLB) est une MT qui s'interdit d’écrire sur B. $ \forall q,q',a,d$  $\sigma (q,B) = (q',a,d)$ -> a  = B car on ne peux pas écrire sur blanc.
+\paragraph{Proposition} L'arret des MTLB est décidable.
+\paragraph{Démonstration} On construit le graphe fini des configuration accessibles à partir de l'entrée x pour la machine M. Il y a environ $|Q|*(|x|+2)*|\Gamma|^{|x|}$\\\\\textbf{$\exists_{MTLB}$}
+\begin{itemize}
+\item entrée : M une MTLB
+\item question : Existe-t-il une entrée x acceptée par M?\\
+\end{itemize}
+\textbf{Proposition} $\exists_{MTLB}$ est indécidable\\
+\textbf{Démonstration} Par l'absurde, on suppose que $\exists_{MTLB}$ est décidable, et on construit un programme qui résoud l’arrêt des MT.\\IL s'agit étant donnés une MT M et une donnée x, de calculer une MTLB f(<M,x>) qui accepte une entrée si et seulement si le MT M  s’arrête sur l'entrée x. Notre MTLB est un vérifieur/parseur/accepteur de trace de MT : il considère son entrée comme une suite de configuration valide de M qui commence pas  $q_{0}^{x}$ et termine par une configuration d'arrêt : \\
+BB\#$q_{0}x1x2...xn$\# ... \# ...\#BB \\\\
+\begin{center}
+$\Sigma ' = Q_{M} \cup \Gamma_{M} \cup$\{\#\}\\
+$\Gamma ' = \Sigma ' \cup $\{B\} $\cup$ alphabet Entouré
+\end{center}
+\textbf{Principe de fonctionnement de la MTLB : }
+\begin{itemize}
+\item vérifier que l'entrée commence par \#$q_{0}x1x2...xn$\#
+\item vérifier que l'entrée termine par \# ... $q_{OUI}$...\#
+\item pour chaque paire successive \#u\#v\# avec $ u,v \in \Sigma'^{*}\backslash$ \{\#\}7
+\begin{itemize}
+\item vérifier que $u|-_{M}v$ en faisant des aller retours en marquant les position avec l'alphabet entouré.
+\end{itemize}
+\end{itemize}
+MPCP est la variante de PCP dnas laquelle on est obligé de commencer par le premier domino ($i_{1} = 1$).\\\textbf{Théorème} MPCP est indécidable\\\\\textbf{Démonstration} Idée : comme pour $\exists_{MTLB}$ on va construire un reconnaisseur de trace de MT. <M,x> |----> jeu de dominos T(M,x) tel que T(M,x) à une solution si et seulement si $\Phi(x)\neq\bot$ et même mieux la solution de T(<M,x>) écrit une trace de M sur l'entrée x.
+\paragraph{Voici les dominos de T(<M,x>)}
+\textbf{INSERER ICI LES IMAGES DU TABLEAU}
+T(<M,x>) admet pour solutions les traces acceptables de M sur l'entrée x. MPCP est indécidable
 \end{document}
