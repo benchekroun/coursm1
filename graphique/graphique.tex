@@ -35,4 +35,14 @@ La segmentation des images consiste à regrouper les pixels de ces images qui pa
 Post traitement des contours, soit refermer les contours, soit ne garde que ceux qui sont connexe, ou enlever les barbillons. 
 \paragraph{Segmentation par seuillage}, comparer la valeur de chaque pixels a un ou plusieurs seuils, indépendamment de la position des pixels.
 \paragraph{Segmentation par division} Critère d’homogénéité, forme a priori de l'histogramme, extrema de l'image, valeurs identiques, variance limitée, etc...
+
+\paragraph{Regroupement de région} Si deux régions appartiennent au meme objet, alors il suivent la meme diffusion gaussienne, si ce n'est pas la cas, alors il suivent des diffusion gaussienne différentes. 
+\section{Morphologie Mathématique} 
+\paragraph{} 
+on comparer les objets d'une image, avec un objet de référence.\\ On suit des transformations ensemblistes de type tout ou rien, on fait des opérations entre le filtre et les pixels, si la réponse et positive, on applique l'opération, sinon on ne fait rien. Érosion, réduction du contour d'une image, on fait un ET logique entre les pixels et un élément structurant (pour du noir et blanc) , et pour du niveau de gris, on prend un élément structurant sur une dimension (principalement une ligne, de 3px) et on prend le min entre le voisin de gauch et celui de droite pour remplacer le pixel courant, et on fait ça pour chaque pixels
+. On peux aussi faire de la dilatation,  pour cela on fait l'inverse, c'est a dire que pour le structurant a trois pixel , on prend le sup pour remplacer le pixel.
+\paragraph{Ouverture}
+Opération qui consiste a faire une érosion et ensuite une dilatation
+\paragraph{Fermeture}
+Opération qui va dilater l'image pou remplir des trous, et ensuite éroder la  nouvelle forme. 
 \end{document}
