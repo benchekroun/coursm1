@@ -77,7 +77,66 @@ Première question : converge-t-il? il a été montré que si les exemples sont 
 \item individu : élément de la population
 \item variable : sert à décrire la population
 \item modalité d'une variable : valeur de la variable
-\paragraph{plot} plot(x,y), ou plot(u) avec liste de vecteur, ou matrice 2D
+\end{itemize}
+\paragraph{plot}
+ plot(x,y), ou plot(u) avec liste de vecteur, ou matrice 2D.
 \paragraph{variables qualitatives} 
+Soucis de commit, penser à regarder le pdf graphique sous R.
+
+\section{Graphique sous R}
+\begin{center}
+\date{6 Février 2013}
+\end{center}
+\paragraph{Continuons la partie représentation}
+summary nous donne des infos sur une dataframe telles que le min, le 1st.quarter, la median, la mean, le 3rd. Quarter ainsi que le max. Faire attention, car le choix de découpage influe beaucoup sur la perception, et peut donner une fausse interprétation. faire plusieurs diagramme pour voir les données sous différents angles.\\Regarder d'un œil critique
+\begin{itemize}
+\item Mesures de tendances centrales ; moyenne, médiane, etc...
+\item 
+\end{itemize}
+\paragraph{Peut être un cours de rappel de proba}
+pas des proba pour faire des probas, mais par exemple revoir les lois gaussienne car on utilise des échantillons gaussiens 
+\paragraph{Propriété de la moyenne}
+Toutes les observations ont le même poids : les valeurs extrêmes influencent autant que les autres.\\Aussi la somme des écarts à la moyenne est nulle $\Sigma(x_{i} - mean(x)) = 0$ .\\ La somme des carrés des distances à la moyenne est plus faible que la somme des carrés des distances à toute autre valeur.\\-> la moyenne est la mesure qui minimise la somme des carrés des écarts à elle-même.\\\\\textbf{autres moyennes}\begin{itemize}
+\item moyenne géométrique : racine $n_{ieme}$ du produit des n facteurs : x1*x2*...*xn
+\item moyenne géométrique pondérée racine $k_{ieme}$ des $x_{n}^{k}$
+\item moyenne harmonique : k éléments, divisé par la somme des 1/$x^{k}$
+\item moyenne quadratique : Q= $\sqrt{1/k(x_{1}^{2}+x_{2}^{2}+...+x_{n}^{2})}$
+\end{itemize}
+Toutes ces moyennes se généralisent en : le nombre M tel que \\$f(M) = 1/n*(n_{1}.f(x_{1}+...+n_{n}.f(x_{n}))$
+\paragraph{Médiane} 
+point qui partage la distribution d'une série d'observations en deux parts égales -> partage l'histogramme(densité) en deux parties de surface égales.\\ Ne s'applique que pour des observations pouvant être ordonnées.\\ Minimise la somme des distances absolues de toutes les observations à ce point. \\\\\textbf{Estimation} Classement des observations par ordre croissant\\\textbf{Calcul : }si le nombre d'observations est impair, la médiane est la (k+1)/2 valeur\\Si c'est paire, toute observation entre k/2 et(k/2)+1, ou la moyenne des observations k/2 et (k/2)+1.\\ si les observations sont regroupées par classe, une valeur plus précise sous l'hypothèse d'une répartition uniforme des observations.
+
+\paragraph{Mode}
+Valeur qui possède la fréquence la plus élevée\\n'est pas toujours une valeur centrale de la distribution\\une distribution peut avoir plusieurs modes, unimodable, bimodale, asymétrique...
+\paragraph{Comparaison}
+\begin{itemize}
+\item moyenne : tiens compte des valeurs de la distribution
+\item mode : indique une seule valeur de la distribution
+\item médiane : indique un rang
+\item si la distribution est unimodale et symétrie, moyenne , mode, et médiane sont confondus.
+\item Si la distribution est bimodale et symétrique, moyenne et médiane sont confondues.
+\item si la distribution est asymétrique, ils peuvent avoir des valeurs différentes.
+\begin{itemize}
+\item tirée a droit, mode, puis médiane , puis moyenne
+\item tirée a gauche : moyenne , médiane, mode
+\end{itemize}
+\end{itemize}
+\paragraph{Variance}
+Elle donne la répartition des valeurs autour de la moyenne, si elle est faible, l'ensemble des valeurs est proche de la moyenne, sinon, cela nous indique que la moyenne c'est pas représentative des valeurs des observations.\\\textbf{Propriété}\\la variance est toujours positive\\ si elle est nulle , toutes les observations sont identiques,\\si on ajoute la même constante a toutes les observations, alors la moyenne change, mais pas la variance.\\si on multiplie les observations par une même constante positive ou négative, on modifie la variance à un facteur multiplicatif(le carré de la constante, vu que la variance fait un carré)
+\paragraph{Autre façons de calculer la variance} variable quantitative avec k observations, x1,...,xn = 1/k*$\Sigma (x_{i}^{2}-mean(x)^{2})$
+Différence entre var de R ,et la vrai variance, car R se base sur un échantillon pour trouver la moyenne pour effecteur son calcul. On parle d'estimateur sans biais, si quand on change d'échantillon, on retrouve la même valeur qu'avec toue la population, donc la variance ne l'est pas.
+\paragraph{Autres mesures}
+écart moyen : prend la valeur absolue plutôt que le carré\\
+écart médian : prend la médiane au lieu de la moyenne pour le calcul de variance.
+intervalle interquartile : \begin{itemize}
+\item Intervalle comprenant 50 \% des observations le plus au ventre de la distribution.
+\item Se définit à partir des quantiles qui sont des positions particulières (ex :médiane)
+\item quartile : coupe en quatre, déciles:  amis en 10, centiles : idem mais en 100.
+\item IQR : intervalle inter quantile : il fait la différence entre le 75\% et le 25\%
+\end{itemize}
+\textbf{Dispersion pour les variables qualitatives}
+\begin{itemize}
+\item variables dichotomique : même définitions que pour les variables qualitatives
+\item variable multicatégorielles : $\sigma^{2}(X) = p_{1}*...*p_{j}$ ou $p_{i}$ est la proportion d'apparition de la classe.
 \end{itemize}
 \end{document}

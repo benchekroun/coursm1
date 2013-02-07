@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "----------------------------------------------"
+echo "        Analyse syntaxique en cours...        "
+echo "----------------------------------------------"
+bison -d -o $1synt.c synt$1.y && flex -o lex$1synt.c lex$1synt.lex && gcc -o synt$1 $1synt.c lex$1synt.c && ./synt$1 exemple$1.txt
+echo "----------------------------------------------"
+echo "         Fin de l'analyse syntaxique.         "
+echo "----------------------------------------------"
+
