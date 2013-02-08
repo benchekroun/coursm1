@@ -35,10 +35,60 @@ bruitfilter = medfilt2(imgbruit);
 
 g = sqrt(((imgmasque.*imgmasque2) + (imgmasque.*imgmasque2))./2);
 %g = g/1,414;
+
+%calcul de l'histogramme de cell.jpg
+imgcell = imread('Cell.jpg');
+%binarisation
+imgcelldbl = im2double(imgcell);
+%histo de limage histo = imhist(imgcell)
+%trouvons le seuil , ici aps de ; à la fin de l'instruction pour afficher S dnas le aconsole
+S = graythresh(imgcelldbl)
+imgcellbw = im2bw(imgcelldbl,S);
+%essayons d'eroder l'image pour pouvoir compter les cells
+%definissons l'element structurant
+ES = [0 1 0;1 1 1;0 1 0];
+% par convention , les 0 sont des noirs et les 1 des blancs, 
+%il faut donc faire attention avec le masque pour l'érosion. 
+%Par convention, il faut donc utiliser une image blanche sur fonc noir 
+%pour appliquer un element structurant
+%nous allons donc inverser l'image
+imgcellbwinv = ~imgcellbw;
+%appliquons l'erosion 5 fois
+imero = erode(imgcellbwinv,ES,1);
+%dilation
+imdil = imdilate(imgcellbwinv,ES);
+%ouverture
+imop = imopen(imgcellbwinv,ES);
+%fermeture
+imcl = imclose(imgcellbwinv,ES);
+%Essayons d'obtenir les contours, avec la difference en valeur absolue de
+%image erode - img dilate
+imgedg = abs(imdil - imero);
+%trouvons le skeleton a partir de l'image bw inversée
+imskeleton = bwmorph(imgcellbwinv, 'skel',100);
+%trouvons les elements connexes avec une fonction qui fait l'"etiquettage"
+imer = erode(imskeleton,ES);
+imdil100 = dilate(imer,ES,10);
+[L,NUM] = bwlabel (imdil100, 8);
+NUM
+%affichage
 figure;subplot(2,2,1);imshow(imdb);title('origine');
 subplot(2,2,2);imshow(diffbw);title('diffBW');
-subplot(2,2,3);imshow(imgbruit);title('buirt');
+subplot(2,2,3);imshow(imgbruit);title('bruit');
 subplot(2,2,4);imshow(bruitfilter);title('bruit filter');
+figure;
+subplot(3,3,1);imshow(imgcell);title('Cell');
+subplot(3,3,2);imshow(imgcelldbl);title('Cell dbl');
+subplot(3,3,3);imshow(imgcellbw);title('CellBW');
+subplot(3,3,4);imshow(imgcellbwinv);title('CellBWINV');
+subplot(3,3,5);imshow(imero);title('CellERODE');
+subplot(3,3,6);imshow(imdil);title('CellDIL');
+subplot(3,3,7);imshow(imop);title('Cellopen');
+subplot(3,3,8);imshow(imcl);title('Cellfer');
+subplot(3,3,9);imshow(imgedg);title('Celledg');
+figure; imshow(imgedg);title('Celledg');
+figure; imshow(imskeleton);title('cell skel');
+figure; imshow(imdil100);title('celldill*');
 
-%filtre passe bas : filtre moyenneur, prendre un point et ses 8 voisins, 
-%un masque avec des 1 partout, et on divise par la somme des coefficients
+
+
