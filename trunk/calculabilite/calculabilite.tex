@@ -1,141 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \documentclass{article}
 \usepackage[utf8]{inputenc} % un package
 \usepackage[T1]{fontenc}      % un second package
@@ -186,16 +48,16 @@ Est ce que $\phi$\_{p}(x) != $\perp$ \\\\On a montré que IMP-arrêt est indéci
 \end{itemize}
 La calculabilité s'intéresse aux propriétés des fonctions calculables qui sont indépendantes du modèles de calcul considéré
 \section{Machines de Turing} Les MT sont le modèle de calcul de référence du cours. Il s'agit d'un modèle de machine mécanique abstrait.C'est le modèle de référence en complexité. A.M.Turing  : On computable numbers with an application to the Entscheidungproblem.1936
-\subsection{Définitions} LE ruban est coupé en case, quantité finie d'information, on suppose qu'on a un alphabet fini qui nous permet d'écrire dans les cases du ruban, et le contenu d'un case c'est une lettre sur un alphabet fini.\\\\L’opérateur est une flèche qui pointe sur une case, il a le droit de mémoriser une quantité fini d'informations et est dans un certain état, cet état est lui aussi dans un alphabet fini , l'ensemble Q des états, il a différentes opérations possibles : lire et écrire dans la case pointée, il peut aussi changer d'état, il peux déplacer le pointeur vers la gauche ou la droite. Le programme c'est  : quoi faire quand on commence, que faire quand on a un couple état/lettre dans la case.\\\\\textbf{Définition : }Une MT est un octuplet (ensemble d'états(Q),$\Sigma$(alphabet d'entrée/sortie),$\Gamma$,lettre blanche (B), état initial(Q0), un état fini succès(Qoui), un ensemble d'état finaux échec(Qnon) et $\delta$ : la fonction de transition).\\\\\textbf{Définition : } Une configuration d'une MT M est un triplet (q,c,p) $\in$ Q * $\gamma$ exp{Z} x Z.\\\\\textbf{Définition : } Il existe une transition de la configuration (q,v,p) à la configuration (q',c',p') de M, notée \\(q,c,p |-(q',c',p')\\si$\delta$(q,c(p)) = (q',a,d)\\où $\forall$k$\in$Z c'(k)= a si k = p, c(k) sinon, et p'=  p-1 si d = <-, p si d= bas, et p+1 si d= ->\\\\\textbf{Remarque : }Dans une utilisation normale d'une MT le ruban est B presque partout. On préféreras noter uqv une configuration (q,c,p) telle que : u: ce qu'il y a de pas blanc avant la case, q l'état de la MT, et V ce qu'il y a après sur la bande.\\\\\textbf{Définition : } La configuration initiale de M sur l'entrée u $\in$ $\Sigma$* est la configuration q0u.\\\\\textbf{Définition} une configuration acceptante de M est une configuration UqouiV.\\\\\textbf{Définition : }une configuration de refus de M ets une configuration UqnonV.\\\\La machine s'arrete lorsqu'elle atteint un état d’arrêt , c’est a dire l'état acceptant qoui ou l'état de refus qnon.\\\\\textbf{Remarque : }On noteras |-n n transitions successive, |-* = union des transitions(|- 0 l'identité).\\\\\textbf{Définition : }Le langage L(M) d'une MT m est l'ensemble des mots acceptés : L(M) = {u$\in$ $\Sigma$* | q0 u |- * VQuoiW}.\\\\\textbf{Définition : } Un langage est récursivement énumérable s'il est le langage d'une MT M, ie L= L(M).\\\\\textbf{Définition : } Un langage L est récursif s'il est le langage d'un MT qui s'arrete sur toute entité.\\\\\textbf{Exemple : } Langage des palindrome : L{u $\in$ {a,b}* | u est un palindrome}.\\\\ \textbf{Définition}un problème est décidable si son langage est récursif.\\exemple : le problème de l'arret :\\ l'entrée : une MT M et u un mot u $\in \Sigma^{*}$. Question Est que $\Phi_{M}(U) != \perp$?\\\\Langage associé : K = {wM,u | $\Phi_{M}(u) != \perp$}
+\subsection{Définitions} LE ruban est coupé en case, quantité finie d'information, on suppose qu'on a un alphabet fini qui nous permet d'écrire dans les cases du ruban, et le contenu d'un case c'est une lettre sur un alphabet fini.\\\\L’opérateur est une flèche qui pointe sur une case, il a le droit de mémoriser une quantité fini d'informations et est dans un certain état, cet état est lui aussi dans un alphabet fini , l'ensemble Q des états, il a différentes opérations possibles : lire et écrire dans la case pointée, il peut aussi changer d'état, il peux déplacer le pointeur vers la gauche ou la droite. Le programme c'est  : quoi faire quand on commence, que faire quand on a un couple état/lettre dans la case.\\\\\textbf{Définition : }Une MT est un octuplet (ensemble d'états(Q),$\Sigma$(alphabet d'entrée/sortie),$\Gamma$,lettre blanche (B), état initial(Q0), un état fini succès(Qoui), un ensemble d'état finaux échec(Qnon) et $\delta$ : la fonction de transition).\\\\\textbf{Définition : } Une configuration d'une MT M est un triplet (q,c,p) $\in$ Q * $\gamma$ exp{Z} x Z.\\\\\textbf{Définition : } Il existe une transition de la configuration (q,v,p) à la configuration (q',c',p') de M, notée \\(q,c,p |-(q',c',p')\\si$\delta$(q,c(p)) = (q',a,d)\\où $\forall$k$\in$Z c'(k)= a si k = p, c(k) sinon, et p'=  p-1 si d = <-, p si d= bas, et p+1 si d= ->\\\\\textbf{Remarque : }Dans une utilisation normale d'une MT le ruban est B presque partout. On préféreras noter uqv une configuration (q,c,p) telle que : u: ce qu'il y a de pas blanc avant la case, q l'état de la MT, et V ce qu'il y a après sur la bande.\\\\\textbf{Définition : } La configuration initiale de M sur l'entrée u $\in$ $\Sigma$* est la configuration q0u.\\\\\textbf{Définition} une configuration acceptante de M est une configuration UqouiV.\\\\\textbf{Définition : }une configuration de refus de M est une configuration UqnonV.\\\\La machine s'arrete lorsqu'elle atteint un état d’arrêt , c’est a dire l'état acceptant qoui ou l'état de refus qnon.\\\\\textbf{Remarque : }On noteras |-n n transitions successive, |-* = union des transitions(|- 0 l'identité).\\\\\textbf{Définition : }Le langage L(M) d'une MT m est l'ensemble des mots acceptés : L(M) = {u$\in$ $\Sigma$* | q0 u |- * VQuoiW}.\\\\\textbf{Définition : } Un langage est récursivement énumérable s'il est le langage d'une MT M, ie L= L(M).\\\\\textbf{Définition : } Un langage L est récursif s'il est le langage d'un MT qui s'arrete sur toute entité.\\\\\textbf{Exemple : } Langage des palindrome : L{u $\in$ {a,b}* | u est un palindrome}.\\\\ \textbf{Définition}un problème est décidable si son langage est récursif.\\exemple : le problème de l'arret :\\ l'entrée : une MT M et u un mot u $\in \Sigma^{*}$. Question Est que $\Phi_{M}(U) != \perp$?\\\\Langage associé : K = {wM,u | $\Phi_{M}(u) != \perp$}
 \paragraph{Définition}
-Une fonction partielle f: $\Sigma* -> \Sigma*$ est calculable si il existe une MT M qui calcule F, c'ets a dire que $\forall u \in \Sigma*$ \begin{itemize}
+Une fonction partielle f: $\Sigma* -> \Sigma*$ est calculable si il existe une MT M qui calcule F, c'est a dire que $\forall u \in \Sigma*$ \begin{itemize}
 \item $q_{0} \vdash^{*} vq_{oui}f(u) si f(u) != \perp$
 \item $\neg q_{0} \vdash^{*} vq_{oui}f(u) si f(u) = \perp$
 \end{itemize}
 \paragraph{Proposition}
 Un langage L $\subseteq \Sigma^{*}$ tes récursif si et seulement si L est récursivement énumérable et L est complémentairement récursivement énumérable \\\\\textbf{Remarque : }L est co-r.e signifie $\Sigma^{*}\backslash L$ est r.e.
 \paragraph{Démonstration} \textbf{dans le sens $\Rightarrow$ }L est récursif donc il existe une MT M totale telle que L(M) = L.\\L est r.e car M reconnaît L.\\ L est Co-r.e car M', copie de M où $q_{oui}$ et $q_{non}$ sont échangés, reconnais $\Sigma^{*}\backslash L$\\\\
-\textbf{Dans le sens $\Leftarrow$ } Soient M une MT qui reconnaît ML et N une MT qui reconnaît $\Sigma^{*}\backslash L$, on construit une MT Z qui , sur une entrée u, simule en parallèle M et N sur l'entrée u. Si M s’arrête alors Z répond oui. Si N s’arrête alors Z répond non. Z est totale et reconnais L.\\\\\textbf{Exercice : } Montrons que L ets récursif si et seulement si $\chi_{L}$ est calculable , où $\forall u \in \Sigma^{*} \chi_{L}(u) = ${OUI si u $\in$ L et NON sinon
+\textbf{Dans le sens $\Leftarrow$ } Soient M une MT qui reconnaît ML et N une MT qui reconnaît $\Sigma^{*}\backslash L$, on construit une MT Z qui , sur une entrée u, simule en parallèle M et N sur l'entrée u. Si M s’arrête alors Z répond oui. Si N s’arrête alors Z répond non. Z est totale et reconnais L.\\\\\textbf{Exercice : } Montrons que L est récursif si et seulement si $\chi_{L}$ est calculable , où $\forall u \in \Sigma^{*} \chi_{L}(u) = ${OUI si u $\in$ L et NON sinon
 \section{Thèse de Chruch-Turing-Kleene}
 \begin{itemize}
 \item 1936 A.Turing définit le calcul/ par les MT. <- complètement mécanique
@@ -318,4 +180,115 @@ MPCP est la variante de PCP dnas laquelle on est obligé de commencer par le pre
 \paragraph{Voici les dominos de T(<M,x>)}
 \textbf{INSERER ICI LES IMAGES DU TABLEAU}
 T(<M,x>) admet pour solutions les traces acceptables de M sur l'entrée x. MPCP est indécidable
+
+
+\section{Evaluation}
+2 CC
+\begin{itemize}
+\item 1h30 calculabilite mer. 6 Mars
+\begin{itemize}
+\item construire une MT
+\item expliquer une MT
+\item démontrer qu'un problème est décidable.
+\end{itemize}
+\item ensuite une correction
+\item 1h30 de complexité
+\begin{itemize}
+\item raisonner sur les classes
+\item démontrer qu'un problème est NP-complet
+\end{itemize}
+\item ensuite une correction
+
+\end{itemize}
+et pour finir une CT de 2h sur tout
+\newpage
+\section{Corollaire} PCP est indécidable , c'est une sorte de dominos qui se collent les uns des autres.\\\\
+\paragraph{Démonstration} On va transformer récursivement une instance donnée de MPCP $\tau$ en une instance $\tau'$ de PCP de sorte que $\tau$ possède une solution si et seulement si $\tau'$ en possède une.\\
+Dans MPCP, on est obligé de poser en premier le premier domino de la liste. Il existe donc des solution de PCP qui ne sont pas solution de MPCP.\\ $[\dfrac{aa}{a}]$ $[\dfrac{bb}{ab}]$ 
+$[\dfrac{b}{bb}]$ $[\dfrac{bb}{b}]$ \\\\
+$[\dfrac{aa}{a}]$ $[\dfrac{bb}{ab}]$ $[\dfrac{b}{bb}]$ est une solution MPCP\\\\
+ $[\dfrac{b}{bb}]$ $[\dfrac{bb}{b}]$ solution de PCP , mais pas MPCP\\\\
+ \textbf{idée : } $[\dfrac{*a*a}{*a*}]$ $[\dfrac{*b*b}{a*b*}]$ 
+$[\dfrac{*b}{b*b*}]$ $[\dfrac{*b*b}{b*}]$ $[\dfrac{*\$}{\$}]$ 
+comme ça on est obligé de prendre la première tuile en premier et celle avec des dollars en dernier.\\\\
+$\forall u \in \Sigma*$
+\begin{itemize}
+\item $\bullet u = *u1*u2...*un$
+\item $u\bullet=u1*u2*...un*$
+\item $\bullet u \bullet = *u\bullet = \bullet u*$
+\end{itemize}
+À partie de $\tau = {(u1,v1),...,(un,vn)}$\\On construit $\tau'$ qui contient les $n+2$ dominos : 
+\begin{itemize}
+\item $(\bullet u_{1},\bullet v_{1}\bullet)$,
+\item $\forall i \in {1,..,n} (\bullet u_{i},v_{i}\bullet)$,
+\item $(\bullet\$,\$)$ 
+\end{itemize}
+avec \$ et * des nouvelles lettres
+\paragraph{} Une solution PCP de $\tau'$ commence nécessairement par $(\bullet u_{1},\bullet v_{1}\bullet)$ et se termine par  $(\bullet\$,\$)$.\\ une plus courte solution contient entre ces tuiles uniquement $(\bullet u_{i},v_{i}\bullet)$\\Les lettres en position impaires sont des * , en position paires des lettres de $u_{i}/v_{i}$\\$\tau$ possède une solution de MPCP si $\tau$  possède une solution de PCP.\\La transformation de $\tau$ en $\tau'$ est totale et calculable donc PCP est indécidable.
+\paragraph{Réductions} pour montrer qu'un problème est indécidable on a souvent construit une transformation calculable totale d'une instance A en instance B qui préserve les solutions.
+\paragraph{Définition} Soient A et B deux problèmes/langages $ A,B\subseteq \Sigma*$, on notera A $<=_{m}$B si il existe une fonction F:  $\Sigma* -> \Sigma*$ calculable et totale telle que : \\$\forall x \in \Sigma*$  $x \in A <-> f(x) \in B$
+On dit que A est plus simple que B , que B est plus compliqué que A ou A est réductible à B.
+\paragraph{Proposition} $<=_{m}$ est un pré-ordre
+\paragraph{Démonstration} 
+\begin{itemize}
+\item $<=_{m}$ est réflexive : $\forall A \subseteq \Sigma*$ $A <=_{m} A$, en effet l'identité (a vers a) est calculable et totale.
+\item $<=_{m}$ est transitive : $\forall A,B,C \subseteq \Sigma*$  $A<=_{m}B$ et $B<=_{m}C$ $->$ $A<=_{m}C$
+\begin{itemize}
+\item si $A<=_{m}B$ il existe F calc.tot. tq $\forall x$ $\forall x \in \Sigma*$  $x \in A <-> f(x) \in B$
+
+\item si $B<=_{m}C$ il existe G calc.tot. tq $\forall x$ $\forall x \in \Sigma*$  $x \in B <-> f(x) \in C$
+\item Donc $\forall x \in \Sigma*$ $x \in A <-> f(x) \in B <-> f(x) \in C$.\\G o F qui est calculable totale réduit A à C.\\\\
+
+\end{itemize}
+\end{itemize}
+
+\textbf{EX} : $ARRET<=_{m}MPCP<=_{m}PCP$ donc $ARRET<=_{m}PCP$ 
+\paragraph{Proposition} si $A<=_{m}B$ et A indécidable, alors B est indécidable
+\paragraph{Démonstration} Soient $A<=_{m}B$ avec A indécidable.\\supposons B décidable. Alors il existe une MT $\mu$ totale qui reconnaît B. \\
+Comme $A<=_{m}B$ il existe F calculable telle que  $\forall x \in \Sigma*$  $x \in A <-> f(x) \in B$\\alors il existe ne MT F tot qui calcule f.\\À partir de F et $\mu$ on construit une MT $\alpha$ qui reconnaît A :
+\begin{itemize}
+\item sur l'entrée x
+\item $\alpha$ applique F pour obtenir f(x)
+\item puis $\alpha$ appelle $\mu$ sur l'entrée f(x) 
+\end{itemize}
+Par construction $\forall x \in \Sigma*$ $x \in A <-> \Phi_{A}(x) = OUI$\\ $\alpha$ est totale, on en déduit que A est décidable,  CONTRADICTION!! Donc B est indécidable.
+
+\paragraph{Propostion} si $A<=_{m}B$ alors  $!A<=_{m}!B$. 
+\paragraph{Idée} 
+$\forall x \in \Sigma*$  $x \in A <-> f(x) \in B$\\donc $\forall x \notin \Sigma*$  $x \in A <-> f(x) \notin B$\\$\forall x \in \Sigma*$  $x \in !A <-> f(x) \in !B$
+\paragraph{Proposition} si $!A<=_{m}!B$ et B est rec.enum, alors a est rec.enum
+\paragraph{Proposition} si $!A<=_{m}!B$ et A n'est pas rec.enum alors B n'est pas rec.enum\\ARRET rec.enum et pas co.rec.enum.\\!ARRET co.rec.enum et non-rec.enum
+\paragraph{EQTM : égalité entre machines de Turing} 
+\begin{itemize}
+\item Entrée : <M1,M2> paire de MT
+\item question : Est ce que L(M1) = L(M2)?
+\end{itemize}
+
+\paragraph{Théorème} EQTM n'est ni rec.Enum , si co-rec.enum.
+\paragraph{Proposition} si $A<=_{m}B$ et A non rec.enum alors b non rec.enum
+\paragraph{Corollaire} si $ARRET<=_{m}!A$ alors A est non rec.enum.\\\textbf{Démonstration}  On sais que !ARRET n'est pas rec.enum , et si $!ARRET<=_{m}A$  alors a non rec.enum , on a $ARRET<=_{m}!A$ ssi $!ARRET<=_{m}A$
+
+\paragraph{Démonstration du théorème}
+\begin{itemize}
+\item montrons que $ARRET<=_{m}!EQTM$ , i.e EQTM non rec.enum.\\À <M,x> on associe récursivement la paire
+\begin{itemize}
+\item M1 : le MT qui calcule $\bot$
+\item M2 : 
+\begin{itemize}
+\item sur l'entrée y
+\item simuler M sur x
+\end{itemize}
+\end{itemize}
+\item Montrons que $ARRET<=_{m}EQTM$, i.e !EQTM non rec.enum.\\À <M,x> on associe récursivement la paire
+\begin{itemize}
+\item M1  :la MT qui s’arrête tout le temps et répond CAKE.
+\item M2 : 
+\begin{itemize}
+\item sur l'entrée  y 
+\item simuler M sur x
+\item répondre CAKE.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\paragraph{Définition} A $\cong$ si $A<=_{m}B$ et $BT<=_{m}A$
 \end{document}
