@@ -139,4 +139,63 @@ intervalle interquartile : \begin{itemize}
 \item variables dichotomique : même définitions que pour les variables qualitatives
 \item variable multicatégorielles : $\sigma^{2}(X) = p_{1}*...*p_{j}$ ou $p_{i}$ est la proportion d'apparition de la classe.
 \end{itemize}
+
+
+\paragraph{Coefficient de Pearson}
+\date{13 février 2013}
+\paragraph{Moment d'ordre r, en langage R} $sum[(x-mean(x))^{3})/length(x)]^2$ 
+\paragraph{mesures d'aplatissement}
+coefficient de Pearson $\beta_{2}$ = $\frac{u^{4}}{u_{2}^{2}}$ d’autant plus faible que la courbe est platicurtique.\\coefficient de Fisher $\gamma{2}=\beta_{2}-3$
+
+\section{Rappels de probabilité}
+\subsection{Notion de base}
+\paragraph{} 
+Expérience aléatoire : on connaît l'ensemble des résultats possible, on ne peut prédire le résultat\\ Ensemble fondamental $\Omega$ de tout les résultats possibles de l'expérience\\Événement : résultat , événement vide = $\emptyset$
+\paragraph{exemple : lancer de deux dés successifs} 
+\begin{itemize}
+\item événement vide $\emptyset$  :somme des deux lancer =  0
+\item événement certain $\Omega$ somme < 13
+\end{itemize}
+\paragraph{Opérations} 
+\begin{itemize}
+\item Négation
+\item conjonction
+\item disjonction 
+\end{itemize}
+
+\textbf{Propriétés: Axiome}
+\begin{itemize}
+\item  $p(\Omega) = 1$.
+\item $p(\emptyset)=0$
+\item $p(!A)=1-p(A)$
+\item $p(A \cup B) = p(A)+p(B)$
+\end{itemize}
+
+\textbf{Exemple : deux billets pour quatre enfants, 2 filles(b et d), deux garçons (a et c),  quelle probabilité de choisir un gars et une fille?}
+\begin{itemize}
+\item événement $\Omega$ : on choisit deux personnes {a b, a c, a d, b c, b d, c d}. Donc chaque couple a une probabilité de $\frac{1}{6}$
+\item E = {a b, a d, b c, b d}. donc $\frac{4}{6}$
+\end{itemize}
+\paragraph{probabilités conditionnelles}
+probabilité de B sachant A \\ 
+$P(B|A) = \frac{P(A \cap B)}{P(A)}$\\
+\\
+\textbf{Théorème de Bayes} $P(B|A).P(A) = P(A|B).P(B)$
+\paragraph{Exemple concret} classification supervisée\\
+Utilisation du classifier bayésien.\\
+Il nous dit que les données sont décrites par des attributs $A_1,A_2,...,A_n$.\\Et sont étiquetées par leur classe.\\
+Étant donnée une observation $A_1=v_1, A_2=v_2,...,A_n=v_n$\\
+déterminer la classe.
+\\
+\begin{center}
+$argmax_{C \in Classes} P(C|A_1=v_1, A_2=v_2,...,A_n=v_n$) =\\
+$ argmax_{C \in Classes} \frac{P(A_1=v_1, A_2=v_2,...,A_n=v_n|C)*P_{r}(C)}{P(A_1=v_1, A_2=v_2,...,A_n)}$\\
+=$ argmax_{C \in Classes} P(A_1=v_1, A_2=v_2,...,A_n=v_n|C)*P_{r}(C)$\\
+\end{center} 
+2 classes, 2 attributs $A_1,A_2$ qui ont 2 valeurs\\ 
+$2+ 4*2 = 10$ probabilités à calculer, c'est beaucoup\\
+\textbf{Hypothèse : }attributs indépendants/à la classe\\
+$P(A_1=v_1, A_2=v_2,...,A_n=v_n|C)=P(A_1=v_1|C)*...*P(A_n=v_n|C)$
+\paragraph{Indépendance} $P(A \cap B) = P(A)*P(B)$
+\paragraph{Indépendance/à la classe} $P(A \cap B | C) = P(A|C) * P(B|C)$
 \end{document}
