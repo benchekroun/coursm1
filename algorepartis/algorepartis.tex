@@ -179,4 +179,52 @@ Exécution d'un tour ;
 \item les processus connaissent un majorant du diamètre
 \end{itemize}
 \end{itemize}
+
+\section{\date{14 Février 2013}}
+\paragraph{défaillance de processus} défaillance byzantine : chaque processus envoie sa valeur, le cas de l’arrêt fonctionne, nb rang = nb panne +1. byz: un menteur au moment du choix, va envoyer au suivant une mauvaise valeur .
+\paragraph{collecte d'information exponentielle} valeur transmise le long d'un réseau en forme d'arbre. la première couche correspond au résultats reçu à l'étape numéro 1., le seconde correspond à la 2eme étape. le dernier chiffre du numéro marqué au dessus de la "feuille" c’est le dernier processus à avoir envoyer le message reçu. on peut ainsi remonter le chemin parcouru par le message.\\\\Chaque processus utilise la même structure d'arbre.\\les noeuds sont étiquetés par des valeurs\\\textbf{initialement} les têtes sont étiquetées par la valeur du noeuds\\\textbf{round r> 1} \begin{itemize}
+\item envoyer le niveau r-1 à tous nœuds (soi même aussi)
+\item utiliser les messages reçu pour étiqueter le niveau r
+\item si pas de message utiliser $\bot$
+\end{itemize}
+\paragraph{règle de choix pour le cas de la panne d'arret : }
+\begin{itemize}
+\item triviale
+\item on prend toutes les étiquettes de l'arbre
+\item si un seul élément , on le prend
+\item sinon on prend par défaut $v_0$
+\end{itemize}
+\paragraph{preuve et complexité}
+\begin{itemize}
+\item preuve  :  il y aura toujours un moment ou il n'y a pas de panne
+\item complexité : nombre de panne +1 rounds, il envoi a tous ces voisins
+\item complexité en nombre de message  : n-1 * nombre de pannes
+\item défaut:  nombre de feuilles peut croître exponentiellement
+\end{itemize}
+
+\subsection{Algorithmes:  pannes byzantines}
+\begin{itemize}
+\item conditions : 
+\begin{itemize}
+\item accord : pas deux processus sans panne décide différemment
+\item si tous les processus sans panne une valeur identique alors elle est choisie par tous les processus sans panne
+\item Terminaison : tous les processus sans panne font un choix
+\end{itemize}
+\item EIG algorithme utilise : 
+\begin{itemize}
+\item un abre
+\item f+1 rounds
+\item n > 3f
+\end{itemize}
+\end{itemize}
+
+\paragraph{mauvais exemple} 3 processus, 1 panne
+supposons n > 3F : \\nouvelle règle de décision : 
+\begin{itemize}
+\item notons val(x) , la valeur du nœud x de l'arbre.
+\item redécorer l'arbre 
+\begin{itemize}
+\item parcours de bas en haut pour trouver la valeur la plus fréquente.
+\end{itemize}
+\end{itemize}
 \end{document}
