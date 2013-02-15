@@ -1,0 +1,43 @@
+\select@language {french}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {1}Motivation}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {2}Langage R}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{commande de bases}{4}
+\contentsline {paragraph}{Vecteur Logique}{4}
+\contentsline {paragraph}{Vecteur de caract\IeC {\`e}res}{4}
+\contentsline {paragraph}{Index des vecteurs}{4}
+\contentsline {paragraph}{S\IeC {\'e}quences}{4}
+\contentsline {paragraph}{Factor}{5}
+\contentsline {paragraph}{Fonctions}{5}
+\contentsline {paragraph}{Tableau - Matrices}{5}
+\contentsline {paragraph}{Tableaux d'indices}{5}
+\contentsline {paragraph}{Listes}{5}
+\contentsline {paragraph}{Data frame}{5}
+\contentsline {paragraph}{Lecture des fichiers}{5}
+\contentsline {paragraph}{R\IeC {\'e}seau de neurones}{6}
+\contentsline {section}{\numberline {3}Compl\IeC {\'e}ments sur R}{6}
+\contentsline {subsection}{\numberline {3.1}Un peu de terminologie}{6}
+\contentsline {paragraph}{plot}{6}
+\contentsline {paragraph}{variables qualitatives}{6}
+\contentsline {section}{\numberline {4}Graphique sous R}{7}
+\contentsline {paragraph}{Continuons la partie repr\IeC {\'e}sentation}{7}
+\contentsline {paragraph}{Peut \IeC {\^e}tre un cours de rappel de proba}{7}
+\contentsline {paragraph}{Propri\IeC {\'e}t\IeC {\'e} de la moyenne}{7}
+\contentsline {paragraph}{M\IeC {\'e}diane}{7}
+\contentsline {paragraph}{Mode}{8}
+\contentsline {paragraph}{Comparaison}{8}
+\contentsline {paragraph}{Variance}{8}
+\contentsline {paragraph}{Autre fa\IeC {\c c}ons de calculer la variance}{8}
+\contentsline {paragraph}{Autres mesures}{8}
+\contentsline {paragraph}{Coefficient de Pearson}{9}
+\contentsline {paragraph}{Moment d'ordre r, en langage R}{9}
+\contentsline {paragraph}{mesures d'aplatissement}{9}
+\contentsline {section}{\numberline {5}Rappels de probabilit\IeC {\'e}}{9}
+\contentsline {subsection}{\numberline {5.1}Notion de base}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{exemple : lancer de deux d\IeC {\'e}s successifs}{9}
+\contentsline {paragraph}{Op\IeC {\'e}rations}{9}
+\contentsline {paragraph}{probabilit\IeC {\'e}s conditionnelles}{10}
+\contentsline {paragraph}{Exemple concret}{10}

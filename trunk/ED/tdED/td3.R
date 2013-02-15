@@ -7,7 +7,7 @@ poidsFem <- da$poids[da$sexe == "feminin"]
 par(mfrow=c(1,2))
 hHom <- hist(poidsHom)
 hFem <- hist(poidsFem)
-boxPlotHom <- boxplot(poidsHom)
-boxPlotFem <- boxplot(poidsFem)
+#boxPlotHom <- boxplot(poidsHom)
+#boxPlotFem <- boxplot(poidsFem)
 ex2 <- c(61,62,67,68,69,76,77,78,79)
 

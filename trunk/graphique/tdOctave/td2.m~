@@ -42,6 +42,7 @@ imgbruit = imnoise(imdb,'salt & pepper');
 %medfilter : filtre médian , remplace la valeur du pixel par la valeur médiane des pixels voisins, pour enlever le bruit
 bruitfilter = medfilt2(imgbruit);
 
+%Gaussienne du masque à la main
 g = sqrt(((imgmasque.*imgmasque2) + (imgmasque.*imgmasque2))./2);
 %g = g/1,414;
 
