@@ -1,0 +1,58 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Fondements de l'informatique}{3}
+\contentsline {section}{\numberline {2}Calculabilit\IeC {\'e}}{4}
+\contentsline {paragraph}{D\IeC {\'e}finition}{4}
+\contentsline {paragraph}{Remarque}{4}
+\contentsline {paragraph}{Intuitivement}{4}
+\contentsline {section}{\numberline {3}Motivation informelle(approche na\IeC {\"\i }ve)}{4}
+\contentsline {paragraph}{Remarque : }{5}
+\contentsline {paragraph}{Proposition : }{5}
+\contentsline {paragraph}{Proposition : }{5}
+\contentsline {paragraph}{D\IeC {\'e}monstration : }{5}
+\contentsline {paragraph}{imp-arr\IeC {\^e}t}{5}
+\contentsline {section}{\numberline {4}Machines de Turing}{7}
+\contentsline {subsection}{\numberline {4.1}D\IeC {\'e}finitions}{7}
+\contentsline {paragraph}{D\IeC {\'e}finition}{8}
+\contentsline {paragraph}{Proposition}{8}
+\contentsline {paragraph}{D\IeC {\'e}monstration}{8}
+\contentsline {section}{\numberline {5}Th\IeC {\`e}se de Chruch-Turing-Kleene}{9}
+\contentsline {paragraph}{Th\IeC {\`e}se}{9}
+\contentsline {paragraph}{Id\IeC {\'e}e : }{9}
+\contentsline {section}{\numberline {6}la machine universelle}{9}
+\contentsline {paragraph}{Proposition}{9}
+\contentsline {paragraph}{Proposition}{9}
+\contentsline {paragraph}{Principe de fonctionnement de U}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {section}{\numberline {7}Ind\IeC {\'e}cidabilit\IeC {\'e}}{9}
+\contentsline {paragraph}{Proposition}{9}
+\contentsline {paragraph}{Remarque : }{10}
+\contentsline {paragraph}{Th\IeC {\'e}or\IeC {\`e}me de l\IeC {\textquoteright }arr\IeC {\^e}t}{10}
+\contentsline {paragraph}{D\IeC {\'e}monstration}{10}
+\contentsline {paragraph}{Th\IeC {\'e}or\IeC {\`e}me de Rice}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {paragraph}{D\IeC {\'e}monstration}{11}
+\contentsline {paragraph}{Probl\IeC {\`e}me de correspondance de Post}{11}
+\contentsline {section}{\numberline {8}Interlude}{11}
+\contentsline {paragraph}{D\IeC {\'e}finition}{11}
+\contentsline {paragraph}{Proposition}{11}
+\contentsline {paragraph}{D\IeC {\'e}monstration}{12}
+\contentsline {paragraph}{Voici les dominos de T(<M,x>)}{12}
+\contentsline {section}{\numberline {9}Evaluation}{12}
+\contentsline {section}{\numberline {10}Corollaire}{14}
+\contentsline {paragraph}{D\IeC {\'e}monstration}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{R\IeC {\'e}ductions}{14}
+\contentsline {paragraph}{D\IeC {\'e}finition}{15}
+\contentsline {paragraph}{Proposition}{15}
+\contentsline {paragraph}{D\IeC {\'e}monstration}{15}
+\contentsline {paragraph}{Proposition}{15}
+\contentsline {paragraph}{D\IeC {\'e}monstration}{15}
+\contentsline {paragraph}{Propostion}{15}
+\contentsline {paragraph}{Id\IeC {\'e}e}{15}
+\contentsline {paragraph}{Proposition}{15}
+\contentsline {paragraph}{Proposition}{16}
+\contentsline {paragraph}{EQTM : \IeC {\'e}galit\IeC {\'e} entre machines de Turing}{16}
+\contentsline {paragraph}{Th\IeC {\'e}or\IeC {\`e}me}{16}
+\contentsline {paragraph}{Proposition}{16}
+\contentsline {paragraph}{Corollaire}{16}
+\contentsline {paragraph}{D\IeC {\'e}monstration du th\IeC {\'e}or\IeC {\`e}me}{16}
