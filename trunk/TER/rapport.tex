@@ -67,15 +67,28 @@ données, visualiser en 3D après préparation des données, sélectionner des o
 \item Interaction
 \item Documentation des technologies à utiliser
 \end{itemize}
-\paragraph{Montée en charge} Comme expliqué plus haut, nous allons différer de la méthode utilisée dans Explorer3D pour toute la partie affichage. Pour savoir si les solutions choisies sont acceptables, il sera nécessaire de faire des tests de montée en charge.\paragraph{} Pour cela nous allons tester la réactivité du système aux différents événements, que ce soit des demandes de calculs,ou des interactions avec la semaine 3D (rotation, zoom, déplacement, etc...).\paragraph{} Pour réaliser ces tests , nous procéderons à la main aux différentes manipulation, et nous nous baserons a notre jugement en terme de vitesse de réponse, car il n'est pas facile de chronométrer la réactivité de la scène 3D, nous allons bien entendu refaire ces test avec un nombre de plus en plus grand d'objet à afficher, pour pouvoir déterminer une limite en terme de quantité d'objet représentable.
+\subsection{Montée en charge}
+\paragraph{} Comme expliqué plus haut, nous allons différer de la méthode utilisée dans Explorer3D pour toute la partie affichage. Pour savoir si les solutions choisies sont acceptables, il sera nécessaire de faire des tests de montée en charge.\paragraph{} Pour cela nous allons tester la réactivité du système aux différents événements, que ce soit des demandes de calculs, ou des interactions avec la scène 3D (rotation, zoom, déplacement, etc...).\paragraph{} Pour réaliser ces tests, nous procéderons à la main aux différentes manipulations, et nous nous baserons sur notre jugement pour percevoir la vitesse de réponse, car il n'est pas facile de chronométrer la réactivité de la scène 3D, nous allons bien entendu refaire ces test avec un nombre de plus en plus grand d'objets à afficher, pour pouvoir déterminer une limite en terme de quantité d'objets représentables.
 \newpage
 \section{Besoins fonctionnels}
-\paragraph{} Les principaux besoins fonctionnels sont les fonctionnalités d'Explorer3D qu'il est nécessaire de porter sous R, du moins autant qu'il sera possible d'en porter.
-\paragraph{} Nous allons lister les différentes fonctionnalités souhaitées et nous les commenterons.
+\paragraph{} 
+tout d'abord, s'agissant avant tout d'une étude, les besoins fonctionnels ne sont pas très poussés, néanmoins l'étude doit montrer la faisabilité de:\begin{itemize}
+\item gestion de fenêtres de dialogue permettant le chargement de données tabulaire, le calcul de projections, l'ouverture d'une fenêtre 3D interactive.
+\item fenêtre 3D interactive, permettant notamment :
+\item zoom et déplacement
+\item mais aussi sélection d'objet par clic
+\item mise en surbrillance des objets sélectionnés
+\item affichage dynamique du repositionnement spatial des objets
+\item ajout au besoin d'objets supplémentaires (e.g. ellipses)
+\item coexistence de plusieurs fenêtres 3D
+\item mécanisme similaire à la "loupe" de Explorer3D (étudier des pistes permettant d'obtenir...)
+\item AJOUT : possibilité de se mettre en écoute sur un port pour réception de commandes de type jeu de données + affichage.
+\end{itemize}
 \newpage
 \section{Description des prototypes}
 \newpage
 \section{Planning, affectation des taches}
+\paragraph{} Dans ce TER, il est facile de différencier deux grandes parties, car il est possible de traiter la partie concernant la scène 3D et la partie interface utilisateur séparément. Nous tiendrons compte de cette séparation pour la répartition des taches.
 \newpage
 \section{Bibliographie} 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  12 FEB 2013 20:02
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  18 FEB 2013 09:51
 entering extended mode
  %&-line parsing enabled.
 **rapport.tex
@@ -308,7 +308,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 16.
+)
 \tf@toc=\write3
 \openout3 = `rapport.toc'.
 
@@ -323,22 +328,23 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
  [5] [6] [7]
 [8] [9] [10] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 1369 strings out of 493848
- 15621 string characters out of 1152824
+ 1373 strings out of 493848
+ 15671 string characters out of 1152824
  72231 words of memory out of 3000000
- 4669 multiletter control sequences out of 15000+50000
- 10990 words of font info for 29 fonts, out of 3000000 for 9000
+ 4672 multiletter control sequences out of 15000+50000
+ 11766 words of font info for 30 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 24i,6n,24p,938b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 24i,6n,24p,932b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-sup
 er-t1.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on rapport.pdf (10 pages, 115768 bytes).
+ts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfrm1728.pfb>
+Output written on rapport.pdf (10 pages, 130966 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
