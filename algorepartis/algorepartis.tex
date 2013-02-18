@@ -180,7 +180,8 @@ Exécution d'un tour ;
 \end{itemize}
 \end{itemize}
 
-\section{\date{14 Février 2013}}
+\section{}
+\date{14 Février 2013}
 \paragraph{défaillance de processus} défaillance byzantine : chaque processus envoie sa valeur, le cas de l’arrêt fonctionne, nb rang = nb panne +1. byz: un menteur au moment du choix, va envoyer au suivant une mauvaise valeur .
 \paragraph{collecte d'information exponentielle} valeur transmise le long d'un réseau en forme d'arbre. la première couche correspond au résultats reçu à l'étape numéro 1., le seconde correspond à la 2eme étape. le dernier chiffre du numéro marqué au dessus de la "feuille" c’est le dernier processus à avoir envoyer le message reçu. on peut ainsi remonter le chemin parcouru par le message.\\\\Chaque processus utilise la même structure d'arbre.\\les noeuds sont étiquetés par des valeurs\\\textbf{initialement} les têtes sont étiquetées par la valeur du noeuds\\\textbf{round r> 1} \begin{itemize}
 \item envoyer le niveau r-1 à tous nœuds (soi même aussi)
@@ -227,4 +228,21 @@ supposons n > 3F : \\nouvelle règle de décision :
 \item parcours de bas en haut pour trouver la valeur la plus fréquente.
 \end{itemize}
 \end{itemize}
+\newpage
+\date{18 Février 2013}
+\section{Modèles asynchrones}
+\subsection{réseaux asynchrones}
+\paragraph{send/recv de  message}
+Graphe G = (e,v), processus associé à chaque noeud et, un canal associé à chaque arc.\\\\\textbf{processus} interface utilisateur : inv, resp.\\problème spécifié en terme de trace autorisées au niveau utilisateur.
+\paragraph{Canaux} différnets types de canaux : FIFO fiable, garantie fiable : perte, duplication, pas d'ordre.\\Peut ^etre définie comme une fonction sur un message d'entrée vers les messages de sortie. \\intégrité : préserve le message\\pas de perte\\pas de duplication\\respecte l'ordre.\\\\\textbf{broadcast et multicast} FIFO fiables enttre chaque noeud\\différents processus peuvent recevoir de différents émetteurs , mais sans contrainte d'ordre.
+\subsection{Algorithmes sur des réseau asynchrones}
+\paragraph{}Supposons que des FIFO fiables.
+\begin{itemize}
+\item Élection sur un anneau
+\item idem sur un réseau
+\item arbre couvrant minimum
+\end{itemize}
+
+\paragraph{} hypothèse : G est un anneau , unidirectionnel ou bidirectionnel, nom pour les voisins , uids\\\\ Il stocke ses messages dans sa fifo locale et attend que le canal soit libre pour envoyer.
+\paragraph{Algorithme de Peterson} Baser sur la notion de phases . \\ Un processus est actif ou passif, les processus ne fond que relayer les messages\\Dans chaque phase la moitié des processus actif devient inactif, ainsi l’élection ne prend au plus n log n phases.\\\\\textbf{Phase 1 : } Envoyer UID de deux prédécesseurs, reste actif si l'uid du milieu est max.\\v autrement dit, chaque porcessus attend de recevoir les uids de ses deux prédecessurs, ainsi , il envoi son uid au suivant, et soit les trois uids recus, si celui du milieu n'est pas le max des trois, alors la processus passe en inactif(relay) et ne fera que passer des messages. Sinnon , il prend l'uid du milieu  et reste actif.\\
 \end{document}
