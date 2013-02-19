@@ -11,6 +11,7 @@
 \contentsline {paragraph}{D\IeC {\'e}monstration : }{5}
 \contentsline {paragraph}{imp-arr\IeC {\^e}t}{5}
 \contentsline {section}{\numberline {4}Machines de Turing}{7}
+\contentsline {paragraph}{}{7}
 \contentsline {subsection}{\numberline {4.1}D\IeC {\'e}finitions}{7}
 \contentsline {paragraph}{D\IeC {\'e}finition}{8}
 \contentsline {paragraph}{Proposition}{8}
@@ -56,3 +57,17 @@
 \contentsline {paragraph}{Proposition}{16}
 \contentsline {paragraph}{Corollaire}{16}
 \contentsline {paragraph}{D\IeC {\'e}monstration du th\IeC {\'e}or\IeC {\`e}me}{16}
+\contentsline {paragraph}{D\IeC {\'e}finition}{16}
+\contentsline {section}{\numberline {11}Points Fixes et r\IeC {\'e}cursion}{16}
+\contentsline {paragraph}{Paradoxe }{16}
+\contentsline {subsection}{\numberline {11.1}Auto-r\IeC {\'e}f\IeC {\'e}rence}{16}
+\contentsline {paragraph}{proposition}{16}
+\contentsline {paragraph}{A}{17}
+\contentsline {paragraph}{B}{17}
+\contentsline {paragraph}{ la machine A}{17}
+\contentsline {paragraph}{la machine B}{17}
+\contentsline {paragraph}{}{17}
+\contentsline {subsection}{\numberline {11.2}Th\IeC {\'e}or\IeC {\`e}me de r\IeC {\'e}cursion : }{18}
+\contentsline {paragraph}{Th\IeC {\'e}or\IeC {\`e}me }{18}
+\contentsline {section}{\numberline {12}Notions}{19}
+\contentsline {paragraph}{}{19}
