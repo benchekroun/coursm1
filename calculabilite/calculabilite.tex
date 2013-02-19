@@ -47,8 +47,10 @@ Est ce que $\phi$\_{p}(x) != $\perp$ \\\\On a montré que IMP-arrêt est indéci
 \item existence de fonctions d'évaluation partielle : s,s',...
 \end{itemize}
 La calculabilité s'intéresse aux propriétés des fonctions calculables qui sont indépendantes du modèles de calcul considéré
-\section{Machines de Turing} Les MT sont le modèle de calcul de référence du cours. Il s'agit d'un modèle de machine mécanique abstrait.C'est le modèle de référence en complexité. A.M.Turing  : On computable numbers with an application to the Entscheidungproblem.1936
-\subsection{Définitions} LE ruban est coupé en case, quantité finie d'information, on suppose qu'on a un alphabet fini qui nous permet d'écrire dans les cases du ruban, et le contenu d'un case c'est une lettre sur un alphabet fini.\\\\L’opérateur est une flèche qui pointe sur une case, il a le droit de mémoriser une quantité fini d'informations et est dans un certain état, cet état est lui aussi dans un alphabet fini , l'ensemble Q des états, il a différentes opérations possibles : lire et écrire dans la case pointée, il peut aussi changer d'état, il peux déplacer le pointeur vers la gauche ou la droite. Le programme c'est  : quoi faire quand on commence, que faire quand on a un couple état/lettre dans la case.\\\\\textbf{Définition : }Une MT est un octuplet (ensemble d'états(Q),$\Sigma$(alphabet d'entrée/sortie),$\Gamma$,lettre blanche (B), état initial(Q0), un état fini succès(Qoui), un ensemble d'état finaux échec(Qnon) et $\delta$ : la fonction de transition).\\\\\textbf{Définition : } Une configuration d'une MT M est un triplet (q,c,p) $\in$ Q * $\gamma$ exp{Z} x Z.\\\\\textbf{Définition : } Il existe une transition de la configuration (q,v,p) à la configuration (q',c',p') de M, notée \\(q,c,p |-(q',c',p')\\si$\delta$(q,c(p)) = (q',a,d)\\où $\forall$k$\in$Z c'(k)= a si k = p, c(k) sinon, et p'=  p-1 si d = <-, p si d= bas, et p+1 si d= ->\\\\\textbf{Remarque : }Dans une utilisation normale d'une MT le ruban est B presque partout. On préféreras noter uqv une configuration (q,c,p) telle que : u: ce qu'il y a de pas blanc avant la case, q l'état de la MT, et V ce qu'il y a après sur la bande.\\\\\textbf{Définition : } La configuration initiale de M sur l'entrée u $\in$ $\Sigma$* est la configuration q0u.\\\\\textbf{Définition} une configuration acceptante de M est une configuration UqouiV.\\\\\textbf{Définition : }une configuration de refus de M est une configuration UqnonV.\\\\La machine s'arrete lorsqu'elle atteint un état d’arrêt , c’est a dire l'état acceptant qoui ou l'état de refus qnon.\\\\\textbf{Remarque : }On noteras |-n n transitions successive, |-* = union des transitions(|- 0 l'identité).\\\\\textbf{Définition : }Le langage L(M) d'une MT m est l'ensemble des mots acceptés : L(M) = {u$\in$ $\Sigma$* | q0 u |- * VQuoiW}.\\\\\textbf{Définition : } Un langage est récursivement énumérable s'il est le langage d'une MT M, ie L= L(M).\\\\\textbf{Définition : } Un langage L est récursif s'il est le langage d'un MT qui s'arrete sur toute entité.\\\\\textbf{Exemple : } Langage des palindrome : L{u $\in$ {a,b}* | u est un palindrome}.\\\\ \textbf{Définition}un problème est décidable si son langage est récursif.\\exemple : le problème de l'arret :\\ l'entrée : une MT M et u un mot u $\in \Sigma^{*}$. Question Est que $\Phi_{M}(U) != \perp$?\\\\Langage associé : K = {wM,u | $\Phi_{M}(u) != \perp$}
+\section{Machines de Turing} 
+\paragraph{} Les MT sont le modèle de calcul de référence du cours. Il s'agit d'un modèle de machine mécanique abstrait.C'est le modèle de référence en complexité. A.M.Turing  : On computable numbers with an application to the Entscheidungproblem.1936
+\subsection{Définitions} 
+Le ruban est coupé en case, quantité finie d'information, on suppose qu'on a un alphabet fini qui nous permet d'écrire dans les cases du ruban, et le contenu d'un case c'est une lettre sur un alphabet fini.\\\\L’opérateur est une flèche qui pointe sur une case, il a le droit de mémoriser une quantité fini d'informations et est dans un certain état, cet état est lui aussi dans un alphabet fini , l'ensemble Q des états, il a différentes opérations possibles : lire et écrire dans la case pointée, il peut aussi changer d'état, il peux déplacer le pointeur vers la gauche ou la droite. Le programme c'est  : quoi faire quand on commence, que faire quand on a un couple état/lettre dans la case.\\\\\textbf{Définition : }Une MT est un octuplet (ensemble d'états(Q),$\Sigma$(alphabet d'entrée/sortie),$\Gamma$,lettre blanche (B), état initial(Q0), un état fini succès(Qoui), un ensemble d'état finaux échec(Qnon) et $\delta$ : la fonction de transition).\\\\\textbf{Définition : } Une configuration d'une MT M est un triplet (q,c,p) $\in$ Q * $\gamma$ exp{Z} x Z.\\\\\textbf{Définition : } Il existe une transition de la configuration (q,v,p) à la configuration (q',c',p') de M, notée \\(q,c,p |-(q',c',p')\\si$\delta$(q,c(p)) = (q',a,d)\\où $\forall$k$\in$Z c'(k)= a si k = p, c(k) sinon, et p'=  p-1 si d = <-, p si d= bas, et p+1 si d= ->\\\\\textbf{Remarque : }Dans une utilisation normale d'une MT le ruban est B presque partout. On préféreras noter uqv une configuration (q,c,p) telle que : u: ce qu'il y a de pas blanc avant la case, q l'état de la MT, et V ce qu'il y a après sur la bande.\\\\\textbf{Définition : } La configuration initiale de M sur l'entrée u $\in$ $\Sigma$* est la configuration q0u.\\\\\textbf{Définition} une configuration acceptante de M est une configuration UqouiV.\\\\\textbf{Définition : }une configuration de refus de M est une configuration UqnonV.\\\\La machine s'arrete lorsqu'elle atteint un état d’arrêt , c’est a dire l'état acceptant qoui ou l'état de refus qnon.\\\\\textbf{Remarque : }On noteras |-n n transitions successive, |-* = union des transitions(|- 0 l'identité).\\\\\textbf{Définition : }Le langage L(M) d'une MT m est l'ensemble des mots acceptés : L(M) = {u$\in$ $\Sigma$* | q0 u |- * VQuoiW}.\\\\\textbf{Définition : } Un langage est récursivement énumérable s'il est le langage d'une MT M, ie L= L(M).\\\\\textbf{Définition : } Un langage L est récursif s'il est le langage d'un MT qui s'arrete sur toute entité.\\\\\textbf{Exemple : } Langage des palindrome : L{u $\in$ {a,b}* | u est un palindrome}.\\\\ \textbf{Définition}un problème est décidable si son langage est récursif.\\exemple : le problème de l'arret :\\ l'entrée : une MT M et u un mot u $\in \Sigma^{*}$. Question Est que $\Phi_{M}(U) != \perp$?\\\\Langage associé : K = {wM,u | $\Phi_{M}(u) != \perp$}
 \paragraph{Définition}
 Une fonction partielle f: $\Sigma* -> \Sigma*$ est calculable si il existe une MT M qui calcule F, c'est a dire que $\forall u \in \Sigma*$ \begin{itemize}
 \item $q_{0} \vdash^{*} vq_{oui}f(u) si f(u) != \perp$
@@ -202,7 +204,8 @@ T(<M,x>) admet pour solutions les traces acceptables de M sur l'entrée x. MPCP 
 \end{itemize}
 et pour finir une CT de 2h sur tout
 \newpage
-\section{Corollaire} PCP est indécidable , c'est une sorte de dominos qui se collent les uns des autres.\\\\
+\section{Corollaire}
+ PCP est indécidable , c'est une sorte de dominos qui se collent les uns des autres.\\\\
 \paragraph{Démonstration} On va transformer récursivement une instance donnée de MPCP $\tau$ en une instance $\tau'$ de PCP de sorte que $\tau$ possède une solution si et seulement si $\tau'$ en possède une.\\
 Dans MPCP, on est obligé de poser en premier le premier domino de la liste. Il existe donc des solution de PCP qui ne sont pas solution de MPCP.\\ $[\dfrac{aa}{a}]$ $[\dfrac{bb}{ab}]$ 
 $[\dfrac{b}{bb}]$ $[\dfrac{bb}{b}]$ \\\\
@@ -291,4 +294,92 @@ $\forall x \in \Sigma*$  $x \in A <-> f(x) \in B$\\donc $\forall x \notin \Sigma
 \end{itemize}
 \end{itemize}
 \paragraph{Définition} A $\cong$ si $A<=_{m}B$ et $BT<=_{m}A$
+
+
+\section{Points Fixes et récursion}
+\paragraph{Paradoxe } Les êtres vivants sont des machines.\\Les êtres vivants sont capables de s'(auto)-reproduire.\\Les machines ne peuvent pas se reproduire.\\Ce dernier point est faux.
+\subsection{Auto-référence}
+\paragraph{proposition} Il existe une MT T qui produit, quelle que soit l'entrée ne description d'elle même.\\\textbf{lemme 1 : }Il existe une fonction calculable $q:\Sigma^*->\Sigma^*$ totale que à x associe une MT $P_x$ qui sur toute entrée produit x et s’arrête.\\\textbf{Démonstration} la MT $Q$ suivante calcule q :
+\begin{itemize}
+\item Sur l'entrée x : 
+\begin{itemize}
+\item soit $P_x$ la MT suivante
+\begin{itemize}
+\item sur l'entrée y:
+\begin{itemize}
+\item effacer y
+\item écrire x
+\item s'arreter
+\end{itemize}
+\end{itemize}
+\item écrire $P_x$
+\item s'arreter
+\end{itemize}
+\end{itemize}
+\textbf{Démonstration}\\\indent $S$ est décomposée en deux MT A et B exécutées l'une après l'autre :
+\begin{itemize}
+\item A produit une description de B
+\item B combien une description de A et de B.
+\item cela produit une description de A.B i.e $S$
+\end{itemize}
+\paragraph{A} c’est exactement $P_B$.
+\paragraph{B} on s'interdit d'utiliser A dans la définition de B , sinon auto-référence et problème. Par contre on a le droit d'utiliser l'entrée de B , c’est à dire la sortie de A c'est à dire une description de B. À partir de B , on calcule $q(B) = P_B  =A$, on le combine à B : c'est $S$! On l'écrit et on arrête.
+\paragraph{ la machine A} c'est $P_B$
+\paragraph{la machine B} \begin{itemize}
+\item \underline{Sur l'entrée $M$}
+\begin{itemize}
+\item calculer $q(M)$
+\item combiner $q(M)$ et $M$
+\item écrire la MT obtenue
+\item s’arrêter.
+\end{itemize}
+\end{itemize}
+$S$ = Combinaison de A et B, ou $S$ = résultat de l'exécution de B sur B.
+\paragraph{} À l'exécution , $S$ se comporte ainsi :
+\begin{itemize}
+\item[1] On, exécute A, i.e, écrit B sur le ruban.
+\item[2] On exécute B sur la sortie de A, i.e la description de B.
+\begin{itemize}
+\item calculer q(B)
+\item Combiner q(B) et B, i.e $S$
+\item écrire $S$
+\end{itemize}
+\end{itemize}
+\newpage
+\subsection{Théorème de récursion : } 
+\paragraph{Théorème } Soit $T$ une machine de Turing qui calcule une fonction t : qui prend deux paramètres  : $\Sigma^*x\Sigma^*->\Sigma^*$. Il existe une MT $R$ qui calcule r:$\Sigma^*->\Sigma^*$ qui vérifie :\\\indent$\forall x\in \Sigma^*$ $r(x) = t(<R,x>)$\\\\\indent\textbf{Démonstration : } Même schéma de preuve que précédemment. c'est B qui fait tout le travail.\\\indent\textbf{B :}\begin{itemize}
+\item sur l'entrée <<B,T>,x> : 
+\begin{itemize}
+\item Calculer A = q'(<B,T>)
+\item combiner A,B, et T -> R
+\item exécuter T sur l'entrée <R,x>
+\end{itemize}
+\end{itemize} 
+$R \cong P'_{<B,T>} -> B -> T -> ruban$ \\\\\indent\textbf{Moralité : }On a le droit maintenant de décrire des MT en ajoutant <<obtenir une description de M>> dans la description de M.\\ex:\begin{itemize}
+\item S sur l'entrée x:
+\begin{itemize}
+\item obtenir une description de S
+\item l'écrire
+\item s'arreter
+\end{itemize}
+\end{itemize}
+ex : Une preuve alternative de l'indécidabilité de l’arrêt.
+\begin{itemize}
+\item Supposons l’arrêt décidable par une MT $\hslash$
+\item on construit alors une MT $\wp$ comme suit
+\begin{itemize}
+\item sur l'entrée x:
+\begin{itemize}
+\item Obtenir une description de P
+\item exécuter$ \hslash$ sur l'entrée <P,x>
+\item si la réponse est OUI alors boucler
+\item si la réponse est NON s’arrêter
+\end{itemize}
+\end{itemize}
+\end{itemize}
+Sur l'entrée x, par construction P s’arrête su et seulement si $\hslash(<P,x>)=NON$ , ie si et seulement si P ne s’arrête pas sur l'entrée x. CONTRADICTION!!!\\$\hslash$ n'existe pas , l’arrêt est indécidable.\\\indent Pour la saison 2 : aller voir la référence qui s'appelle Classical Recursive Theory
+\newpage
+\section{Notions}
+\paragraph{}
+Machines de Turing à 1 ruban ,déterministe.\\Fonction calculable$f:\Sigma^*->\Sigma^*$(partielle)\\Langage $L\subseteq\Sigma^*$ récursif, reconnu par une MT TOTALE au sens fort\\Langage récursivement énumérable, reconnu au sens faible\\Problème décidable , langage récursif\\Problème indécidable, langage non-récursif\\On a montré que le problème de l'arret est indécidable\\Théorème de Rice : tout problème qui caractérise les MT dont la fonction satisfait une certaine propriété est soit trivial, soit indécidable\\Notion de réduction , $\leq_m$. Pour montrer P indécidable, on montre ARRET $\leq_m$ P.\\Théorème de récursion. 
 \end{document}
