@@ -3,6 +3,10 @@
 \contentsline {paragraph}{}{3}
 \contentsline {paragraph}{}{3}
 \contentsline {section}{\numberline {2}Introduction du domaine}{4}
+\contentsline {paragraph}{La classification}{4}
+\contentsline {paragraph}{La classification supervis\IeC {\'e}e}{4}
+\contentsline {paragraph}{La classification non-supervis\IeC {\'e}e}{4}
+\contentsline {paragraph}{Le logiciel R}{4}
 \contentsline {section}{\numberline {3}Analyse de l'existant}{5}
 \contentsline {paragraph}{}{5}
 \contentsline {paragraph}{}{5}
@@ -13,13 +17,12 @@
 \contentsline {paragraph}{}{5}
 \contentsline {paragraph}{}{5}
 \contentsline {section}{\numberline {4}Besoins non fonctionnels}{6}
-\contentsline {subsection}{\numberline {4.1}Mont\IeC {\'e}e en charge}{6}
-\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{Mont\IeC {\'e}e en charge}{6}
 \contentsline {paragraph}{}{6}
 \contentsline {paragraph}{}{6}
 \contentsline {section}{\numberline {5}Besoins fonctionnels}{7}
 \contentsline {paragraph}{}{7}
+\contentsline {paragraph}{Gestion de fen\IeC {\^e}tres}{7}
 \contentsline {section}{\numberline {6}Description des prototypes}{8}
 \contentsline {section}{\numberline {7}Planning, affectation des taches}{9}
-\contentsline {paragraph}{}{9}
 \contentsline {section}{\numberline {8}Bibliographie}{10}

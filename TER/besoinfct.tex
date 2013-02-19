@@ -1,4 +1,27 @@
 \section{Besoins fonctionnels}
-\paragraph{} Les principaux besoins fonctionnels sont les fonctionnalités d'Explorer3D qu'il est nécessaire de porter sous R, du moins autant qu'il sera possible d'en porter.
-\paragraph{} Nous allons lister les différentes fonctionnalités souhaitées et nous les commenterons.
+\paragraph{} Les principaux besoins fonctionnels sont les fonctionnalités d'Explorer3D qu'il est nécessaire de porter sous R, du moins autant qu'il sera possible d'en porter.\\\\
+\indent Nous allons lister les différentes fonctionnalités souhaitées et nous les commenterons.
+
+\paragraph{Gestion de fenêtres} Nous souhaitons pouvoir fournir a l'utilisateur une interface graphique lui permettant d'agir sur les données, offrant diverses possibilités, telles que le chargement de données, ou la demande de calcul. Il doit aussi avoir la possibilité d'ouvrir une nouvelle fenêtre 3D interactive.\\\\\indent
+
+ Nous allons donc déterminer si il est possible de créer ces différentes fenêtres, aussi nous chercherons à savoir comment pourrions nous agir depuis cette interface utilisateur sur la ou les fenêtres 3D.\\\\\indent 
+ 
+ Nous allons maintenant préciser ce que nous attendons des fenêtres 3D.\\\\\indent Nous l'avons évoqué dans les besoins non fonctionnels, nous voulons avoir une fenêtre qui nous permettent d'afficher une très grand nombre d'objets, nous ne donnerons pas d'ordre de grandeur pour le moment, car nous en saurons plus après les premiers tests.
+- gestion de fenêtres de dialogue permettant le chargement de données tabulaire, le calcul de projections, l'ouverture d'une fenêtre 3D interactive.\\\\\indent
+
+Nous souhaitons aussi avoir la possibilité de modifier la scène 3D, plus précisément nous souhaitons connaître les possibilités de zoom et de déplacement de la scène dans la fenêtre 3D. Nous nous intéressons aussi à la rotation de la scène, nous aimerions pouvoir faire tourner la scène et ainsi avoir un autre point de vue de la répartition des objets.\\\\\indent
+
+Comme dans Explorer3D, nous voulons offrir la possibilité de sélectionner certain objets, par un clic sur l'objet dans la fenêtre 3D. il sera donc nécessaire de pouvoir connaître l'état d'un objet, s’il est sélectionné ou non. Ici Nous cherchons , plus qu'un coté algorithmique, à savoir comment pourrions nous, si possible, implémenter ça avec RGL. 
+
+
++- fenêtre 3D interactive, permettant notamment :
++- zoom et déplacement
+ - mais aussi sélection d'objet par clic
+ - mise en surbrillance des objets sélectionnés
+ - affichage dynamique du repositionnement spatial des objets
+ - ajout au besoin d'objets supplémentaires (e.g. ellipses)
+- coexistence de plusieurs fenêtres 3D
+- mécanisme similaire à la "loupe" de Explorer3D (étudier des pistes permettant d'obtenir...)
+- AJOUT : possibilité de se mettre en écoute sur un port pour réception de commandes de type jeu de données + affichage.
+
 \newpage
