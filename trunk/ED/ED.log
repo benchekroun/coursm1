@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  13 FEB 2013 15:11
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  20 FEB 2013 14:14
 entering extended mode
  %&-line parsing enabled.
 **ED.tex
@@ -397,6 +397,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--190
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
 [10] (./ED.aux) ) 
 Here is how much of TeX's memory you used:
  1379 strings out of 493848
@@ -420,7 +425,7 @@ ublic/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
 texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm17
 28.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on ED.pdf (10 pages, 252751 bytes).
+Output written on ED.pdf (10 pages, 257998 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
