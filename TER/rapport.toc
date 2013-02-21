@@ -23,6 +23,6 @@
 \contentsline {section}{\numberline {5}Besoins fonctionnels}{7}
 \contentsline {paragraph}{}{7}
 \contentsline {paragraph}{Gestion de fen\IeC {\^e}tres}{7}
-\contentsline {section}{\numberline {6}Description des prototypes}{8}
-\contentsline {section}{\numberline {7}Planning, affectation des taches}{9}
-\contentsline {section}{\numberline {8}Bibliographie}{10}
+\contentsline {section}{\numberline {6}Description des prototypes}{9}
+\contentsline {section}{\numberline {7}Planning, affectation des taches}{10}
+\contentsline {section}{\numberline {8}Bibliographie}{11}

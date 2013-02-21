@@ -2,7 +2,7 @@
 \paragraph{} Les principaux besoins fonctionnels sont les fonctionnalités d'Explorer3D qu'il est nécessaire de porter sous R, du moins autant qu'il sera possible d'en porter.\\\\
 \indent Nous allons lister les différentes fonctionnalités souhaitées et nous les commenterons.
 
-\paragraph{Gestion de fenêtres} Nous souhaitons pouvoir fournir a l'utilisateur une interface graphique lui permettant d'agir sur les données, offrant diverses possibilités, telles que le chargement de données, ou la demande de calcul. Il doit aussi avoir la possibilité d'ouvrir une nouvelle fenêtre 3D interactive.\\\\\indent
+\paragraph{} Nous souhaitons pouvoir fournir a l'utilisateur une interface graphique lui permettant d'agir sur les données, offrant diverses possibilités, telles que le chargement de données, ou la demande de calcul. Il doit aussi avoir la possibilité d'ouvrir une nouvelle fenêtre 3D interactive.\\\\\indent
 
  Nous allons donc déterminer si il est possible de créer ces différentes fenêtres, aussi nous chercherons à savoir comment pourrions nous agir depuis cette interface utilisateur sur la ou les fenêtres 3D.\\\\\indent 
  
@@ -12,13 +12,20 @@
 Nous souhaitons aussi avoir la possibilité de modifier la scène 3D, plus précisément nous souhaitons connaître les possibilités de zoom et de déplacement de la scène dans la fenêtre 3D. Nous nous intéressons aussi à la rotation de la scène, nous aimerions pouvoir faire tourner la scène et ainsi avoir un autre point de vue de la répartition des objets.\\\\\indent
 
 Comme dans Explorer3D, nous voulons offrir la possibilité de sélectionner certain objets, par un clic sur l'objet dans la fenêtre 3D. il sera donc nécessaire de pouvoir connaître l'état d'un objet, s’il est sélectionné ou non. Ici Nous cherchons , plus qu'un coté algorithmique, à savoir comment pourrions nous, si possible, implémenter ça avec RGL. 
+\\\\\indent
+
+Nus souhaiterions aussi avoir la possibilité de changer les propriétés des objets, par exemple la couleur, afin de pouvoir mettre en évidence les objets sélectionné, et ceux de manière la plus fluide et rapide possible.
+\\\\\indent
+
+Nous souhaitons aussi offrir la possibilité de repositionner les objets dans l'espace, et nous souhaitons pouvoir afficher dynamiquement ce repositionnement, nous chercherons ici a afficher une animation, et pas seulement rafraîchir la scène avec la nouvelle position de l'objet déplacé. 
+\\\\\indent
 
 
 +- fenêtre 3D interactive, permettant notamment :
 +- zoom et déplacement
- - mais aussi sélection d'objet par clic
- - mise en surbrillance des objets sélectionnés
- - affichage dynamique du repositionnement spatial des objets
++- mais aussi sélection d'objet par clic
++- mise en surbrillance des objets sélectionnés
++- affichage dynamique du repositionnement spatial des objets
  - ajout au besoin d'objets supplémentaires (e.g. ellipses)
 - coexistence de plusieurs fenêtres 3D
 - mécanisme similaire à la "loupe" de Explorer3D (étudier des pistes permettant d'obtenir...)
