@@ -1,0 +1,25 @@
+algues <- read.table("algae.txt", header=TRUE)
+resumeAlgues<- summary(algues)
+
+
+# creer une fonction qui calcule le nombre de lignes dans les quelles il ne manque aucune valeur.
+NrTotalNA <- function(X) {
+	manquantes <- X[!complete.cases(X),]
+	return (nrow(manquantes))
+}
+
+alguesClean <- na.omit(algues)
+tailleClean <- nrow(alguesClean)
+
+
+NrNARow <- function(x){
+sum(is.na(x))
+}
+
+manyNAs <- function(x,seuil){
+	cpt <- apply(x,1,NrNARow)
+	percent <- cpt/ncol(x)
+	return(x[percent < seuil,])
+}
+
+

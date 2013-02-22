@@ -1,0 +1,27 @@
+Erlang 
+-----
+Variable en majuscule
+affectatino avec = , mais une seule fois
+atom  : minuscule
+mettre des espaces dans uen chaine, entre ''
+les tuples c'est entre {,}
+listes [,]
+~ remplace le \
+io:format/1 , io: module d'E/S, format/1 : fonction à une parametre
+poiur écrire une fonction 
+
+fact(1) -> 1 ;
+fact(N) -> N*fact(N-1).
+
+En Erlang tous les processus ont un pid unique
+pid ! message pour envoyer un message
+
+receive 
+	pattern 1 -> act1;
+	...
+	after 54 -> actX // faire ça apres 54 unit de temps
+end
+
+flush() //vide la "boite aux lettres" 
+
+spawn/3 , en premier un nom de module, en second un nom de fonction du module, en dernier une liste d'arguments a passer à la fonction.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  20 FEB 2013 14:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  20 FEB 2013 15:32
 entering extended mode
  %&-line parsing enabled.
 **ED.tex
@@ -402,11 +402,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
-[10] (./ED.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
+
+ []
+
+[10]
+Overfull \hbox (0.30457pt too wide) in paragraph at lines 220--224
+\T1/cmr/m/n/10 la ma-chine fonc-tionne quand au moins deux tiers des com-po-san
+ts sont en marche. 
+ []
+
+[11] (./ED.aux) ) 
 Here is how much of TeX's memory you used:
  1379 strings out of 493848
  15972 string characters out of 1152824
- 74231 words of memory out of 3000000
+ 77231 words of memory out of 3000000
  4677 multiletter control sequences out of 15000+50000
  12079 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -425,9 +451,9 @@ ublic/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
 texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm17
 28.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on ED.pdf (10 pages, 257998 bytes).
+Output written on ED.pdf (11 pages, 264821 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
