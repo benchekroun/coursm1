@@ -204,4 +204,21 @@ $P(A_1=v_1, A_2=v_2,...,A_n=v_n|C)=P(A_1=v_1|C)*...*P(A_n=v_n|C)$
 \item F est croissante
 \item $\forall x , F(x) \in [0,1]$
 \end{itemize}
+\paragraph{Formule}
+Espérance  : $E(X)= \sum x_i p(x_i)$\\
+Variance $\sigma^2 = Var(X) = \sum (x_i -\mu)^2 . p(x_i) = E(X-\mu)^2$\\\\\textbf{Propriété de l'espérance et de la variance}
+\begin{itemize}
+\item E(a.X + B) = a.E(X) +b
+\item si X et Y sont indépendants : E(X.Y) = E(X).E(Y)
+\item Var(a.X+b) = $a^2$.Var(X)
+\end{itemize}
+\indent \textbf{loi conjointe , loi marginale}
+X : nombre de piles, Y : nombre de pile dans les deux premiers essais. On considère donc les probabilités d'avoir les événements X et Y, à savoir quel(s) événement(s) satisfont Y et X. si x et y sont indépendants $ p(x,y)  = p(x) * p(y)$. la covariance de deux ev indep est  0 , donc on calcule souvent cette donnée sur nos observations pour savoir si des ev sont indépendants.\\E(X) =$0*\frac{1}{8}+1*\frac{3}{8}+2*\frac{3}{8}+3*\frac{1}{8} = 12/8 = 3/2$\\\\E(Y) = $0*\frac{2}{8}+1*\frac{4}{8}+2*\frac{2}{8}= \frac{8}{8} = 1$\\\\
+\\loi binomiale : somme d'une série de Bernoulli (ensemble d'ev suivant la même loi)\\Probabilité d'avoir x succès sur n tirage : $P(X=x)=C_n^x * p^x * q^{n-x}$ avec $C_n^x = \frac{n!}{x!(n-x)!}$\\$\mu = n * p$ (somme de n variables de Bernoulli indépendantes)\\$\sigma^2 = n*p*q$\\\textbf{Exemple avec R} \\ 
+rXXXX:  génération de nombres aléatoires suivant la loi XXXX\\dXXXX étant donné un ensemble de valeurs, retourne la hauteur de la probabilité de distribution à chaque point.\\pXXXX : probabilité P(x$\leq$x) qu'un nombre tiré aléatoirement suivant cette loi soit inférieur à un nombre x donné.\\qXXXX : nombre X tel que P(X$\leq$x) soit égale à n , qui est donné.
+\subsection{Variable aléatoire continue} 
+Machine avec 24 composants \\
+probabilité qu'un composant tombe en panne : 0.2\\
+la machine fonctionne quand au moins deux tiers des composants sont en marche.\\
+Probabilité que la machine fonctionne.\\X nombre de composants en marche.\\P(X$\geq$16)=$\sum_{i=16}^{24} P(X=i) = \sum_{i=16}^{24} C_{24}^i (0.8)^i (0.2)^{24-i}$
 \end{document} 

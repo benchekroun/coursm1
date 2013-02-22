@@ -1,0 +1,28 @@
+algues <- read.table("algae.txt", header=TRUE)
+s<- summary(algues)
+attach(algues)
+yule <- function(X){
+	if(is.numeric(X)){
+		qs <- quantile(X,na.rm=T,names=FALSE)
+		Q1 <- qs[2]
+		med <- qs[3]
+		Q3 <- qs[4]
+		result <- ((Q3-med)-(med-Q1))/((Q3-med)+(med-Q1))
+ 		
+		return(result)
+	} else {
+		return (NA)
+	}
+} 
+#divise la fentre en deux
+par(mfrow=c(1,3))
+hmxph <-hist(mxPH);
+mn02 <-hist(mnO2);
+hcl <-hist(Cl);
+#divise la fentre en deux
+par(mfrow=c(1,1))
+res <- boxplot(oPO4,ylab='Orthophosphate (oPO4)')
+rr <- rug(jitter(oPO4),side=2)
+aa <- abline(h=mean(oPO4,na.rm=T),lty=2)
+
+outliers <- res$out
