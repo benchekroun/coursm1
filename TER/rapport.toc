@@ -8,17 +8,24 @@
 \contentsline {paragraph}{La classification non-supervis\IeC {\'e}e}{4}
 \contentsline {paragraph}{Le logiciel R}{4}
 \contentsline {section}{\numberline {3}Analyse de l'existant}{5}
+\contentsline {subsection}{\numberline {3.1}le logiciel R}{5}
 \contentsline {paragraph}{}{5}
 \contentsline {paragraph}{}{5}
 \contentsline {paragraph}{}{5}
 \contentsline {paragraph}{}{5}
 \contentsline {paragraph}{}{5}
 \contentsline {paragraph}{}{5}
-\contentsline {paragraph}{}{5}
-\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {3.2}Le logiciel Explorer3D}{5}
+\contentsline {subsection}{\numberline {3.3}Packages R utilisables}{5}
+\contentsline {subsubsection}{\numberline {3.3.1}RGL}{5}
+\contentsline {subsubsection}{\numberline {3.3.2}RGTK}{5}
 \contentsline {section}{\numberline {4}Besoins non fonctionnels}{6}
-\contentsline {paragraph}{Mont\IeC {\'e}e en charge}{6}
+\contentsline {subsection}{\numberline {4.1}Mont\IeC {\'e}e en charge}{6}
 \contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {subsection}{\numberline {4.2}Documentation des technologies}{6}
 \contentsline {paragraph}{}{6}
 \contentsline {section}{\numberline {5}Besoins fonctionnels}{7}
 \contentsline {paragraph}{}{7}
