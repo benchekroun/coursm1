@@ -1,8 +1,20 @@
 \section{Analyse de l'existant}
 \subsection{le logiciel R}
 \paragraph{}
-R est un logiciel de statistiques open source qui fonctionne par modules
-http://www.r-project.org/.
+
+Le logiciel R est à la fois un environnement interactif de calcul, en lignes de
+commandes, et un langage de programmation. Il existe sur différentes plateformes
+(Linux, MacOS et Windows). Il peut être utilisé pour des traitements de données
+ou des analyses statistiques. R est un logiciel libre, ouvert à la participation de
+développeurs extérieurs. En effet, l’environnement s’enrichit par l’intégration de
+packages provenant de la communauté ajoutant des modules et des fonctionnalités
+complémentaires au logiciel initial.\\\\
+
+\begin{center}
+\includegraphics[scale=0.7]{Rlogo.png}\\
+\textit{Le logiciel R}
+\end{center}
+
 \paragraph{}
 La communauté R est très active et de nombreux modules sont régulièrement proposés.
 R permet facilement de charger des données, de sortir des informations statistiques, de visualiser
@@ -12,16 +24,38 @@ Par défaut, R se présente sous la forme d'une ligne de commande. Il est cepend
 développer des interfaces utilisateur pour contrôler l'application ainsi que pour visualiser des
 résultats de traitement.
 
+\begin{center}
+\includegraphics[scale=0.7]{demarrage_r.png}\\
+\textit{Aperçu de la console R}
+\end{center}
+\newpage
+\paragraph{} 
+Le logiciel R nous permet de traiter des données tabulaires, sous forme de vecteurs, ou de data-frame (matrice contenant les instances de objets en ligne, avec un attribut par colonne). Il propose ensuite des opérations sur les vecteurs, tout en discriminant les objets par leurs attributs non numériques. Ce qui permet d’étiqueter les objets avant de faire des calculs et pouvoir ensuite différencier les résultats des calculs en fonction des étiquettes des objets.
+
+\paragraph{} On utilisera sans doute cette spécificité pour colorer les objets dans la fenêtre 3D, en fonction de leurs propriétés.
+
+\newpage
 
 \subsection{Le logiciel Explorer3D}
 \paragraph{}
 De notre côté, nous développons depuis plusieurs années un logiciel de visualisation de données
 doté d'une interface graphique 3D interactive. Ce logiciel est écrit en Java.
 http://www.univ-orleans.fr/lifo/software/Explorer3D/
+
+\begin{center}
+\includegraphics[scale=0.3]{explorer3d.jpg}\\
+\textit{Explorer3D}
+\end{center}
+
 \paragraph{}
 Nous avons acquis une bonne maîtrise de la structuration d'un tel outil afin de le rendre évolutif.
+\newpage
+\paragraph{}
 Nous avons également mis en place un certain nombre de fonctionnalités interactives.
-Nous étudions maintenant les possibilités d'interactions entre ce logiciel et la plateforme R, afin d'intégrer rapidement divers outils existant sous R, mais également de diffuser notre logiciel vers cette communauté.\\Au moins deux approches sont possibles :
+Nous étudions maintenant les possibilités d'interactions entre ce logiciel et la plateforme R, afin d'intégrer rapidement divers outils existant sous R, mais également de diffuser notre logiciel vers cette communauté.
+
+
+Au moins deux approches sont possibles :
 \begin{itemize}
 
 \item intégrer des invocations de R depuis java.
@@ -33,12 +67,18 @@ Concernant le premier point, l'invocation de R depuis java est relativement simp
 abordée dans ce TER. Concernant le second point, R propose la création de fenêtres de contrôle et
 de fenêtres graphiques 2D et 3D (voir par exemple http://rgl.neoscientists.org/). Toutefois, nous ne
 connaissons pas les possibilités d'interaction réelles de l'interface 3D.
-%\input{introex3D}
+
+\begin{center}
+\includegraphics[scale=0.3]{explorer.png}\\
+\textit{Les possibilités d'Explorer3D}
+\end{center}
+
 
 \newpage
 \subsection{Packages R utilisables}
 \subsubsection{RGL}
 \input{introrgl}
+\newpage
 \subsubsection{RGTK}
 \input{introrgtk}
 \newpage
