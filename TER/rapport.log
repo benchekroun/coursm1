@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  26 FEB 2013 12:40
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  27 FEB 2013 12:35
 entering extended mode
  %&-line parsing enabled.
 **rapport.tex
@@ -397,100 +397,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 <regression.jpg, id=55, 684.5575pt x 501.875pt>
 File: regression.jpg Graphic file (type jpg)
  <use regression.jpg>) [12 <./colorselector2.png> <./regression.jpg>]) (./besoi
-nnonfct.tex
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
-
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
-
- []
-
-[14]) (./besoinfct.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
-
- []
-
-[16]) (./descriptionproto.tex [17]) (./planning.tex [18]) (./biblio.tex)
-[19] (./rapport.aux) ) 
+nnonfct.tex [13] [14])
+(./besoinfct.tex [15] [16]) (./descriptionproto.tex [17]) (./planning.tex
+[18]) (./biblio.tex) [19] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 2102 strings out of 493848
- 25367 string characters out of 1152824
+ 2085 strings out of 493848
+ 25086 string characters out of 1152824
  81231 words of memory out of 3000000
- 5338 multiletter control sequences out of 15000+50000
+ 5324 multiletter control sequences out of 15000+50000
  12452 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 25i,6n,24p,533b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.en
-c}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1
-/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
-x1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti
-1000.pfb>
-Output written on rapport.pdf (19 pages, 1311944 bytes).
+ 25i,6n,24p,576b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/cm
+-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on rapport.pdf (19 pages, 1306121 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

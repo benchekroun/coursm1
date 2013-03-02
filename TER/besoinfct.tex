@@ -1,35 +1,42 @@
 \section{Besoins fonctionnels}
-\paragraph{} Les principaux besoins fonctionnels sont les fonctionnalités d'Explorer3D qu'il est nécessaire de porter sous R, du moins autant qu'il sera possible d'en porter.\\\\
-\indent Nous allons lister les différentes fonctionnalités souhaitées et nous les commenterons.
+\paragraph{} 
+Les principaux besoins fonctionnels sont les fonctionnalités d'Explorer3D qu'il est nécessaire de porter sous R, du moins autant qu'il sera possible d'en porter.\\
+Nous allons lister les différentes fonctionnalités souhaitées et nous les commenterons.
 
-\paragraph{} Nous souhaitons pouvoir fournir a l'utilisateur une interface graphique lui permettant d'agir sur les données, offrant diverses possibilités, telles que le chargement de données, ou la demande de calcul. Il doit aussi avoir la possibilité d'ouvrir une nouvelle fenêtre 3D interactive.\\\\\indent
+\paragraph{} 
+Nous souhaitons pouvoir fournir a l'utilisateur une interface graphique lui permettant d'agir sur les données, offrant diverses possibilités, telles que le chargement de données, ou la demande de calcul. Il doit aussi avoir la possibilité d'ouvrir une nouvelle fenêtre 3D interactive.
 
- Nous allons donc déterminer si il est possible de créer ces différentes fenêtres, aussi nous chercherons à savoir comment pourrions nous agir depuis cette interface utilisateur sur la ou les fenêtres 3D.\\\\\indent 
- 
- Nous allons maintenant préciser ce que nous attendons des fenêtres 3D.\\\\\indent Nous l'avons évoqué dans les besoins non fonctionnels, nous voulons avoir une fenêtre qui nous permettent d'afficher une très grand nombre d'objets, nous ne donnerons pas d'ordre de grandeur pour le moment, car nous en saurons plus après les premiers tests.
-- gestion de fenêtres de dialogue permettant le chargement de données tabulaire, le calcul de projections, l'ouverture d'une fenêtre 3D interactive.\\\\\indent
+\paragraph{}
+ Nous allons donc déterminer si il est possible de créer ces différentes fenêtres, aussi nous chercherons à savoir comment pourrions nous agir depuis cette interface utilisateur sur la ou les fenêtres 3D.
 
-Nous souhaitons aussi avoir la possibilité de modifier la scène 3D, plus précisément nous souhaitons connaître les possibilités de zoom et de déplacement de la scène dans la fenêtre 3D. Nous nous intéressons aussi à la rotation de la scène, nous aimerions pouvoir faire tourner la scène et ainsi avoir un autre point de vue de la répartition des objets.\\\\\indent
+\paragraph{} 
+Nous allons maintenant préciser ce que nous attendons des fenêtres 3D.
 
-Comme dans Explorer3D, nous voulons offrir la possibilité de sélectionner certain objets, par un clic sur l'objet dans la fenêtre 3D. il sera donc nécessaire de pouvoir connaître l'état d'un objet, s’il est sélectionné ou non. Ici Nous cherchons , plus qu'un coté algorithmique, à savoir comment pourrions nous, si possible, implémenter ça avec RGL. 
-\\\\\indent
+\paragraph{} 
+Nous l'avons évoqué dans les besoins non fonctionnels, nous voulons avoir une fenêtre qui nous permettent d'afficher une très grand nombre d'objets, nous ne donnerons pas d'ordre de grandeur pour le moment, car nous en saurons plus après les premiers tests.
 
+\paragraph{}
+Nous souhaitons aussi avoir la possibilité de modifier la scène 3D, plus précisément nous souhaitons connaître les possibilités de zoom et de déplacement de la scène dans la fenêtre 3D. Nous nous intéressons aussi à la rotation de la scène, nous aimerions pouvoir faire tourner la scène et ainsi avoir un autre point de vue de la répartition des objets;
+
+\paragraph{}
+Comme dans Explorer3D, nous voulons offrir la possibilité de sélectionner certain objets, par un clic sur l'objet dans la fenêtre 3D. il sera donc nécessaire de pouvoir connaître l'état d'un objet, s’il est sélectionné ou non. Ici Nous cherchons , plus qu'un coté algorithmique, à savoir comment pourrions nous, si possible, implémenter ça avec RGL.
+
+\paragraph{}
 Nus souhaiterions aussi avoir la possibilité de changer les propriétés des objets, par exemple la couleur, afin de pouvoir mettre en évidence les objets sélectionné, et ceux de manière la plus fluide et rapide possible.
-\\\\\indent
 
+\paragraph{}
 Nous souhaitons aussi offrir la possibilité de repositionner les objets dans l'espace, et nous souhaitons pouvoir afficher dynamiquement ce repositionnement, nous chercherons ici a afficher une animation, et pas seulement rafraîchir la scène avec la nouvelle position de l'objet déplacé. 
-\\\\\indent
 
+\paragraph{}
 Nous aimerons aussi pouvoir rajouter de façon dynamique des objets dans la scène tels que des ellipses ou ces enveloppes connexes, encore une fois , sans avoir a rouvrir une nouvelle fenêtre, mais juste en mettant a jour la fenêtre courante.
-\\\\\indent
 
+\paragraph{}
 Nous souhaiterions avoir la possibilité de pouvoir faire cohabiter plusieurs fenêtres 3D,  par exemple pour comparer plusieurs représentations des objets.
-\\\\\indent
 
+\paragraph{}
 Explorer3D propose aussi un système de loupe , qui en plus d'un zoom optique sur une partie de la scène où se trouve le pointeur de la souris, sélectionne tous les objets présents sous la loupe, ce qui permet par exemple de mettre en évidence , la présence d'un groupe d'objets dans une vue (une fenêtre) mais ce même "groupe" serait dispersé dans une autre vue.
-\\\\\indent
 
-
+\paragraph{}
 - AJOUT : possibilité de se mettre en écoute sur un port pour réception de commandes de type jeu de données + affichage.
 
 \newpage

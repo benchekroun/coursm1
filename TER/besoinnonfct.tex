@@ -2,26 +2,27 @@
 \begin{itemize}
 \item Montée en charge
 \item Documentation des technologies à utiliser
+\item MVC
 \end{itemize}
 \subsection{Montée en charge}
 \paragraph{} Comme expliqué plus haut, nous allons différer de la méthode utilisée dans Explorer3D pour toute la partie affichage. Pour savoir si les solutions choisies sont acceptables, il sera nécessaire de faire des tests de montée en charge.
 
 \paragraph{} Pour cela nous allons tester la réactivité du système aux différents événements, que ce soit des demandes de calculs,ou des interactions avec la semaine 3D (rotation, zoom, déplacement, etc...).
 
-\paragraph{} Pour réaliser ces tests , nous procéderons à la main aux différentes manipulation, et nous nous baserons a notre jugement en terme de vitesse de réponse, car il n'est pas facile de chronométrer la réactivité de la scène 3D, nous allons bien entendu refaire ces test avec un nombre de plus en plus grand d'objet à afficher, pour pouvoir déterminer une limite en terme de quantité d'objet représentable.
+\paragraph{} Pour réaliser ces tests , nous procéderons à la main aux différentes manipulations, et nous nous baserons sur notre jugement en terme de vitesse de réponse, car il n'est pas facile de chronométrer la réactivité de la scène 3D, nous allons bien entendu refaire ces test avec un nombre de plus en plus grand d'objet à afficher, pour pouvoir déterminer une limite en terme de quantité d'objets représentables.
 
-\paragraph{}
-L'objectif de ce TER consiste à :étudier le mécanisme de développement d'interfaces utilisateur sur le plan 1/ des fenêtres de
-contrôle, et 2/ des fenêtres de visualisation 3D et 2D ;
-• en produire une synthèse ;
-• réaliser une maquette dont le contour précis sera discuté avec l'enseignant (charger un jeu de
-données, visualiser en 3D après préparation des données, sélectionner des objets de la scène
-3D grâce à la souris, afficher des images).
 \newpage
 
 \subsection{Documentation des technologies}
 \paragraph{} Dans la cadre cette étude nous allons être amener à utiliser certaines technologies qui ne seront pas forcément facile à mettre en oeuvre. Cette étude devant se placer dans la continuité d'un projet plus large, nous allons aussi devoir produire et introduire dans notre rendu, une documentation sur les technologies utilisées.
-\\\\\indent
 
+\paragraph{}
 Mais plus qu'une documentation technique, nous souhaitons produire plusieurs petits tutoriaux, qui permettrons à nos successeurs de gagner du temps, et de prendre en main plus facilement le résultat de notre travail, ainsi que les technologies utilisées pour mener à bien ce projet.
+
+\subsection{Modèle Vue Controleur}
+\paragraph{}
+Comme expliqué dans l'analyse de l'existant, Explorer3D a été développé pour être extensible et modulable. Ses concepteurs ont en effet veillé à ce que son architecture permette l'ajout de nouveaux modules, sans empiéter sur les modules existants.
+
+\paragraph{}
+Il serait donc souhaitable de garder la même optique lors de ce TER, et si possible mettre en place un modèle propre, de type Modèle Vue Contrôleur, pour permettre à notre travail d’être évolutif. Nous allons donc essayer de séparer les parties calculatoires des parties d'affichages dans la conception et le développement.
 \newpage

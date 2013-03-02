@@ -18,7 +18,9 @@
 \contentsline {paragraph}{}{7}
 \contentsline {paragraph}{}{8}
 \contentsline {paragraph}{}{8}
+\contentsline {paragraph}{}{8}
 \contentsline {subsection}{\numberline {3.3}Packages R utilisables}{9}
+\contentsline {paragraph}{}{9}
 \contentsline {subsubsection}{\numberline {3.3.1}RGL}{9}
 \contentsline {paragraph}{}{9}
 \contentsline {paragraph}{}{9}
@@ -35,12 +37,26 @@
 \contentsline {paragraph}{}{13}
 \contentsline {paragraph}{}{13}
 \contentsline {paragraph}{}{13}
-\contentsline {paragraph}{}{13}
 \contentsline {subsection}{\numberline {4.2}Documentation des technologies}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {subsection}{\numberline {4.3}Mod\IeC {\`e}le Vue Controleur}{14}
+\contentsline {paragraph}{}{14}
 \contentsline {paragraph}{}{14}
 \contentsline {section}{\numberline {5}Besoins fonctionnels}{15}
 \contentsline {paragraph}{}{15}
 \contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
 \contentsline {section}{\numberline {6}Description des prototypes}{17}
 \contentsline {section}{\numberline {7}Planning, affectation des taches}{18}
 \contentsline {section}{\numberline {8}Bibliographie}{19}
