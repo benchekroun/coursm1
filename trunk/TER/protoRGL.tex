@@ -1,0 +1,140 @@
+                                      
+\subsection{Utiliser RGL}
+
+\paragraph{Prérequis} Vous devez avoir une version de R récente déjà présente sur votre ordinateur ; le mieux est de récupérer les sources les plus à jour et de les compiler directement pour votre système. 
+\\ \\
+Le package RGL se trouve dans la liste des package disponnibles pour R à cet adresse : http://cran.r-project.org/ section "Packages", "sorted by Names", "rgl". Le fichier à récupérer est le "package source" en tar.tgz. Une fois que ce fichier est téléchargé, lancez une invite de commande R et saisissez : 
+
+\begin{lstlisting}
+> install.packages("$HOME/Downloads/rgl_0.93.928.tar.gz")
+\end{lstlisting}
+
+Le chemin passé en paramètre est un exemple, donnez le chemin vers le fichier que vous avez téléchargé. Celà devrait prendre un peu de temps. \\ \\
+Une fois l'installation terminée vous devez linker le package dans l'environnement courrant (et vous devrez le faire à chaque début de session R où vous aurez besoin de RGL) : 
+
+\begin{lstlisting}
+> library(rgl)
+\end{lstlisting}
+\newpage
+\subsection{Première Session d'affichage 3D en R}
+
+Voici un code court qui va afficher N sphères de tailles, coordonnées et rayons aléatoires : 
+
+\begin{lstlisting}
+premier.test <- function(N)
+{
+  rgl.open()
+  rgl.bg(color="black")
+  rgl.spheres(x=rnorm(N), y=rnorm(N), z=rnorm(N), 
+              radius=runif(N), color=rainbow(N))
+}
+
+> premier.test(10)
+\end{lstlisting}
+
+Maintenant on va expliquer chaque lignes de ce script. La première commande, \textbf{rgl.open()} va permettre d'ouvrir une feneêtre openGL. Pour l'instant cette fenêtre est vide, on n'a pas encore demandé d'affichages. Ensuite la seconde ligne \textbf{rgl.bg(color="black")} va permetre de changer la couleur d'arrière plan. 
+\\ \\
+Enfin, la dernière commande, la plus importante va demander au moteur OpenGL d'afficher N sphères. \textbf{rgl.spheres(x=rnorm(N), y=rnorm(N), z=rnorm(N), radius=runif(N), color=rainbow(N))}. Nous allons l'expliquer pour chaque paramètres.
+\begin{itemize}
+\item \textit{x,y,z} : Trois vecteurs de taille identique représentant pour chaque sphère les coordonnées de son centre
+\item \textit{radius} : Un vecteur de la même taille que x,y et z qui contient pour chaque sphère son rayon
+\item \textit{color} : Un vecteur de la même taille que x,y et z contenant les couleurs pour chaque sphères (ou alors une seule couleur pour toute les sphères)
+\end{itemize}
+
+\newpage
+\subsection{Primitives de dessin}
+
+\subsubsection{Points et Lignes}
+Dessiner un point ou un ensemble de points. Le paramètre \textit{color} est disponnible pour l'ensemble des primitives
+\begin{lstlisting}
+> rgl.open()
+> rgl.bg(color="black")
+> rgl.points(x, y, z, color="red" )
+> rgl.lines(x, y, z)
+\end{lstlisting}
+
+\begin{itemize}
+\item \textit{x,y,z} : Trois vecteurs de taille identique représentant pour chaque point les coordonnées de son centre
+\item \textit{color} : Un vecteur de la même taille que x,y et z contenant les couleurs pour chaque points (ou alors une seule couleur pour tous les points)
+\end{itemize}
+
+
+
+\subsubsection{triangles}
+
+Dessiner un ensemble de triangles
+
+\begin{lstlisting}
+> rgl.open()
+> rgl.bg(color="black")
+> rgl.triangles(x, y, z, normals=NULL, texcoord=NULL )
+\end{lstlisting}
+
+\begin{itemize}
+\item \textit{x,y,z} : Trois vecteurs de taille identique représentant pour chaque point les coordonnées de son centre
+\item \textit{Normals} : Un vecteur contenant pour chaque sommet du reseau de triangle
+\item \textit{texcoords} : Un vecteur contenant pour chaque sommet du reseau de triangle ses coordonnées de texture.
+\end{itemize}
+
+\subsubsection{Spheres}
+
+Dessiner une sphère ou un ensemble de sphères. Le paramètre \textit{color} est disponnible pour l'ensemble des primitives
+\begin{lstlisting}
+> rgl.points(x, y, z,r color="red" )
+\end{lstlisting}
+
+\begin{itemize}
+\item \textit{x,y,z} : Trois vecteurs de taille identique représentant pour chaque point les coordonnées de son centre
+\item \textit{r} : Un vecteur de la même taille que x, y et z contenant le rayon pour chaque sphères 
+\item \textit{color} : Un vecteur de la même taille que x,y et z contenant les couleurs pour chaque sphères(ou alors une seule couleur pour toutes les sphères)
+\end{itemize}
+
+\newpage
+\subsection{recapitulatif rapide des fonctions de base de RGL}
+\textit{gestion de l'outils}\\\\
+\begin{tabular}{|c|c|}
+\hline 
+rgl.open()/open3d() & Ouvre une nouvelle fenêtre \\ \hline
+rgl.close() & Ferme la fenêtre actuelle \\ \hline
+rgl.cur() & Retourne le nombre de fenêtres ouvertes \\ \hline
+rgl.set(idFenetre) & Selectionne la fenêtre corespondante comme active \\ \hline
+rgl.quit() & Ferme toute les fenêtres ouvertes et décharge la console courante de RGL \\ \hline
+\end{tabular}\\
+
+\textit{gestion de la scène }\\\\
+\begin{tabular}{|c|c|}
+\hline
+rgl.clear() & Nettoie la scène en fonction du paramètre passé (ex "shapes" ou "lights") \\ \hline
+rgl.pop(type="shapes") & Supprime le dernier objet ajouté à la scène \\ \hline
+
+\end{tabular}\\
+
+\textit{fonctions d'export}\\\\
+\begin{tabular}{|c|c|} 
+\hline
+rgl.snapshot(nameFile) & Sauvegarde un screenshot de la scène courante au format PNG \\ \hline
+
+\end{tabular}\\
+
+\textit{gestion des objets}\\\\
+\begin{tabular}{|c|c|} 
+\hline
+rgl.points(x,y,z,..)/points3d() & Dessine un point aux coordonnées x,y et z (voir plus haut) \\ \hline
+rgl.lines(x,y,z,..) & Dessine une/des lignes sur l'axe (voir détails plus haut) \\ \hline
+rgl.triangles(x,y,z,..) & Dessine un/des triangles (voir détails plus haut) \\ \hline
+rgl.quads(x,y,z,..) & Dessine un/des carrés \\ \hline
+rgl.spheres(x,y,z,r,..) & Dessine une/des sphères (voir détails plus haut) \\ \hline
+rgl.texts(x,y,z,text,..) & Ajoute une texture à la scène \\ \hline
+rgl.surface(x,y,z) & Ajoute a la surface .. \\ \hline
+
+\end{tabular}\\
+\newpage
+\textit{gestion de l'environnement}\\\\
+\begin{tabular}{|c|c|}
+\hline
+rgl.viewpoint(theta,phi,fov,zoom,interactive) & Définie le point de vue (theta, phi)\\ &  dans des coordonnées polaires  \\ & avec un angle de vue fov et un facteur zoom.\\ & Le marqueur logique interactive définie \\ & si ou non la navigation est autorisée \\ \hline
+rgl.light(theta,phi,..) & Ajoute une source de lumière à la scène \\ \hline
+rgl.bg(..) & Attribue le background de la scène \\ \hline
+rgl.bbox(..)/bbox3d & Attribue un support visuel dynamique aux objets\\ & ainsi qu'une échelle visible de leurs coordonnées \\ \hline
+
+\end{tabular}\\
