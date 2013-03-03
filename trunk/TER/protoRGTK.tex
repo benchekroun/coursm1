@@ -1,0 +1,48 @@
+\newpage
+\subsection{Utiliser RGtk2}
+
+\paragraph{Prérequis} Vous devez avoir une version de R récente déjà présente sur votre ordinateur ; le mieux est de récupérer les sources les plus à jour et de les compiler directement pour votre système. 
+\\ \\
+Le package RGL se trouve dans la liste des package disponnibles pour R à cet adresse : http://cran.r-project.org/ section "Packages", "sorted by Names", "rgtk". Le fichier à récupérer est le "package source" en tar.tgz. Une fois que ce fichier est téléchargé, lancez une invite de commande R et saisissez : 
+
+\begin{lstlisting}
+> install.packages("$HOME/Downloads/RGtk2_2.20.25.tar.gz")
+\end{lstlisting}
+
+Le chemin passé en paramètre est un exemple, donnez le chemin vers le fichier que vous avez téléchargé. Celà devrait prendre un peu de temps. \\ \\
+Une fois l'installation terminée vous devez linker le package dans l'environnement courrant (et vous devrez le faire à chaque début de session R où vous aurez besoin de RGL) : 
+
+\begin{lstlisting}
+> library(RGtk2)
+\end{lstlisting}
+\newpage
+
+\subsection{Première fen\^etre avec RGtk2}
+
+Voici un code court qui va nous permettre d'afficher une fen\^etre avec le label "hello world". \\
+
+\begin{lstlisting}
+>library(RGtk2)
+ 
+createWindow <- function()
+{
+    window <- gtkWindow()
+ 
+    label <- gtkLabel("Hello World")
+    window$add(label)
+}
+ 
+>createWindow()
+\end{lstlisting}
+
+\begin{center}
+\includegraphics[scale=0.5]{hello.png}\\
+\textit{Résultat du code ci-dessus}
+\end{center}
+
+Maintenant on va expliquer chacune des lignes de code. La première ligne \textbf{window <- gtkWindow()} nous permet de créer une fen\^etre vide. Ensuite l'appel à la fonction \textbf{gtkLabel()} permet de créer un label qu'il faudra ensuite ajouter à la vue car pour le moment la vue est vide m\^eme si les éléments à ajouter sont déclarés. Enfin gr\^ace à la dernière ligne, \textbf{window\$add(label)} on ajoute le label à la vue. \\
+
+
+
+
+
