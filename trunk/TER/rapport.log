@@ -1,24 +1,20 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.1.24)  3 MAR 2013 16:31
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  3 MAR 2013 17:49
 entering extended mode
- restricted \write18 enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
- polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
-lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
-welsh, loaded.
-(/usr/share/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size10.clo
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -33,19 +29,19 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(/usr/share/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texmf-texlive/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -195,7 +191,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu
+(/usr/share/texmf-texlive/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -226,7 +222,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu
+(/usr/share/texmf-texlive/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -250,28 +246,28 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texmf-dist/tex/latex/base/t1enc.def
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/share/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2008/07/08 v3.8m The Babel package
+(/var/lib/texmf/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
 
-(/usr/share/texmf-dist/tex/generic/babel/frenchb.ldf
-Language: frenchb 2010/08/21 v2.5a French support from the babel system
+(/usr/share/texmf-texlive/tex/generic/babel/frenchb.ldf
+Language: frenchb 2009/03/16 v2.3d French support from the babel system
 
-(/usr/share/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-Package babel Info: Making : an active character on input line 234.
-Package babel Info: Making ; an active character on input line 235.
-Package babel Info: Making ! an active character on input line 236.
-Package babel Info: Making ? an active character on input line 237.
+Package babel Info: Making : an active character on input line 120.
+Package babel Info: Making ; an active character on input line 121.
+Package babel Info: Making ! an active character on input line 122.
+Package babel Info: Making ? an active character on input line 123.
 \FB@Mht=\dimen104
 \std@mcc=\count88
 \dec@mcc=\count89
@@ -280,41 +276,34 @@ Package babel Info: Making ? an active character on input line 237.
 *************************************
 * Local config file frenchb.cfg used
 *
-(/usr/share/texmf-dist/tex/generic/babel/frenchb.cfg)))
-(/usr/share/texmf-dist/tex/latex/carlisle/scalefnt.sty)
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texmf-texlive/tex/generic/babel/frenchb.cfg)))
+(/usr/share/texmf-texlive/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gread@gobject=\count90
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
-(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texmf-texlive/tex/latex/listings/listings.sty
 \lst@mode=\count91
 \lst@gtempboxa=\box26
 \lst@token=\toks17
@@ -328,13 +317,13 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count96
 \lst@maxwidth=\dimen111
 
-(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count97
 \lst@skipnumbers=\count98
 \lst@framebox=\box27
 )
-(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
@@ -357,7 +346,7 @@ LaTeX Info: Redefining \degres on input line 14.
 LaTeX Info: Redefining \dots on input line 14.
 LaTeX Info: Redefining \up on input line 14.
 
-(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
 \scratchdimen=\dimen112
@@ -368,57 +357,9 @@ LaTeX Info: Redefining \up on input line 14.
 \MPscratchCnt=\count102
 \MPscratchDim=\dimen113
 \MPnumerator=\count103
-\makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks19
-) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-\c@lstlisting=\count105
+\c@lstlisting=\count104
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -436,7 +377,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `rapport.toc'.
 
- [2] (./resumeprojet.tex [3]) (./introdomaine.tex [4]) (./analyseexistant.tex
+
+[2] (./resumeprojet.tex [3]) (./introdomaine.tex [4]) (./analyseexistant.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
@@ -446,58 +388,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
 
-<Rlogo.png, id=20, 87.2058pt x 66.2475pt>
+<Rlogo.png, id=19, 87.2058pt x 66.2475pt>
 File: Rlogo.png Graphic file (type png)
  <use Rlogo.png>
-Package pdftex.def Info: Rlogo.png used on input line 14.
-(pdftex.def)             Requested size: 61.04362pt x 46.37292pt.
-
-<demarrage_r.png, id=22, 440.64626pt x 257.96375pt>
+<demarrage_r.png, id=21, 440.64626pt x 257.96375pt>
 File: demarrage_r.png Graphic file (type png)
  <use demarrage_r.png>
-Package pdftex.def Info: demarrage_r.png used on input line 28.
-(pdftex.def)             Requested size: 308.45027pt x 180.57338pt.
-
-[5 <./Rlogo.png> <./demarrage_r.png (PNG copy)>] [6]
-<explorer3d.jpg, id=32, 1102.1175pt x 926.46124pt>
+[5 <./Rlogo.png> <./demarrage_r.png>] [6]
+<explorer3d.jpg, id=31, 1102.1175pt x 926.46124pt>
 File: explorer3d.jpg Graphic file (type jpg)
  <use explorer3d.jpg>
-Package pdftex.def Info: explorer3d.jpg used on input line 46.
-(pdftex.def)             Requested size: 330.6378pt x 277.9405pt.
-
-[7 <./explorer3d.jpg>] <explorer.png, id=37, 1114.1625pt x 529.98pt>
+[7 <./explorer3d.jpg>] <explorer.png, id=36, 1114.1625pt x 529.98pt>
 File: explorer.png Graphic file (type png)
 
-<use explorer.png>
-Package pdftex.def Info: explorer.png used on input line 71.
-(pdftex.def)             Requested size: 334.25133pt x 158.99521pt.
- [8 <./explorer.png>] (./introrgl.tex
-<screen_rgl2.png, id=42, 205.5178pt x 222.8325pt>
+<use explorer.png> [8 <./explorer.png>] (./introrgl.tex
+<screen_rgl2.png, id=41, 205.5178pt x 222.8325pt>
 File: screen_rgl2.png Graphic file (type png)
  <use screen_rgl2.png>
-Package pdftex.def Info: screen_rgl2.png used on input line 6.
-(pdftex.def)             Requested size: 143.86148pt x 155.98167pt.
-
-<screen_rgl3.png, id=43, 246.9225pt x 243.15843pt>
+<screen_rgl3.png, id=42, 246.9225pt x 243.15843pt>
 File: screen_rgl3.png Graphic file (type png)
  <use screen_rgl3.png>
-Package pdftex.def Info: screen_rgl3.png used on input line 17.
-(pdftex.def)             Requested size: 172.84456pt x 170.20973pt.
-
-[9 <./screen_rgl2.png>]) [10 <./screen_rgl3.png>] (./introrgtk.tex
-<multipleviews.png, id=50, 611.28375pt x 545.03625pt>
+[9 <./screen_rgl2.png (PNG copy)>]) [10 <./screen_rgl3.png (PNG copy)>]
+(./introrgtk.tex <multipleviews.png, id=49, 611.28375pt x 545.03625pt>
 File: multipleviews.png Graphic file (type png)
- <use multipleviews.png>
-Package pdftex.def Info: multipleviews.png used on input line 8.
-(pdftex.def)             Requested size: 244.50917pt x 218.01064pt.
 
-<colorselector2.png, id=51, 594.22pt x 359.3425pt>
+<use multipleviews.png> <colorselector2.png, id=50, 594.22pt x 359.3425pt>
 File: colorselector2.png Graphic file (type png)
- <use colorselector2.png>
-Package pdftex.def Info: colorselector2.png used on input line 16.
-(pdftex.def)             Requested size: 237.68379pt x 143.73445pt.
 
-[11 <./multipleviews.png>]
+<use colorselector2.png> [11 <./multipleviews.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
@@ -507,13 +425,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
-<regression.jpg, id=56, 684.5575pt x 501.875pt>
+<regression.jpg, id=55, 684.5575pt x 501.875pt>
 File: regression.jpg Graphic file (type jpg)
- <use regression.jpg>
-Package pdftex.def Info: regression.jpg used on input line 28.
-(pdftex.def)             Requested size: 273.81815pt x 200.74643pt.
-) [12 <./colorselector2.png> <./regression.jpg>]) (./besoinnonfct.tex [13] [14]
-)
+ <use regression.jpg>) [12 <./colorselector2.png> <./regression.jpg>]) (./besoi
+nnonfct.tex [13] [14])
 (./besoinfct.tex [15] [16]) (./descriptionproto.tex (./protoRGL.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
@@ -636,12 +551,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<hello.png, id=94, 202.7575pt x 233.87375pt>
+<hello.png, id=93, 202.7575pt x 233.87375pt>
 File: hello.png Graphic file (type png)
  <use hello.png>
-Package pdftex.def Info: hello.png used on input line 39.
-(pdftex.def)             Requested size: 101.3785pt x 116.93657pt.
-
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
@@ -667,28 +579,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-) [24]) (./planning.tex [25] [26]) (./biblio.tex) [27] (./rapport.aux) ) 
+) [24]) (./planning.tex [25] <diag_ter.png, id=105, 523.20468pt x 499.11469pt>
+File: diag_ter.png Graphic file (type png)
+
+<use diag_ter.png>
+Overfull \hbox (21.24077pt too wide) in paragraph at lines 19--20
+ [] 
+ []
+
+[26 <./diag_ter.png>]) (./biblio.tex) [27] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 4297 strings out of 493488
- 55943 string characters out of 3146892
- 121602 words of memory out of 3000000
- 7511 multiletter control sequences out of 15000+200000
+ 3703 strings out of 493848
+ 46225 string characters out of 1152824
+ 109087 words of memory out of 3000000
+ 6922 multiletter control sequences out of 15000+50000
  12452 words of font info for 31 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,6n,32p,578b,971s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/s
-hare/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/
-sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></
-usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf
--dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-su
-per/sfti1000.pfb>
-Output written on rapport.pdf (27 pages, 1409104 bytes).
+ 714 hyphenation exceptions out of 8191
+ 26i,6n,32p,578b,971s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/f
+onts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx
+1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1
+200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on rapport.pdf (27 pages, 1424140 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
