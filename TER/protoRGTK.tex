@@ -42,6 +42,45 @@ createWindow <- function()
 
 Maintenant on va expliquer chacune des lignes de code. La première ligne \textbf{window <- gtkWindow()} nous permet de créer une fen\^etre vide. Ensuite l'appel à la fonction \textbf{gtkLabel()} permet de créer un label qu'il faudra ensuite ajouter à la vue car pour le moment la vue est vide m\^eme si les éléments à ajouter sont déclarés. Enfin gr\^ace à la dernière ligne, \textbf{window\$add(label)} on ajoute le label à la vue. \\
 
+\subsection{Quelques fen\^etres utiles}
+
+\subsubsection{Une fen\^etre en plein écran}
+Pour afficher une fen\^etre en plein écran, il faut créer la vue et ensuite lui demander de passer en plein écran. 
+
+\begin{lstlisting}
+> win <- gtkWindow()
+> gtkWindowFullscreen(win)
+\end{lstlisting}
+
+La fonction \textbf{gtkWindowFullscreen(win)} prend en paramètre un objet de type gtkWindow. 
+
+\subsubsection{Des onglets dans la vue}
+Une fen\^etre avec des onglets est une chose intéressante à avoir pour l'interface utilisateur. 
+
+\begin{lstlisting}
+> window.master <- gtkWindow("toplevel",show=FALSE)
+> 
+> forms.notebook <- gtkNotebook()
+> forms.notebook$setTabPos("top")
+> 
+> form1.notebook <- gtkNotebook()
+> form1.notebook$setTabPos("top")
+> 
+> form1.boxp1.y3 <- gtkVBox(FALSE,3)
+> form1.boxp2.ud <- gtkVBox(FALSE,2)
+> forms.notebook$add(form1.notebook)
+> window.master$add(forms.notebook)
+> 
+> window.master$show()
+
+\end{lstlisting}
+
+\begin{itemize}
+\item \textbf{gtkNotebook} est une conteneur de vue avec des onglets. \\
+\item \textbf{form1.boxp1.y3 <- gtkVBox(FALSE,3)} permet de créer une gtkVBox qui sera notre premier onglet. \\
+\item \textbf{forms.notebook\$add(form1.notebook)} : on ajoute le formulaire form1 au formulaire principal forms qui sera ensuite ajouté à la vue via la commande \textbf{window.master\$add(forms.notebook)}. \\
+\item \textbf{window.master\$show()} affiche la fenêtre complète. L'appel de cette fonction est obligatoire car on avait choisi de ne pas afficher la fenêtre lors de sa création. 
+\end{itemize}
 
 
 
