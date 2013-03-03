@@ -64,7 +64,7 @@
 \contentsline {subsection}{\numberline {6.3}Primitives de dessin}{19}
 \contentsline {subsubsection}{\numberline {6.3.1}Points et Lignes}{19}
 \contentsline {subsubsection}{\numberline {6.3.2}triangles}{19}
-\contentsline {subsubsection}{\numberline {6.3.3}Spheres}{19}
+\contentsline {subsubsection}{\numberline {6.3.3}Sph\IeC {\`e}res}{19}
 \contentsline {subsection}{\numberline {6.4}recapitulatif rapide des fonctions de base de RGL}{20}
 \contentsline {section}{\numberline {7}Planning, affectation des taches}{22}
 \contentsline {paragraph}{}{22}
@@ -74,5 +74,5 @@
 \contentsline {subsection}{\numberline {7.2}R\IeC {\'e}partition des taches}{22}
 \contentsline {paragraph}{}{22}
 \contentsline {paragraph}{}{22}
-\contentsline {subsection}{\numberline {7.3}Planning G\IeC {\'e}n\IeC {\'e}ral}{22}
-\contentsline {section}{\numberline {8}Bibliographie}{23}
+\contentsline {subsection}{\numberline {7.3}Planning G\IeC {\'e}n\IeC {\'e}ral}{23}
+\contentsline {section}{\numberline {8}Bibliographie}{24}
