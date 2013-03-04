@@ -180,8 +180,8 @@ Exécution d'un tour ;
 \end{itemize}
 \end{itemize}
 
-\section{}
-\date{14 Février 2013}
+\section{14 Février 2013}
+
 \paragraph{défaillance de processus} défaillance byzantine : chaque processus envoie sa valeur, le cas de l’arrêt fonctionne, nb rang = nb panne +1. byz: un menteur au moment du choix, va envoyer au suivant une mauvaise valeur .
 \paragraph{collecte d'information exponentielle} valeur transmise le long d'un réseau en forme d'arbre. la première couche correspond au résultats reçu à l'étape numéro 1., le seconde correspond à la 2eme étape. le dernier chiffre du numéro marqué au dessus de la "feuille" c’est le dernier processus à avoir envoyer le message reçu. on peut ainsi remonter le chemin parcouru par le message.\\\\Chaque processus utilise la même structure d'arbre.\\les noeuds sont étiquetés par des valeurs\\\textbf{initialement} les têtes sont étiquetées par la valeur du noeuds\\\textbf{round r> 1} \begin{itemize}
 \item envoyer le niveau r-1 à tous nœuds (soi même aussi)
@@ -244,5 +244,9 @@ Graphe G = (e,v), processus associé à chaque noeud et, un canal associé à ch
 \end{itemize}
 
 \paragraph{} hypothèse : G est un anneau , unidirectionnel ou bidirectionnel, nom pour les voisins , uids\\\\ Il stocke ses messages dans sa fifo locale et attend que le canal soit libre pour envoyer.
-\paragraph{Algorithme de Peterson} Baser sur la notion de phases . \\ Un processus est actif ou passif, les processus ne fond que relayer les messages\\Dans chaque phase la moitié des processus actif devient inactif, ainsi l’élection ne prend au plus n log n phases.\\\\\textbf{Phase 1 : } Envoyer UID de deux prédécesseurs, reste actif si l'uid du milieu est max.\\v autrement dit, chaque porcessus attend de recevoir les uids de ses deux prédecessurs, ainsi , il envoi son uid au suivant, et soit les trois uids recus, si celui du milieu n'est pas le max des trois, alors la processus passe en inactif(relay) et ne fera que passer des messages. Sinnon , il prend l'uid du milieu  et reste actif.\\
+\paragraph{Algorithme de Peterson} Baser sur la notion de phases . \\ Un processus est actif ou passif, les processus ne fond que relayer les messages\\Dans chaque phase la moitié des processus actif devient inactif, ainsi l’élection ne prend au plus n log n phases.\\\\\textbf{Phase 1 : } Envoyer UID de deux prédécesseurs, reste actif si l'uid du milieu est max.\\v autrement dit, chaque processus attend de recevoir les uids de ses deux prédécesseurs, ainsi , il envoi son uid au suivant, et soit les trois uids reçus, si celui du milieu n'est pas le max des trois, alors la processus passe en inactif(relay) et ne fera que passer des messages. Sinon, il prend l'uid du milieu et reste actif.\\
+
+\section{4 mars 2013}
+\subsection{Synchroniseurs}
+on prend un algo sync et on veux le faire tourner dans un env async. simuler les algo sync en async , mise en place de synchroniseurs. On part d'un graphe non orient, on suppose qu'on a l'algo sync qui résout le pb. Un noeud va effectuer l'étape k quand tous les autre sauront finis l'étape k-1.\\Le principe : on introduit un synchroniseur, il attend la réponse des états dans les étapes, pour dire , c'est bon passez à la suite.
 \end{document}
