@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  19 FEB 2013 17:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  24 FEB 2013 10:30
 entering extended mode
  %&-line parsing enabled.
 **calculabilite.tex
@@ -900,7 +900,7 @@ hare/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public
 mf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on calculabilite.pdf (19 pages, 276439 bytes).
+Output written on calculabilite.pdf (19 pages, 276053 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
