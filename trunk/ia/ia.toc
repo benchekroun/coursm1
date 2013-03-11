@@ -37,3 +37,5 @@
 \contentsline {paragraph}{Variantes de A*}{10}
 \contentsline {paragraph}{IDA*}{10}
 \contentsline {paragraph}{SMA*}{11}
+\contentsline {section}{\numberline {7}5 Mars 2013}{11}
+\contentsline {paragraph}{}{11}

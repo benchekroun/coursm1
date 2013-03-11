@@ -46,7 +46,8 @@ L'IA est une discipline qui systématise et automatise les taches .
 \paragraph{Agent Rationnel} abstrait : un agent est une fonction qui met en correspondance des séquences perceptives P* et des actions A : f : P* -> A.\\\\processus où on ne sais pas tout, ou temps limité trop court pour répondre, donc réponse acceptable mais pas optimale.
 \paragraph{Fondements de l'IA}Elle repose sur plusieurs domaines.\\\\Philosophie : logique et raisonnement.\\\\Mathématiques : représentations formelles et preuves, algorithmes, (in)décidabilité, probabilité.\\\\Psychologie : adaptation, perception et controle moteur, techniques expérimentales.\\\\Linguistique : représentation de connaissances grammaires.\\\\Neurosciences : substrat physique et biologique de l'activité mentale.\\\\Théorie du controle : systèmes asservis, stabilité, concept d'agent optimal.
 
-\section{Histoire de l'IA}\begin{itemize}
+\section{Histoire de l'IA}
+\begin{itemize}
 \item 1943 : modélisation de neurones.
 \item 1950's : vision complète de l'IA
 \item 60's : dev des réseaux de neurones.
@@ -57,7 +58,8 @@ L'IA est une discipline qui systématise et automatise les taches .
 \end{itemize}
 
 \paragraph{Prédictions et réalité} différence prédictions réalité ;,  60's œil électronique, pas encore fait mais ça avance et s'est encourageant.\\\\ Robot qui font tout, déjà dans les 70's.
-\section{Qu'est ce qu'un problème pour l'IA}Problème qui n'as pas de solution analytique connue, objectif : si l'objectif est hors du possible donner une solution acceptable en temps raisonnable.\\\\Certaines taches aisées pour l'humain sont difficiles pour la machine : tout ce qui a besoin de la sensibilité humaine.
+\section{Qu'est ce qu'un problème pour l'IA}
+Problème qui n'as pas de solution analytique connue, objectif : si l'objectif est hors du possible donner une solution acceptable en temps raisonnable.\\\\Certaines taches aisées pour l'humain sont difficiles pour la machine : tout ce qui a besoin de la sensibilité humaine.
 
 \paragraph{Contenu du cours} 4 approches différentes de la résolution de problèmes en IA
 \begin{itemize}
@@ -125,7 +127,7 @@ Une bonne fonction heuristique aura une valeur de $b^{*}$ proche de 1 (la foncti
 \paragraph{Variantes de A*} Les problèmes réels sot souvetn très complexes\\L'espace de recherche devient très grand\\Meme les méthodes de recherche heuristique deviennent inefficaces\\A* : complexité en espace exponentiel.\\IDA* = approfondissement itératif de A*\\SMA* = A* avec gestion mémoire.
 \paragraph{IDA*} IDS effectue l'approfondissement par rapport à la profondeur de la recherche\\IDA* utilise comme limite la la valeur de la fonction heuristique f(n), chaque itération de IDA* est une recherche en profondeur, la profondeur limite correspond à la plus petite valeur observé au delà de la limite de l'étape précédente.\\IL est complet et optimal\\Complexité en espace de IDA* : O(bd), ok pour coût unitaire, mais qu'en est il pour des coûts réels? \\\\\textbf{Un alternative : RBFS}\\Récursive  BFS\\Approche best-first, mais\\Enregistre dans chaque nœud le f du meilleur chemin alternatif\\remonte si le cout est supérieur à un f mémorisé\\En remontant, mémorise ce cout (pour redescendre si besoin)\\+ efficace qu'IDA* mais risque de redévelopper beaucoup de nœuds\\Optimale (si h est admissible), espace O(bd) , temps ?\\PB : la faible complexité en espace est finalement gênante.
 \paragraph{SMA*} Simplified Memory bounded A*\\SMA* effectue sa propre gestion de mémoire\\principe \begin{itemize}
-\item si la mémoire (file d'attente) esy pleine, alors faire de la place en éliminant le nœud le moins intéressant (celui avec une valeur f élevée)
+\item si la mémoire (file d'attente) est pleine, alors faire de la place en éliminant le nœud le moins intéressant (celui avec une valeur f élevée)
 \item retenir dans le nœud ancêtre la valeur du meilleur descendant oublié
 
 \end{itemize}
@@ -136,4 +138,14 @@ Une bonne fonction heuristique aura une valeur de $b^{*}$ proche de 1 (la foncti
 \item complet si espace mémoire suffisant
 \end{itemize}
 
+\section{5 Mars 2013}
+\paragraph{} Les algos de recherche locale sont adaptés aux pbs ou on cherche une solution mais on ne s'occupe pas du chemin. Ils considèrent un état courant, puisse déplacent successivement vers un état voisin par relation de voisinage. \\\\\textbf{propriété} il sont : non-complets, non-optimaux, et non-exhaustifs, MAIS, utilisent peu de mémoire, souvent en quantité constante, ils conviennent aux recherches "offline" et "online".\\ Ils trouvent souvent des solutions raisonnables dans des espaces d'états très grands, voir infini, où les autres algos ne peuvent pas s'appliquer.\\ils s'adaptent aux problèmes d'optimisation où l'on cherche le meilleur état suivant une fonction d'objectif.\\ un voisinage s'obtient en perturbant légèrement un état, on définit une distance $V(s) = \{s' |d(s,s') < \epsilon\}$.\\on considère une fonction de cout qui mesure l'écrat entre l'état et l'objectif ou simplement la valeur de l'état courant, on cherche à optimiser cette fonction.\\\\\textbf{Exemple : TSP}\\ L'état initial est un tour quelconque , puis les états voisins sont obtenus successivement en échangeant deux déplacements. des variantes de cette méthode trouvent une solution raisonnable rapidement avec des centaines de villes.\\\\\textbf{hill climbing (approche par escalade)}\\ le principe consiste à rechercher , parmis les voisins , celui qui améliore le plus al fonction de cout, on recommence jusqu'au max, souvent max local, l'algo est glouton.
+
+\paragraph{Satisfaction de clauses booléenne} problème NP-Complet, distance de Hamming, nombre de bits différents. cout : nombre de clauses satisfaite par ce changement de bit. on pondère avec le nombre de variable, car les grandes clauses sont plus difficiles a satisfaire. l'algorithme peux osciller dans un maximum local, s'il il n'y a pas de réponse, on peut relancer l'algorithme. pour le climbing, il faut pouvoir sortir des plateaux (même valeur plusieurs fois), mais avec mouvement random, risque de boucler sur un plateau.
+\paragraph{le recuit simulé}\\ idée, autoriser de redescendre vers un état moins bon avec une certaine probabilité.\\ La probabilité de descente dépend d'un paramètre appelé \textit{température} \\Au cours de la recherche, on diminue progressivement la température.\\température élevée : recherche + aléatoire -> exploration de larges zones de l'espace de recherche\\recuit simulé = simulated annealing.
+
+\paragraph{local beam search} garder K successeurs au oieu d'un , pas le meme comportement avec k recherches en parallèles, souvent k états finissent par se retrouver dans un maximum local. Idée : choisir k successeurs aléatoirement , \textit{stochastic beam search} Analogie dans la sélection naturelle. 
+
+\section{Les algorithmes génétiques} 
+\paragraph{le principe} maintenir une population de solutions candidates appelées individus(= états).\\coder chaque individus (ses gènes).\\générer au hasard une population initial.\\exécuter le cycle suivant jusqu’à obtention d'un critère d’arrêt : Sélection -< reproduction -> mutation
 \end{document}

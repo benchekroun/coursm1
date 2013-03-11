@@ -22,6 +22,3 @@ manyNAs <- function(x,seuil){
 	return(x[percent < seuil,])
 }
 
-centreImputation <- function(x){
-	
-}
