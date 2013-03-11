@@ -221,4 +221,22 @@ Machine avec 24 composants \\
 probabilité qu'un composant tombe en panne : 0.2\\
 la machine fonctionne quand au moins deux tiers des composants sont en marche.\\
 Probabilité que la machine fonctionne.\\X nombre de composants en marche.\\P(X$\geq$16)=$\sum_{i=16}^{24} P(X=i) = \sum_{i=16}^{24} C_{24}^i (0.8)^i (0.2)^{24-i}$
+
+\section{6 Mars 2013}
+\paragraph{fonction de densité} densité f de la variable aléatoire X de fonction de répartition F, c'est la dérivée de la fonction de répartition.\\
+Propriété : $ P(a\leq X \leq b) = \int_a^b f(x)dx$. pour Espérance et variance, on utilise al fonction de densité sur un intervalle \textit{I}\\\\
+E:  $\int_I x.f(x)dx $ = $\int_0^{360} \frac{x}{360} dx$\\\\
+$\frac{1}{360} \int_0^{360} xdx$\\\\ 
+$\frac{1}{360} [\frac{x^2}{2}]_0^{360}$ \\\\
+Var = $\int_0^{360} (x-\frac{1}{180})^2 . \frac{1}{360}dx$
+\paragraph{loi uniforme} loi uniforme sur intervalle [a,b], densité f(x) = $\frac{1}{b-a}$.\\$F(x) = \int_a^x \frac{dx}{b-a} = \frac{x-a}{b-a}$, pour $a\leq x\leq b$
+
+\paragraph{loi normale} Soit X une variable aléatoire à valeur réelles. la loi normale est définie par 2 paramètres, l'espérance $\mu$ et la variance $\sigma^2$, notée $ X \sim N(\mu,\sigma^2)$
+
+\paragraph{Loi binomiale} loi binomiale de paramètre (probabilité) p de taille (nombre de lancés) n.\\$E(X) = n*p$\\$Var(X) = n*p*(1-p)$.\\ 2 expériences \begin{itemize}
+\item n fixé, faire varier p
+\item p fixé, on fait croître n.
+\end{itemize}
+
+\paragraph{} On considère $Z= \frac{X-np}{\sqrt{n(1-p)}}$ . Lorsque n tend vers l'infini, loi binomiale tend vers $N(0,1)$ (la loi normale centrée).\\-> Cas particulier du théorème central limite. Soient $X_1,...,X_n$ suite de V.A indépendantes de loi de moyenne $\mu$ et de variance $\sigma^2$.\\Soit $\frac{}{X_n}$ la moyenne arithmétique de $X_1,...,X_n$ \\alors $E(\frac{}{X_n}) = \mu$ , $Var(\frac{}{X_n}) = \frac{\sigma^2}{n}$ \\ $Z_n = \frac{\frac{}{X_n} - \mu}{\frac{\sigma^2}{\sqrt{n}}}$ tend vers $N(0,1)$ quand n->$\infty$
 \end{document} 

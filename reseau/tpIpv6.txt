@@ -1,0 +1,11 @@
+ipv6 : 128 bits
+loopbak  : 0:0:0:0:0:0:0:1 /128 = 0000:0000:0000:0000:0000:0000:0000:0000:0001
+undifined : 0:0:0:0:0:0:0:0/128 0000:0000:0000:0000:0000:0000:0000:0000 /128
+_unicast ipv6 : adresse d'une interface.
+
+deux adresses par interfacec : link-local (visible uniquement en lAN) et global scope (idem que ipv4)
+link-local : préfix de FE80::/10 , donc les dix premiers bits sont forcé a F(1111 1111) E(1111 1110) 8(0001 0000) 0(0000 0000):00XXXXXX XXXXXXXX XXXXXXXX XXXXXXXX:... 
+multicast des routeurs d'un segment : FF02::2
+
+NDP : neighbourg discovery protocol
+solicitation : FF02::1:FF33:4455 multicast-solicited-node FF02:0:0:0:0:1:FF:24 dernier de la machine dont on cherche @MAC
