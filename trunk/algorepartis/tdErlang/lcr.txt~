@@ -1,0 +1,11 @@
+Quand je recois qq chose, quand la valeur que je recois est strictement plus grande que moi alors je me contente de la passer à mon voisin et je boucle EVIDEMMENT :) !
+Quand je recois une valeur qui est égale à la mienne, je suis élu (io :format youhou c'est moi qui suis élu).
+Dans les autres cas, c'est que la valeur est plus petite. Dans ce cas, je l'ignore. 
+Si je reçois start, je l'ignore => petite astuce qui vient du fait qu'on peut recevoir un start trop tard.
+
+Il reste à définir leader. Quand on a reçu leader, on sautille ou je ne sais pas ahahaha.
+=> Ecriture de l'algo tel qu'on l'a vu en cours.
+
+Une fois que LCR marche, il faut faire Peterson (fait un peu moins de messages que LCR).
+J'envoie mon UID aux deux personnes qui me suivent dans l'anneau.
+Je regarde si mon père connait le max parmi les3  valeurs.

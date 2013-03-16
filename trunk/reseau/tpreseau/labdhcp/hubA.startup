@@ -1,0 +1,4 @@
+ifconfig eth0 inet 192.168.0.254
+ifconfig eth1 inet 192.168.0.253
+ifconfig eth2 inet 192.168.0.252
+/etc/init.d/quagga start

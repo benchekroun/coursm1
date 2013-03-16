@@ -1,0 +1,9 @@
+pc11: rt1
+pc12: rt1
+pc21: rt2
+pc22: rt2
+pc31: rt3
+pc32: rt3
+rt1: rt1z
+rt2: rt2z
+rt3: rt3z
