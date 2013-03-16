@@ -53,3 +53,11 @@
 \contentsline {paragraph}{loi normale}{12}
 \contentsline {paragraph}{Loi binomiale}{12}
 \contentsline {paragraph}{}{12}
+\contentsline {section}{\numberline {7}13 Mars 2013}{12}
+\contentsline {paragraph}{A savoir}{12}
+\contentsline {paragraph}{Analyse de r\IeC {\'e}gression et corr\IeC {\'e}lation}{12}
+\contentsline {subsection}{\numberline {7.1}Analyse de r\IeC {\'e}gression}{12}
+\contentsline {paragraph}{}{12}
+\contentsline {paragraph}{r\IeC {\'e}gression lin\IeC {\'e}aire}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{Evaluation de la droite de r\IeC {\'e}gression estim\IeC {\'e}e}{14}

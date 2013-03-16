@@ -1,0 +1,4 @@
+ifconfig eth0 5.6.7.2/24
+ifconfig eth1 2.3.4.1/24
+route add -net 1.2.3.0/24 gw 5.6.7.1
+route add -net 3.4.5.0/24 gw 5.6.7.3

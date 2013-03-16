@@ -233,10 +233,42 @@ Var = $\int_0^{360} (x-\frac{1}{180})^2 . \frac{1}{360}dx$
 
 \paragraph{loi normale} Soit X une variable aléatoire à valeur réelles. la loi normale est définie par 2 paramètres, l'espérance $\mu$ et la variance $\sigma^2$, notée $ X \sim N(\mu,\sigma^2)$
 
-\paragraph{Loi binomiale} loi binomiale de paramètre (probabilité) p de taille (nombre de lancés) n.\\$E(X) = n*p$\\$Var(X) = n*p*(1-p)$.\\ 2 expériences \begin{itemize}
+\paragraph{Loi binomiale} loi binomiale de paramètre (probabilité) p de taille (nombre de lancés) n.\\$E(X) = n*p$\\$Var(X) = n*p*(1-p)$.\\ 2 expériences 
+\begin{itemize}
 \item n fixé, faire varier p
 \item p fixé, on fait croître n.
 \end{itemize}
 
 \paragraph{} On considère $Z= \frac{X-np}{\sqrt{n(1-p)}}$ . Lorsque n tend vers l'infini, loi binomiale tend vers $N(0,1)$ (la loi normale centrée).\\-> Cas particulier du théorème central limite. Soient $X_1,...,X_n$ suite de V.A indépendantes de loi de moyenne $\mu$ et de variance $\sigma^2$.\\Soit $\frac{}{X_n}$ la moyenne arithmétique de $X_1,...,X_n$ \\alors $E(\frac{}{X_n}) = \mu$ , $Var(\frac{}{X_n}) = \frac{\sigma^2}{n}$ \\ $Z_n = \frac{\frac{}{X_n} - \mu}{\frac{\sigma^2}{\sqrt{n}}}$ tend vers $N(0,1)$ quand n->$\infty$
+
+\section{13 Mars 2013}
+\paragraph{A savoir} connaître loi jointe de deux variables, connaître les rappels de statistiques, un peu de dev R, un peu d'analyse de données. Controle lundi après midi
+
+\paragraph{Analyse de régression et corrélation} analyse : recherche d'une relation stochastique qui lie 2 ou plusieurs variables. Corrélation : indice mesurant l'intensité de la relation entre 2 variables.
+\subsection{Analyse de régression}
+\paragraph{} Estimer la valeur d'une des variables à l'aide des valeurs des autres. $Y=f(X)$ avec Y  : variable expliquée et X variable explicative.\\déterminer le modèle, c'est à dire l'équation de f(x) qui relie X et Y.\\estimer le degré de fiabilité de l'estimation.
+\newpage
+\paragraph{régression linéaire} Entrées : 2 variables X et Y, Sortie : si Y est une fonction de X, notée : $Y=f(X)$.\\généralement en premier on regarde le diagramme de dispersion de Y et X, c'est a dire tracer les points d abscisse X et d'ordonnée Y, pour voir si cela suit une fonction linéaire, avec plot(X,Y), si on constate Y=aX+b.\\On s'intéresse au cas où l'influence d'une variable sur une autre peut être représentée par une droite de régression.\\\\ premier Cas : $Y_i =a+bX_i$. relation déterministe peu probable.\\Second cas:  $Y_i = a+bX_i+\epsilon_i$ où $\epsilon_i$ est un terme d'erreur qui prend en compte les influences aléatoire sur Y.\\\\
+On cherche un modèle (d'ordre 1) $Y_i = a+bX_i+ \epsilon_i$. les inconnues sont a,b,$\epsilon_i$.  On cherche à estimer a et b à partir des observations $(X_1Y_1),...,(X_nY_n)$ de manière à minimiser les erreurs $\epsilon_i , \forall i$.\\on pose $D=\sum \epsilon_i^2 = \sum (Y_i-a-bX_i)^2$. on peut choisir de minimiser $\sum |\epsilon_i|$ au lieu du carré ou minimiser le max des epsilon.\\On veux trouver \^a et \^b , qui sont $ argmin_{a,b} D= \sum argmin(Y_i-a-bX_i)^2$.\\
+\^a , \^b vérifient $\frac{\delta D}{\delta a} = 0$ et $\frac{\delta D}{\delta b} = 0$ .\\
+$\frac{\delta D}{\delta a} = 0$ <=> $(f(x)^2)' = 2f(x)f'(x)$ <=> $\sum 2(Y_i-$\^a$-$\^b$X_i)(-1) = 0$ <=> $\sum Y_i - n$\^a$-$\^b$\sum X_i=0$ (1)\\\\
+
+$\frac{\delta D}{\delta b} = 0$ <=> $(f(x)^2)' = 2f(x)f'(x)$ <=> $\sum 2(Y_i-$\^a$-$\^b$X_i)(-X_i) = 0$ <=> $\sum Y_iX_i - n$\^a$\sum X_i-$\^b$\sum X_i^2=0$. (2)\\\\
+
+$\bar{Y} = \frac{ \sum Y_i}{n}$, $\bar{X} = \frac{\sum X_i}{n}$.\\
+(1) s'écrit $\bar{Y}-$\^a$-$\^b$\bar{X}=0$ .\\
+$\bar{Y}=$\^a$+$\^b$\bar{X}$ => \^a$=\bar{Y}-$\^b$\bar{X}$.\\on remplace \^a par  $=\bar{Y}-$\^b$\bar{X}$ dans 2).\\\\On trouve \^b = $\frac{\sum X_iY_i-n\bar{X}\bar{Y}}{\sum X_i^2 -n\bar{X}^2} $ = $\frac{\sum (X_i-\bar{X})(Y_i-\bar{Y})}{\sum (X_i -\bar{X})^2} $ = $\frac{Covar(X,Y)}{Var(X)}$.\\\\
+
+\begin{tabular}{|c|c|}
+\hline
+X=année & Y=inclinaison \\ \hline
+1975 & 624 \\ \hline
+1976 & 644 \\ \hline
+1977 & 656 \\ \hline
+1978 & 667 \\\hline
+\end{tabular}
+\paragraph{} sous R lm(Y $\sim$ X). on dois calculer en premier $\bar{X}$ et $\bar{Y}$ , ensuite  \^b à partie de la formule \^b = $\frac{\sum X_iY_i-n\bar{X}\bar{Y}}{\sum X_i^2 -n\bar{X}^2} $ = $\frac{\sum (X_i-\bar{X})(Y_i-\bar{Y})}{\sum (X_i -\bar{X})^2} $ = $\frac{Covar(X,Y)}{Var(X)}$ et ensuite \^a.
+\paragraph{Évaluation de la droite de régression estimée} Calcul de l'écart entre la valeur observée et la valeur prédite.\\$\sum (Y_i-\bar{Y})^2 = \sum (Y_i-$\^Y$_i)^2+ \sum($\^Y$_i-\bar{Y})^2$. On appelle cela la variation totale : $SC_{totale}$  =  Variation inexpliquée (somme des carrés des résidus) + variation expliquée(sommé des carrés de la régression).\\Coefficient de détermination $R^2 = \frac{Varitation expliquée}{Variation totale}$ 
+
+ 
 \end{document} 

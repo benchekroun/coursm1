@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  13 MAR 2013 15:31
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  12 MAR 2013 17:05
 entering extended mode
  %&-line parsing enabled.
-**ED.tex
-(./ED.tex
+**complexite.tex
+(./complexite.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
@@ -281,250 +281,258 @@ Package babel Info: Making ? an active character on input line 123.
 (/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
-) (./ED.aux)
-\openout1 = `ED.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Info: Redefining \degres on input line 11.
-LaTeX Info: Redefining \dots on input line 11.
-LaTeX Info: Redefining \up on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./ED.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 21.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 21.
 )
+(/usr/share/texmf/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen106
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip10
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks18
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks19
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks20
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+) (./complexite.aux)
+\openout1 = `complexite.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 15.
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \degres on input line 15.
+LaTeX Info: Redefining \dots on input line 15.
+LaTeX Info: Redefining \up on input line 15.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 16.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 16.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 16.
+
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 16.
+
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 16.
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 16.
+
+(/usr/share/texmf-texlive/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./complexite.toc)
 \tf@toc=\write3
-\openout3 = `ED.toc'.
+\openout3 = `complexite.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 22.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 22.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 22.
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Overfull \hbox (107.82033pt too wide) in paragraph at lines 41--47
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
 
 
-Overfull \hbox (31.3852pt too wide) in paragraph at lines 40--41
-[]\T1/cmr/m/n/10 along = vec-teur(seul ar-gu-ment si uti-lisé, créer une sé-que
-nce de 1 à length(vecteur). 
- []
-
-[4]
-Overfull \hbox (0.5545pt too wide) in paragraph at lines 45--46
-\T1/cmr/m/n/10 sieurs di-men-sions si on lui as-so-cie un vec-teur de di-men-si
-on. La fonc-tion dim(vect)
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 56.
-(/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [6]
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-
- []
-
-
-Overfull \hbox (3.33055pt too wide) in paragraph at lines 100--101
-[]\T1/cmr/m/n/10 moyenne géo-mé-trique : ra-cine $\OML/cmm/m/it/10 n[]$ \T1/cmr
-/m/n/10 du pro-duit des n fac-teurs : x1*x2*...*xn 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
-
- []
-
-[7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 180--184
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 184--190
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--210
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--219
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--219
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--219
-
- []
-
-[10]
-Overfull \hbox (0.30457pt too wide) in paragraph at lines 220--224
-\T1/cmr/m/n/10 la ma-chine fonc-tionne quand au moins deux tiers des com-po-san
-ts sont en marche. 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--232
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--232
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--232
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--232
-
- []
-
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 251--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--261
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--261
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--261
-
- []
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 271.
-
-Missing character: There is no é in font cmr7!
-[13] [14] (./ED.aux) ) 
+[5] (./complexite.aux) ) 
 Here is how much of TeX's memory you used:
- 1383 strings out of 493848
- 16008 string characters out of 1152824
- 78231 words of memory out of 3000000
- 4680 multiletter control sequences out of 15000+50000
- 12765 words of font info for 32 fonts, out of 3000000 for 9000
+ 2384 strings out of 493848
+ 28317 string characters out of 1152824
+ 82639 words of memory out of 3000000
+ 5613 multiletter control sequences out of 15000+50000
+ 47679 words of font info for 58 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 24i,6n,24p,1013b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.en
-c}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmr5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sftt1000.pfb>
-Output written on ED.pdf (14 pages, 298229 bytes).
+ 27i,8n,24p,645b,202s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/us
+r/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvip
+s/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf
+/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx1
+2.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/font
+s/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
+Output written on complexite.pdf (5 pages, 194722 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

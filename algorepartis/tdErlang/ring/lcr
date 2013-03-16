@@ -1,0 +1,4 @@
+#!/usr/bin/env escript
+%% -*- erlang -*-
+main([S]) ->
+    lcr:go(list_to_integer(S)).
