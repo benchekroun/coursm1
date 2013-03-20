@@ -13,3 +13,10 @@
 \contentsline {subparagraph}{i}{4}
 \contentsline {subparagraph}{ii}{4}
 \contentsline {subparagraph}{}{5}
+\contentsline {section}{\numberline {2}19 Mars 2013}{5}
+\contentsline {subsection}{\numberline {2.1}NP-Completude}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{thm Cook-Levin}{6}
+\contentsline {paragraph}{Id\IeC {\'e}e:}{6}
+\contentsline {paragraph}{}{7}

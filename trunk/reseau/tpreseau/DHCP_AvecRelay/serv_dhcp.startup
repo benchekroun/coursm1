@@ -1,0 +1,4 @@
+ifconfig eth0 192.168.1.253
+route add default gw 192.168.1.254
+/etc/init.d/dhcp3-server start
+

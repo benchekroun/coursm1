@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  12 MAR 2013 17:05
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  19 MAR 2013 17:19
 entering extended mode
  %&-line parsing enabled.
 **complexite.tex
@@ -455,18 +455,18 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 16.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./complexite.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./complexite.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 17.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 17.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 17.
+)
 \tf@toc=\write3
 \openout3 = `complexite.toc'.
 
  [2]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 22.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 22.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 22.
-
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
@@ -487,52 +487,125 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
  []
 
 [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
 
-[5] (./complexite.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+[5]
+
+LaTeX Warning: Command \' invalid in math mode on input line 93.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--100
+
+ []
+
+
+Overfull \hbox (35.1906pt too wide) in paragraph at lines 92--100
+\OT1/lmr/m/n/10 ^^H[] = \OMS/lmsy/m/n/10 ^[] ^[] \OT1/lmr/m/n/10 ^^H[](\OML/lmm
+/m/it/10 x[]; :::; x[]; x[]; :::; x[]; x[]; :::; x[]; x[]; :::; x[];$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
+
+ []
+
+
+Overfull \hbox (21.39845pt too wide) in paragraph at lines 101--104
+\OT1/lmr/m/n/10 ^^H[] = ^^H[](\OML/lmm/m/it/10 q[]; x[]\OT1/lmr/m/n/10 )\OML/lm
+m/m/it/10 ; x[]; :::; x[] \OMS/lmsy/m/n/10 ^ ^[]\OT1/lmr/m/n/10 ^^H[](\OML/lmm/
+m/it/10 x[]; x[]; :::; x[]\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^ ^[]\OT1/lmr/m/n/
+10 (\OML/lmm/m/it/10 B; x[]; :::; x[]\OT1/lmr/m/n/10 )$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+[6] [7] (./complexite.aux) ) 
 Here is how much of TeX's memory you used:
- 2384 strings out of 493848
- 28317 string characters out of 1152824
- 82639 words of memory out of 3000000
- 5613 multiletter control sequences out of 15000+50000
- 47679 words of font info for 58 fonts, out of 3000000 for 9000
+ 2387 strings out of 493848
+ 28354 string characters out of 1152824
+ 84639 words of memory out of 3000000
+ 5616 multiletter control sequences out of 15000+50000
+ 50677 words of font info for 59 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,8n,24p,645b,202s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/us
-r/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf
-/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx1
-2.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on complexite.pdf (5 pages, 194722 bytes).
+ 27i,8n,24p,1103b,202s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/t
+exmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
+Output written on complexite.pdf (7 pages, 217504 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

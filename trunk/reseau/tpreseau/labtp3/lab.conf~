@@ -1,0 +1,34 @@
+LAB_DESCRIPTION="trois petits réseaux"
+LAB_VERSION=1
+LAB_AUTHOR="N. Ollinger"
+LAB_EMAIL=Nicolas.Ollinger@univ-orleans.fr
+
+machines="www rt1z rt2z rt3z r1 r2 r3 pc11 pc12 pc21 pc22 pc31 pc32"
+
+rt1[0]="hubA"
+pc11[0]="hubA"
+pc12[0]="hubA"
+rt1[1]="hubAA"
+rt1z[1]="hubAA"
+rt1z[0]="rezo"
+rt1z[con0]=none
+
+rt2[0]="hubB"
+pc21[0]="hubB"
+pc22[0]="hubB"
+rt2[1]="hubBB"
+rt2z[1]="hubBB"
+rt2z[0]="rezo"
+rt2z[con0]=none
+
+rt3[0]="hubC"
+pc31[0]="hubC"
+pc32[0]="hubC"
+rt3[1]="hubCC"
+rt3z[1]="hubCC"
+rt3z[0]="rezo"
+rt3z[con0]=none
+
+www[0]="rezo"
+www[mem]=128
+www[con0]=none

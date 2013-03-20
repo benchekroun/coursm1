@@ -60,4 +60,4 @@
 \contentsline {paragraph}{}{12}
 \contentsline {paragraph}{r\IeC {\'e}gression lin\IeC {\'e}aire}{13}
 \contentsline {paragraph}{}{13}
-\contentsline {paragraph}{Evaluation de la droite de r\IeC {\'e}gression estim\IeC {\'e}e}{14}
+\contentsline {paragraph}{\IeC {\'E}valuation de la droite de r\IeC {\'e}gression estim\IeC {\'e}e}{14}
