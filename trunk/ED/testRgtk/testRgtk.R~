@@ -87,8 +87,10 @@ the.buttons$setLayout("spread")
 the.buttons$setSpacing(40)
 buttonOK = gtkButtonNewFromStock("gtk-ok")#btn ok
 #connecter un bouton a une fonction
-gSignalConnect(buttonOK, "clicked", performStatistics)
+gSignalConnect(buttonOK, "clicked", window$destroy)
 the.buttons$packStart(buttonOK,fill=F)
 buttonCancel = gtkButtonNewFromStock("gtk-close")#btn close
 gSignalConnect(buttonCancel, "clicked", window$destroy)
 the.buttons$packStart(buttonCancel,fill=F)
+
+
