@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc} % un package
 \usepackage[T1]{fontenc}      % un second package
 \usepackage[francais]{babel}  % un troisième package
-
+\usepackage{amsmath}
 
 \title{ED- Christel Vrain}
 \author{Alexandre Masson}
@@ -245,6 +245,7 @@ Var = $\int_0^{360} (x-\frac{1}{180})^2 . \frac{1}{360}dx$
 \paragraph{A savoir} connaître loi jointe de deux variables, connaître les rappels de statistiques, un peu de dev R, un peu d'analyse de données. Controle lundi après midi
 
 \paragraph{Analyse de régression et corrélation} analyse : recherche d'une relation stochastique qui lie 2 ou plusieurs variables. Corrélation : indice mesurant l'intensité de la relation entre 2 variables.
+
 \subsection{Analyse de régression}
 \paragraph{} Estimer la valeur d'une des variables à l'aide des valeurs des autres. $Y=f(X)$ avec Y  : variable expliquée et X variable explicative.\\déterminer le modèle, c'est à dire l'équation de f(x) qui relie X et Y.\\estimer le degré de fiabilité de l'estimation.
 \newpage
@@ -270,5 +271,61 @@ X=année & Y=inclinaison \\ \hline
 \paragraph{} sous R lm(Y $\sim$ X). on dois calculer en premier $\bar{X}$ et $\bar{Y}$ , ensuite  \^b à partie de la formule \^b = $\frac{\sum X_iY_i-n\bar{X}\bar{Y}}{\sum X_i^2 -n\bar{X}^2} $ = $\frac{\sum (X_i-\bar{X})(Y_i-\bar{Y})}{\sum (X_i -\bar{X})^2} $ = $\frac{Covar(X,Y)}{Var(X)}$ et ensuite \^a.
 \paragraph{Évaluation de la droite de régression estimée} Calcul de l'écart entre la valeur observée et la valeur prédite.\\$\sum (Y_i-\bar{Y})^2 = \sum (Y_i-$\^Y$_i)^2+ \sum($\^Y$_i-\bar{Y})^2$. On appelle cela la variation totale : $SC_{totale}$  =  Variation inexpliquée (somme des carrés des résidus) + variation expliquée(sommé des carrés de la régression).\\Coefficient de détermination $R^2 = \frac{Varitation expliquée}{Variation totale}$ 
 
- 
+\section{20 Mars 2013}
+\subsection{Approche Matériel de la régression linéaire} en générale on ne cherche pas la régression linéaire sur une seule variable, mais plutôt sur plusieurs variables telles que $Y= a_0+a_1X_1+...+a_nX_n$\\Observations \\$y_1$ $x_1$\\$y_2$ $x_2$\\$y_3$ $x_3$\\recherche d'une relation $Y=\beta_0 + \beta_1X+\epsilon$ , on l'instancie un y et un epsilon par variable, que l'on écrit sous forme de matrice\\
+\begin{center}
+
+$ Y=X\beta+\epsilon $\\
+$\begin{pmatrix}
+ y_1\\
+ y_2\\
+ ...\\
+ y_n
+\end{pmatrix}$  = $\begin{pmatrix}
+1 & x_1 \\
+... \\
+1 & x_n
+\end{pmatrix}$ x $\begin{pmatrix}
+\beta_0 \\ \beta_1
+\end{pmatrix}$ + 
+$\begin{pmatrix}
+\epsilon_1 \\
+... \\
+\epsilon_n
+\end{pmatrix}$
+\end{center}
+
+\newpage
+\paragraph{} Minimiser $\epsilon_1^2 + ... + \epsilon_n^2 = ^t \epsilon * \epsilon$  où $^t \epsilon = \epsilon_1 ...\epsilon_n$\\$= ^t(Y-X\beta)(Y-X\beta)$\\$=(^tY-^t\beta^tX)(Y-X\beta)$\\$=^tYY-^tX\beta-^t\beta^tXY+^t\beta^tXX\beta$\\$=^tYY-2\beta^tXY+^t\beta^tXX\beta$\\\\dériver par rapport à $\beta$\\la solution est la machine $\beta$ où la dérivée s'annule.\\$-2^tXY+2^tXX\beta = 0$ donc $^tXX\beta = ^tXY$\\$\beta = $ $^{-1}(^tXX)(^tXY)$ \\\\ l'interet est que l'on peux étendre ce procédé a la régression multiples, puisque cela change juste notre matrice X et celle des $\beta$, de plus la formule de $\beta$  ne change pas.
+\subsection{Intervalle de confiance, test d'hypothèse}
+\subsubsection{Intervalle de confiance d'une estimation} 
+\paragraph{Paramètre}
+valeur inconnue de la population à estimer à partir d'un échantillon\\\textbf{Estimation} Utilisation des informations sur un échantillon pour déduire des résultats sur toute une population.\\le paramètre(caractéristique de la population (exprimé avec les lettres grecques)) est estimé partir d'une statistique(carac de l'échantillon) de l'échantillon.\\on cherche à exprimer\\
+\begin{center}
+
+$\begin{pmatrix}
+ & parametre & statistique \\
+ moyenne & \mu & \bar{x} \\
+ ecart-type & \sigma & s \\
+ variance & \sigma^2 & s^2 \\
+ pourcentage & \pi & p
+\end{pmatrix}$
+
+\end{center}
+\paragraph{} On cherche a connaître la relation entre le paramètre et la statistique\\si $\theta$ est un paramètre et si ($x_1,...x_n$) est un échantillon.\\un estimateur de $\theta$ est une fonction G($x_1,...,x_n$) utilisé pour trouver une valeur estimée de $\theta$\\exemple: \\
+$\bar{x} = \frac{x_1+...+x_n}{n}$\\\\
+
+$s^2 = \frac{1}{n} \sum_{i=1}^n (x_i -  \bar{x})$\\
+Il existe donc une valeur de $\bar{x}$ pour échantillon, on a donc $\bar{x}$ qui est un variable aléatoire , dont on peux calculer l'espérance, sur tous les échantillons possibles.\\
+Si on a une population de taille N et si on choisit des échantillons de taille n , on a comme échantillons possibles $C_N^n = \begin{pmatrix}
+N \\ n
+\end{pmatrix}$ $=\frac{N!}{n!(N-n)!}$
+\paragraph{} NO parle de distribution d'échantillonnage =  distribution de toutes les moyennes obtenues en considérant tous les échantillons de taille n possibles .  Il est dit sans biais si l'ensemble des toutes les moyennes des estimateur est en moyenne égale à la valeur souhaités, if(mean(mean($\forall$ échantillon)) = param recherché.\\
+$\bar{x} = \frac{x_1+...+x_n}{n}$ est un estimateur dans biais de $\mu$ \\$E(\bar{x})= \mu$.\\
+En revanche la variance $s^2 = \frac{1}{n} \sum_{i=1}^n (x_i -  \bar{x})$ n'est pas un estimateur sans biais de la variance ($\sigma^2$), car $E(s^2) = \frac{n-1}{n} \sigma^2$\\La distribution d'échantillonnage \underline{des moyennes} , si n est suffisamment grand suit approximativement une loi normale de moyenne $\mu$ et de variance $\frac{\sigma^2}{n} \frac{N-n}{N-1}$\\Si la population suit une loi normale, la distribution d'échantillonnage aussi, et quelque soit la taille de l'échantillon aussi.\\ Intervalle de confiance d'un estimation: Soi t$\theta$ un paramètre à estimer et T son estimateur à partir d'un échantillon, on détermine un intervalle [T-e,T+e] tq $P(T-e\leq \theta \leq T+e) = 1-\alpha$ où $1-\alpha$ désigne le niveau de confiance.\\
+Exemple pour la moyenne : \\Hypothèse : la variance est connue, comme la population suit une loi normale, je sais que la distribution suit aussi une loi normale. \\ donc $\bar{X} \sim N(\mu,\sigma_{\bar{x}})$\\Soit $z_\frac{\alpha}{2}$ le réel tel que P($Z\leq z_{\frac{\alpha}{2}}$ ) = $1-\frac{ \alpha}{2}$ (table de Gauss)\\
+P($- z_{\frac{\alpha}{2}} \leq Z \leq z_{\frac{\alpha}{2}}) = \Phi(z_{\frac{\alpha}{2}}) - \Phi(-z_{\frac{\alpha}{2}})$\\$=\Phi(z_{\frac{\alpha}{2}}) -(1- \Phi(z_{\frac{\alpha}{2}}))$\\$=2\Phi(z_{\frac{\alpha}{2}})-1$ = $1-\alpha$ car $ \Phi(z_{\frac{\alpha}{2}}) = 1-\frac{\alpha}{2}$\\\\
+$P(- z_{\frac{\alpha}{2}} \leq \frac{\bar{X}-\mu}{\sigma_{\bar{X}}} \leq z_{\frac{\alpha}{2}})$\\
+$P(\bar{X}- z_{\frac{\alpha}{2}}\sigma_{\bar{X}} \leq \mu \leq \bar{X}+z_{\frac{\alpha}{2}}\sigma_{\bar{X}})$
+
 \end{document} 
