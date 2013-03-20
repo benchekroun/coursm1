@@ -1,0 +1,8 @@
+question 1 
+il existe deux heuristiques possibles
+h1 (n) = nombre de plaquettes mal placees
+h2 (n) = nombre total des distances de Manhattan
+(nombre de pas pour arriver a la bonne place de chaque
+plaquette)
+
+

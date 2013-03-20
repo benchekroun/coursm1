@@ -1,0 +1,21 @@
+LAB_DESCRIPTION="DHCP avec relay"
+LAB_VERSION=1
+LAB_AUTHOR="S. Robert"
+LAB_EMAIL=sophie.robert@univ-orleans.fr
+
+r1[0]="hubA"
+r2[0]="hubB"
+serv_dhcp[0]="hubA"
+
+pc11[0]="hubA"
+pc12[0]="hubA"
+pc13[0]="hubA"
+
+
+pc21[0]="hubB"
+pc22[0]="hubB"
+pc23[0]="hubB"
+mach_relay[0]="hubB"
+
+r1[1]="hubC"
+r2[1]="hubC"

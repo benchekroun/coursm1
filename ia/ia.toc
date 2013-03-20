@@ -39,3 +39,29 @@
 \contentsline {paragraph}{SMA*}{11}
 \contentsline {section}{\numberline {7}5 Mars 2013}{11}
 \contentsline {paragraph}{}{11}
+\contentsline {paragraph}{Satisfaction de clauses bool\IeC {\'e}enne}{12}
+\contentsline {paragraph}{le recuit simul\IeC {\'e}}{12}
+\contentsline {paragraph}{local beam search}{12}
+\contentsline {section}{\numberline {8}Les algorithmes g\IeC {\'e}n\IeC {\'e}tiques}{12}
+\contentsline {paragraph}{le principe}{12}
+\contentsline {section}{\numberline {9}Jeux}{12}
+\contentsline {paragraph}{intro}{12}
+\contentsline {paragraph}{de quoi dispose t on }{12}
+\contentsline {paragraph}{Alpha-b\IeC {\^e}ta}{13}
+\contentsline {paragraph}{d\IeC {\'e}cision imparfaite en temps r\IeC {\'e}el}{13}
+\contentsline {paragraph}{Hasard}{14}
+\contentsline {section}{\numberline {10}19 Mars 2013}{14}
+\contentsline {subsection}{\numberline {10.1}Agents \IeC {\`a} base de connaissances}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{Exemple :chasse au Wumpus}{14}
+\contentsline {paragraph}{Description PEAS du monde du Wumpus}{14}
+\contentsline {paragraph}{suite de l'exemple}{15}
+\contentsline {paragraph}{domaines des systemes experts}{15}
+\contentsline {paragraph}{architecture}{15}
+\contentsline {paragraph}{Exigence}{16}
+\contentsline {paragraph}{Construction d'un syst\IeC {\`e}me expert}{16}
+\contentsline {subsection}{\numberline {10.2}Raisonnement en logique propositionnelle}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{base du Wumpus}{16}
+\contentsline {paragraph}{R\IeC {\'e}solution}{17}
