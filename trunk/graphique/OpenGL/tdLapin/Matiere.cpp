@@ -8,19 +8,19 @@
 using namespace std;
   
 Matiere::Matiere(){
-  Matiere_Ambiente[0] = 0.1;
-  Matiere_Ambiente[1] = 0.1;
-  Matiere_Ambiente[2] = 0.1;
+  Matiere_Ambiente[0] = 0.0001;
+  Matiere_Ambiente[1] = 0.0001;
+  Matiere_Ambiente[2] = 0.0001;
   Matiere_Ambiente[3] = 1.0;
 
-  Matiere_Diffuse[0] = 0.1;
-  Matiere_Diffuse[1] = 0.1;
-  Matiere_Diffuse[2] = 0.1;
+  Matiere_Diffuse[0] = 0.0001;
+  Matiere_Diffuse[1] = 0.0001;
+  Matiere_Diffuse[2] = 0.0001;
   Matiere_Diffuse[3] = 1.0;
 
-  Matiere_Speculaire[0] = 0.1;
-  Matiere_Speculaire[1] = 0.1;
-  Matiere_Speculaire[2] = 0.1;
+  Matiere_Speculaire[0] = 0.0001;
+  Matiere_Speculaire[1] = 0.0001;
+  Matiere_Speculaire[2] = 0.0001;
   Matiere_Speculaire[3] = 1.0;
 
   shine = 50;
