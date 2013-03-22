@@ -20,9 +20,9 @@ Lumiere::Lumiere(){
   Lumiere_Diffuse[2] = 0.6;
   Lumiere_Diffuse[3] = 1.0;
 
-  Lumiere_Speculaire[0] = 0.3;
-  Lumiere_Speculaire[1] = 0.3;
-  Lumiere_Speculaire[2] = 0.3;
+  Lumiere_Speculaire[0] = 0.03;
+  Lumiere_Speculaire[1] = 0.03;
+  Lumiere_Speculaire[2] = 0.03;
   Lumiere_Speculaire[3] = 1.0;
 
   Lumiere_Position[0] = 512.0;

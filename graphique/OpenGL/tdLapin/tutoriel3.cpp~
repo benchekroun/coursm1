@@ -177,7 +177,7 @@ void init()
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
   lum = new Lumiere();
-  lapin.setFilename("./myfile.off");
+  lapin.setFilename("./lapin.off");
   lapin.charger();
 }
 float minX=0,minY=0,minZ=0,maxX=0,maxY=0,maxZ=0,atX=0,atY=0,atZ=0;
@@ -243,10 +243,14 @@ void Display(void)
 
   gluLookAt(minX+((maxX-minX)/2.0),minY+((maxY-minY)/2.0),maxZ+alpha,minX+((maxX-minX)/2.0),minY+((maxY-minY)/2.0),minZ+((maxZ-minZ)/2.0),0,1,0);
     
-  lapin.colorer(255,200,200,255);
-//lapin.setAngleY(b);
+ // lapin.colorer(255,200,200,255);
+lapin.set_shininess(12);
+lapin.set_mat_Ambiente(0.9, 0.000000, 0.000000, 1.0);
+lapin.set_mat_Speculaire(0.0000, 0.00006, 0.00000, 1.00);
+lapin.set_mat_Diffuse(0.000000000, 0.0000000000, 0.6, 1.0);
+ lapin.setAngleY(b);
   lapin.dessiner();
-  lapin.drawNormals();
+  //lapin.drawNormals();
   // A obtenir
   // Nouveau tableau d'indices et utiliser glArrayElement puis glDrawElements avec GL_TRIANGLES
   glutSwapBuffers();

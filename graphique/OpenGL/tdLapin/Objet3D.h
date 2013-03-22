@@ -190,25 +190,25 @@ class Objet3D
   virtual ~Objet3D()
     {
       /* delete de l'existant */
-	if(_vertices)
-	  {
-	    delete [] _vertices;
-	  }
+      if(_vertices)
+	{
+	  delete [] _vertices;
+	}
 
-	if(_index)
-	  {
-	    delete [] _index;
-	  }
+      if(_index)
+	{
+	  delete [] _index;
+	}
       
-	if(_texcoord)
-	  {
-	    delete [] _texcoord; 
-	  }
+      if(_texcoord)
+	{
+	  delete [] _texcoord; 
+	}
       
-	if(_normals)
-	  {
-	    delete [] _normals;
-	  }
+      if(_normals)
+	{
+	  delete [] _normals;
+	}
     }
   
   /* observateurs */
@@ -248,7 +248,7 @@ class Objet3D
   
   void move(float x, float y, float z)
   {
-     _posX = x; _posY = y; _posZ = z;
+    _posX = x; _posY = y; _posZ = z;
   }
 
   void setAngleX(float ax)
@@ -324,19 +324,18 @@ class Objet3D
 	/* on a notre normale du triangle _index & _index+1 & _index+2 */
 
 	/* on normanize */
-	float normanizer=sqrt(n[0]*n[0]+n[1]*n[1]+n[2]*n[2]);
-	
+	float normanizer=sqrt(n[0]*n[0]+n[1]*n[1]+n[2]*n[2]);	
 	n[0] = n[0]/normanizer;
 	n[1] = n[1]/normanizer;
 	n[2] = n[2]/normanizer;
 	
 	/* on additionne a cette normale les normales stockées pour chaque point du triangle */
-	_normals[3 * _index[j*3]] += n[0];
-	_normals[3 * _index[j*3+1]] += n[0];
-	_normals[3 * _index[j*3+2]] += n[0];
+	_normals[3 * _index[j*3]] += n[0]; //point 1 sur x
+	_normals[3 * _index[j*3+1]] += n[0]; //point 2 sur x
+	_normals[3 * _index[j*3+2]] += n[0]; //point3 sur x
 	
-	_normals[3 * _index[j*3] + 1] += n[1];
-	_normals[3 * _index[j*3+1] + 1] += n[1];
+	_normals[3 * _index[j*3] + 1] += n[1]; //point 1 sur y
+	_normals[3 * _index[j*3+1] + 1] += n[1]; //Etc...
 	_normals[3 * _index[j*3+2] + 1] += n[1];
 	
 	_normals[3 * _index[j*3] + 2] += n[2];
@@ -346,6 +345,15 @@ class Objet3D
 	
 	//cout << "normal : "<< j<<endl;
       }
+
+    //penser a renormaliser toutes les normales, en effet le += fausse la normalisation
+    for(int i= 0 ; i< _nb_normals ;i++){
+      	float normanizer=sqrt(n[3*i]*n[3*i]+n[3*i+1]*n[3*i+1]+n[3*i-2]*n[3*i+2]);
+	n[3*i] = n[3*i]/normanizer;
+	n[3*i+1] = n[3*i+1]/normanizer;
+	n[3*i+2] = n[3*i+2]/normanizer;
+    }
+    
   }
 
   void drawNormals(){
