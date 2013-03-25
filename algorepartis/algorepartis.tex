@@ -269,7 +269,46 @@ Savoir qu'un événement est après un autre, rapport de cause-effet , ceux qui 
 
 \paragraph{Banque} dans le système , chaque banquier possède les dates à laquelle il doit indiquer à un serveur combien de pognon il possède, quand arrive la date, il collecte l'argent qu'il a localement, et il a  besoin de calculer l'argent qui à été envoyé, il v attendre des autres processus des mesg avec les dates à laquelle le pognon à été envoyé, il va calculer l'argent qu'il a dans ses compte et calculer combien il a reçu à des dates antérieurs à la date d'envoi. le processus envoi un infinité de messages à d'autres, même avec 0 comme valeur de pognon.
 
-\paragraph{Global snapshot} généralisation du banking system, on va avoir une vision globale du système\\ simuler machine a états, il reçoit des événements, il les mets dnas une file, et les executent dans l'ordre, avant d'exécuter un event r, il faut etre sur de ne pas recevoir un event  n< r, pour cela, on attend encore une fois que l'horloge locale passe la date r.
+\paragraph{Global snapshot} généralisation du banking system, on va avoir une vision globale du système\\ simuler machine a états, il reçoit des événements, il les mets dans une file, et les executent dans l'ordre, avant d'exécuter un évent r, il faut être sur de ne pas recevoir un event  n< r, pour cela, on attend encore une fois que l'horloge locale passe la date r.
 \subsection{horloge vectorielle} 
-\paragraph{} on a envie de def un ordre sur des évents, mais pas forcement total, on peut comparer des events sur le même processus, et ceux appartenant au même envoie de message, mais les autres on ne peux pas. au lieu d'avoir une valeur d'horloge par processus on garde un vecteur d'horloge , soit mon horloge plus ma vision locale des horloges des autres processus. quand il envoie un message, il incrémente sa valeur, quadn il recçoit , il incrémente sa valeur a lui de la valeur maximum entre le max du vecter reçu +1 et la sienne +1, puis met a jours ses valeurs connues des autres processus , avec a chaque fois le maximum. Avec ce système là , on obtient l'ordre obtenu avec l'ordre total et l'ordre à l'execution.
+\paragraph{} on a envie de def un ordre sur des évents, mais pas forcement total, on peut comparer des events sur le même processus, et ceux appartenant au même envoie de message, mais les autres on ne peux pas. au lieu d'avoir une valeur d'horloge par processus on garde un vecteur d'horloge , soit mon horloge plus ma vision locale des horloges des autres processus. quand il envoie un message, il incrémente sa valeur, quand il reçoit , il incrémente sa valeur a lui de la valeur maximum entre le max du vecteur reçu +1 et la sienne +1, puis met a jours ses valeurs connues des autres processus , avec a chaque fois le maximum. Avec ce système là , on obtient l'ordre obtenu avec l'ordre total et l'ordre à l’exécution.
+
+
+\section{25 Mars 2013}
+\subsection{Systèmes à mémoire partagées} 
+\paragraph{} on ne veux pas que deux processus accèdent à une même ressource, algorithme de Peterson, Dijkstra, Lamport, Burns. \\\\
+
+qu'est ce qu'un système asynchrone?\\
+Ce qui est important c'est qu'on a un ensemble de processus, et un ensemble de variables les deux forment un graphe, chaque processus accède a certaines variables, elles sont donc partagées. trois modes d’accès contraints , faible(R/W), fort(R/M/W) et Queues/stack/others. Avec Java concurrency, on a des structures pour gérer la concurrence.\\
+
+\paragraph{} Nous allons étudier deux problèmes, dans un environnement ou il n'y a pas de faute, mutual exclusion et ressources allocation.\\ On suppose que le système peut être dans n'importe quel état et il doit converger vers un état stable. \\\\On va rester sur un description des programmes à base de graphe, à base d'invocation et réponse, pour l'accès aux variables. On va décrire les algorithmes sous forme d'automates.
+
+\paragraph{Mutual exclusion} Partager une ressource entre plusieurs Users. \\User$_i$ à quatre régions, la zone normale, l'entrée en zone critique, la zone critique et la sortie de zone critique, notre objectif est de coder le comportement de l'algo en entrée et sortie de section critique , c'est a dire comment il prend la main et comment il la rend. Le système doit respecter le modèle, il doit être safe, donc respecter l'exclusion mutuelle, il doit aussi être équitable, un processus ne doit pas attendre "trop longtemps" pour accéder à la donnée souhaitée.
+
+\paragraph{} algo de Dijkstra 1965, principe , on a une variable turn qui peux etre lues par tout le monde et peut prendre des valeurs $ 1..n$, multiread, multiwrite. Chaque process à une variable flag qui vaux entre $0,1,2$ seul le processus i peut modifier son flag et seul les autres processus peuvent le lire. Quand le processus met son flag à 1 , il essaye de rentrer en session critique, il va essayer de mettre son id en variable turn. Si il n'est pa sturn , alors il regarde si le processus gagnant(celui qui a su imposer son pid) est actif, (si le flag du process winner est à  1) si je réussi à accéder à la section critique mon flag est  à deux. donc avant d'écrire je regarde si je suis le seul à deux. 
+\paragraph{}
+\begin{verbatim}
+try 
+L:	flag[i]= 1;
+		while(turn != i)
+			if (flag[turn] = 0)
+				turn = i
+end try
+	flag[i] = 2;
+	for j != i do
+		if(flag[j] = 2) then
+			 goto L;
+	exit
+		flag[i] = 0;
+\end{verbatim}
+\paragraph{ } On passe a Peterson, algo pour seulement 2 processus
+\begin{verbatim}
+try 
+L:	flag[i]= 1;
+	turn = i
+end try
+	wait flag[1-i]=0 v turn != i 
+\end{verbatim}
+On peut l'étendre à n processus
+\paragraph{} Sequence of competition : les processus doivent monter un escalier, celui le plus haut à accès à la données.\\\\\textbf{Peterson : Tournament algorithm } On suppose $2^n$ processus
 \end{document}
