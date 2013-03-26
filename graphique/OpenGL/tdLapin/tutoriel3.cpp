@@ -177,7 +177,7 @@ void init()
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
   lum = new Lumiere();
-  lapin.setFilename("./lapin.off");
+  lapin.setFilename("./triceratops.off");
   lapin.charger();
 }
 float minX=0,minY=0,minZ=0,maxX=0,maxY=0,maxZ=0,atX=0,atY=0,atZ=0;
@@ -248,9 +248,9 @@ lapin.set_shininess(12);
 lapin.set_mat_Ambiente(0.9, 0.000000, 0.000000, 1.0);
 lapin.set_mat_Speculaire(0.0000, 0.00006, 0.00000, 1.00);
 lapin.set_mat_Diffuse(0.000000000, 0.0000000000, 0.6, 1.0);
- lapin.setAngleY(b);
+ //lapin.setAngleY(b);
   lapin.dessiner();
-  //lapin.drawNormals();
+  lapin.drawNormals();
   // A obtenir
   // Nouveau tableau d'indices et utiliser glArrayElement puis glDrawElements avec GL_TRIANGLES
   glutSwapBuffers();

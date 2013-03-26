@@ -1,4 +1,4 @@
 ifconfig eth0 10.3.0.254/16
 ifconfig eth1 3.4.5.6/24
 route add default gw 3.4.5.1
-
+/etc/init.d/dhcp3-server start
