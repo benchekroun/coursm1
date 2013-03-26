@@ -105,5 +105,81 @@ $\Phi_{input}^{M,P,x} = \Phi_{case}^M(q_0,x_0),x_1^{00},...,x_1^{00} \wedge \wed
 $\Phi_{accept}^{M,N}$ vérifie que la case (0,n] contient bien $q_{oui}$ \\
 la formule $\Phi_x^{M,N}$ est donc calculable en temps polynomial en |x| et est satisfiable ssi l existe des choix non déterministes pour lequels $M$ accepte x, i.e x in A.
 \paragraph{} 
-Si A ets NP-diificile et $A\leq_p B$ alors B ets NP difficile, car B est plus compliqué que A., pour montrer que BLOP ets np complet, on montre que blop in NP et blip $\leq_p$ BLOP , comme blop plus compliqué que blip et blip np , alors blop np\\\textbf{prop} 3SAT et variante est NP-complet, \\une formule CNF avec jsuqu'a 3 littéraux par clause\\ idem mais avec exactement\\idem mais avec 3 littéraux distincts\\\\\textbf{démonstration} \\3SAT in NP : cf cours précédent\\3SAT est NP-difficile, montrons $SAT \leq_p 3SAT$ \\Exhibons F calculable en temps ploynomial telle que \\$\forall \Phi, \Phi \in SAT <=> f(\Phi) \in 3SAT$\\no doit trouver un moyen de transformer les littéraux de tailel n en littéraux de taille 3 avec des conjonctions entre eux, pour respecter CNF.\\\\F remplace chaque clause ($l_1 v l_2v...vl_k$) par la formule ($l_1vl_2v\alpha_2) \wedge (\bar{\alpha_2}vl_3n\alpha_3)\wedge...\wedge(\bar{\alpha_{k-2}}vl_{k-1}vl_k)$ où $\alpha_2,...,\alpha_{k-2}$ sont k-3 nouvelles variables, et cette formule est satisfiable ssi la clause l'est.
+Si A est NP-diificile et $A\leq_p B$ alors B est NP difficile, car B est plus compliqué que A., pour montrer que BLOP est np complet, on montre que blop in NP et blip $\leq_p$ BLOP , comme blop plus compliqué que blip et blip np , alors blop np\\\textbf{prop} 3SAT et variante est NP-complet, \\une formule CNF avec jsuqu'a 3 littéraux par clause\\ idem mais avec exactement\\idem mais avec 3 littéraux distincts\\\\\textbf{démonstration} \\3SAT in NP : cf cours précédent\\3SAT est NP-difficile, montrons $SAT \leq_p 3SAT$ \\Exhibons F calculable en temps ploynomial telle que \\$\forall \Phi, \Phi \in SAT <=> f(\Phi) \in 3SAT$\\no doit trouver un moyen de transformer les littéraux de tailel n en littéraux de taille 3 avec des conjonctions entre eux, pour respecter CNF.\\\\F remplace chaque clause ($l_1 v l_2v...vl_k$) par la formule ($l_1vl_2v\alpha_2) \wedge (\bar{\alpha_2}vl_3n\alpha_3)\wedge...\wedge(\bar{\alpha_{k-2}}vl_{k-1}vl_k)$ où $\alpha_2,...,\alpha_{k-2}$ sont k-3 nouvelles variables, et cette formule est satisfiable ssi la clause l'est.
+
+\section{26 Mars 2013}
+\subsection{NP-complétude suite}
+\paragraph{} \textbf{Lemme} $3_{\neq} SAT \leq_p 3_{ex}SAT \leq_p 3_\leq SAT$\\\textbf{Démo} Icic à chaque fois $A \leq_m B $ à prouver\\avec $A\subseteq B$ et on sait séparer A de B en temps polynomial.\\\textbf{Proposition} $3_\leq SAT \leq_p 3_{\neq} SAT$\\\textbf{Proposition} $SAT \leq_p 3_{\leq}SAT$\\\textbf{Corollaire} 3SAT est NP-Complet\\\textbf{Démonstration} Astuce : la clause ($P vQ$) ou P et Q sont des disjonctions de littéraux est satisfiable si et seulement si $(Pvx) \wedge (\bar{x} v Q)$ est satisfiable ou x n’apparaît ni dans P ni dans Q.\\\textbf{=>} Supposons (PvQ) satisfiable . Fixons une instanciaition $\sigma$ qui satisfait (PvQ). ALors on construit une instanciation $\sigma$' qui satisfait $(Pvx) \wedge (\bar{x} v Q)$  ainsi
+\begin{itemize}
+\item si $\sigma(P)$ ets vraie on pose $\sigma'(x)$ = faux
+\item si $\sigma(P)$ est faux alors $\sigma(Q)$ ets vrai on pose $\sigma'(x)$ = vrai
+\item $\forall y ,y\neq x$ , $\sigma'(y) = \sigma(y)$
+\end{itemize}
+\textbf{<=} Supposons $(Pvx) \wedge (\bar{x} v Q)$ satisfait par ine instanciation $\sigma$ alors $\sigma$ satisfait aussi (P $\wedge$ Q). En effet si $\sigma(X)$ ets vraie alors $\sigma(Q)$ ets vraie, et si $\sigma(X)$ ets faux alors $\sigma(P)$ ets vraie.
+
+\paragraph{} Pour montrer  $3_{\leq}SAT \leq_p 3_{\neq}SAT$, il faut associer à toute formule $\phi$ avec jusqu'a 3 lit/clauses, une formule $f(\phi)$ avec exactement 3 lit $\neq$/clause de sorte de $\phi$ satisfiable <=> $f(\phi)$ sat.\\Il faut faire grossir les clauses à  ou  2 lit $\neq$ ON applique l'astuce une ou deux fois. Cette transformation se calcule en temps polynomial.\\Pour montrer qu e$SAT \leq_p 3_{\leq}SAT$ \\$\phi$ quelconque\\$f(\phi)$ jusqu'a 3 lit/clause\\on applique l'astuce pour faire maigrir les clauses : \\$(l_1 v l_2 v ... v l_k)$  on l'applique k-1 fois -> $(l_1 v \alpha_1) \wedge (\bar{\alpha_1} v l_2 v \alpha_2) \wedge ...\wedge (\bar{\alpha_{k-1}} v l_k)$\\cette transformation est calculable en temps polynomial donc $SAT \leq_p 3SAT$\\
+\begin{verbatim}
+CIRCUIT-SAT
+	entrée : un circuit boolean C avec des portes NON,ET,OU, et des entrées et une sortie
+	question : existe-t-il une affectation des entrées qui force la sortie de C à vrai
+\end{verbatim}
+
+\paragraph{}CIRCUIT-SAT $\in$ NP pour décoder CIRCUIT-SAT, il suffit de deviner une instanciation des entrées et d'évaluer le circuit, en temps polynomial.\\\\\textbf{Proposition} CIRCUIT-SAT est NP-Complet.\\\textbf{Démonstration} \begin{itemize}
+\item[1] CIRCUIT-SAT $\in$ NP (axiome)
+\item[2] $3SAT \leq_p CIRCUIT-SAT$ 
+\end{itemize}
+On code une formule $\phi$ de 3SAT par un circuit avec : 
+\begin{itemize}
+\item une entrée /variable, 
+\item une porte $\neq$ /littéral négatif
+\item deux portes OU par clauses
+\item k-1 portes ET entre les k clauses
+\end{itemize}
+Cette transformation est une réduction many-one PTIME de 3SAT en CIRCUIT-SAT.
+
+\begin{verbatim}
+VERTEX-COVER
+	Entrée : G=(V,E) un graphe et k appartient à N
+	question : existe-t-il un sous-ensemble U \subseteq V, U de taille k tel que toute arête de G à une extrémité dans U
+\end{verbatim}
+\textbf{Proposition} VERTEX-COVER est NP-Complet \\Prove-it !
+\begin{itemize}
+\item[i] VERTEX-COVER$\in$NP : un certificat est un sous ensemble de sommets qui couvre les arêtes de G
+\item[ii] Mq 3SAT $\leq_p$ VERTEX-COVER
+\end{itemize}
+Soit  $\phi$ une instance de 3SAT on construit $f(\phi)$ à l'aide des gadgets suivants:
+\begin{itemize}
+\item chaque variable x est représentés par : (x)---($\bar{x}$)
+\item chaque clause ($l_1 v l_2 v l_3$) est représentée par: un triangle
+\item on relie chaque sommet des gadgets de clauses aux sommets des gadgets de variables de même label
+\item k = 2(n+m) avec m = \#clause et n=\#variables.
+\end{itemize}
+\textbf{=>} Si $\phi$ est satisfiable, on obtient une couverture de $f(\phi)$ de taille k=2m+n) ainsi : \\ on fixe une instance $\sigma$ qui satisfait $\phi$.
+\begin{itemize}
+\item si $\sigma(x) $ est vrai , on prend le sommet x de l'haltère x sinon le sommet $\bar{x}$
+\item pour chaque clauses ($l_1 v l_2 v ... v l_n$) avec $\sigma(l_1)$ = vrai , on prend les sommet$ l_2 et l_3$
+\end{itemize}
+les aretes internes de chaque gadget sont couverts. une arete d'un littéral vrai est couverte par le littéral lui-meme et une arete d'un littéral faux est couverte par la clause\\\\\textbf{<= } Soit U une k-couverture de $f(\phi)$, elle couvre les haltères donc , comme elle couvre chaque haltère, U contient au moins un sommet par haltere( soit la var et la neg de la var).\\elle couvre les triangles, comme elle couvre tous les triangles, alors U contient au moins deux sommets /triangle.\\comme \#U = k =2m+n la couverture ets de la forme précédente et l'instanciation associée satisfait $\phi$
+\paragraph{SUBSET-SUM}
+\begin{verbatim}
+SUBSET-SUM
+entrée : des entiers x1,x2,...,xn de N ert un objectif S de N
+question: existe-t-il un sous-ensemble des xi qui sommet à S?
+peut on prendre un sous ensemble dont la somme des éléments sera S?
+\end{verbatim}
+\textbf{proposition} SUBSET-SUm est NP-Complet\\let's Go !!
+\begin{itemize}
+\item SUBSET-SUM : un certificat qui est le choix I des $x_i$ qui somment à S
+\item 3SAT$\leq_p$SUBSET-SUM
+\end{itemize}
+soit $\phi$ une instance de 3SAT, on construit polynomialement $f(\phi)$  une instance de SUBSET-SUM qui est satisfiable ssi $\phi$ l'est.\\\\ON code $\phi$ à n variables et m clauses par des nombre $N_i$ décimaux à m+n chiffres de la manière suivantes : 
+\begin{itemize}
+\item on les décomposent en deux zones
+\item celle de gauche code les variables,
+\item celle de droite code les clauses
+\item à chaque variable $x_i$ on associe un entier $N_{2i}$  et $N_{2i+1}$ qui est contruit de la manière suivante : que des zéro sauf , un 1 pour le chiffre qui correspond a $x_i$ et un 1 si $x_i$ apparaît dans la clause(ou 1 si x n’apparaît pas pour $n_{2i+1}$ qui code $\bar{x}$
+\item à chaque clause $C_j$ on associe $N_{2(n+j)}$ et $N_{2(n+j)+1}$identiques et égaux à que des 0 dnas la partie variables et un 1 dans le chiffre qui code la clause
+\end{itemize}
+\textbf{=>} Si $\phi$ ets satisfaite par $\sigma$, il suffit de choisir $N_ {2i}$ si $\sigma(x_i)$ = VRAI, $N_{2i+1}$ sinon.\\Et $N_{2(n+j)}$ ,$N_{2(N+j)+1}$ pour compter le chiffre de $C_j$ si il vaux 1 ou 2.\\\\
+\textbf{Proposition} Si $f(\phi)$ est satisfait par U. U force pour chaque $x_i$ le choix de $N_{2i}$ ou $N_{2i+1}$ fixant une instanciation $\sigma$ qui satisfait $\phi$.\\f ets calculable en temps polynomiale donc c’est une réduction \\3SAT $\leq_p$ SUBSET-SUM\\donc SUBSET-SUM est NP-Complet.\\
 \end{document} 
