@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  19 MAR 2013 17:19
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  26 MAR 2013 17:07
 entering extended mode
  %&-line parsing enabled.
 **complexite.tex
@@ -584,28 +584,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[6] [7] (./complexite.aux) ) 
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+
+ []
+
+[7]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 121.
+
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (101.2487pt too wide) in paragraph at lines 125--125
+[]\T1/lmtt/m/n/10 entrée : un circuit boolean C avec des portes NON,ET,OU, et d
+es entrées et une sortie[] 
+ []
+
+
+Overfull \hbox (85.49875pt too wide) in paragraph at lines 125--125
+[]\T1/lmtt/m/n/10 question : existe-t-il une affectation des entrées qui force 
+la sortie de C à vrai[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
+
+ []
+
+
+Overfull \hbox (1.99614pt too wide) in paragraph at lines 138--139
+\T1/lmr/m/n/10 Cette trans-for-ma-tion est une ré-duc-tion many-one PTIME de 3S
+AT en CIRCUIT-
+ []
+
+
+Overfull \hbox (263.99823pt too wide) in paragraph at lines 144--144
+[]\T1/lmtt/m/n/10 question : existe-t-il un sous-ensemble U \subseteq V, U de t
+aille k tel que toute arête de G à une extrémité dans U[] 
+ []
+
+[8]
+Overfull \hbox (13.5418pt too wide) in paragraph at lines 160--161
+[]\T1/lmr/m/n/10 pour chaque clauses ($\OML/lmm/m/it/10 l[]vl[]v:::vl[]$\T1/lmr
+/m/n/10 ) avec $\OML/lmm/m/it/10 ^^[\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 l[]\OT1/l
+mr/m/n/10 )$ \T1/lmr/m/n/10 = vrai , on prend les sommet$\OML/lmm/m/it/10 l[]et
+l[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+
+Overfull \hbox (6.74898pt too wide) in paragraph at lines 169--169
+[]\T1/lmtt/m/n/10 peut on prendre un sous ensemble dont la somme des éléments s
+era S?[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+ []
+
+[9] (./complexite.aux) ) 
 Here is how much of TeX's memory you used:
- 2387 strings out of 493848
- 28354 string characters out of 1152824
- 84639 words of memory out of 3000000
- 5616 multiletter control sequences out of 15000+50000
- 50677 words of font info for 59 fonts, out of 3000000 for 9000
+ 2427 strings out of 493848
+ 28963 string characters out of 1152824
+ 85639 words of memory out of 3000000
+ 5652 multiletter control sequences out of 15000+50000
+ 50996 words of font info for 60 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  27i,8n,24p,1103b,202s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/t
-exmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on complexite.pdf (7 pages, 217504 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/sh
+are/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm
+/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf
+/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx1
+2.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/font
+s/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmtt10.pfb>
+Output written on complexite.pdf (9 pages, 256843 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
