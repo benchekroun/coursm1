@@ -3,7 +3,7 @@ LAB_VERSION=1
 LAB_AUTHOR="N. Ollinger"
 LAB_EMAIL=Nicolas.Ollinger@univ-orleans.fr
 
-machines="www rt1z rt2z rt3z r1 r2 r3 pc11 pc12 pc21 pc22 pc31 pc32"
+machines="www rt1z rt2z rt3z rt1 rt2 rt3 pc11 pc12 pc21 pc22 pc31 pc32"
 
 rt1[0]="hubA"
 pc11[0]="hubA"

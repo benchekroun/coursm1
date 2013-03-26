@@ -1,4 +1,6 @@
 ifconfig eth0 10.1.0.254/16
 ifconfig eth1 1.2.3.4/24
 route add default gw 1.2.3.1
+iptables -t nat -A POSTROUTING -s 10.1.0.0/16 -j MASQUERADE
+iptables -t nat -A PREROUTING -i eth1 -p tcp --dport 22 -j DNAT --to-destination 10.1.0.1
 /etc/init.d/dhcp3-server start
