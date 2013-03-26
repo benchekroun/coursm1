@@ -214,5 +214,43 @@ KB = l'ensemble de toutes les phrases en logique prépositionnelle décrivant le
 \paragraph{Algo de résolution} on cherche KB$\models \alpha$ par contradiction, montrons que $KB\models \neg \alpha$ est instatisfiable. on transforme en CNF pour résoudre, ajouter les nouvelles clauses produites, le processus continue jusqu'à ce qu'un des cas suivants se produise, plus de nouvelles clauses ou on trouve une clause vide
 
 \section{26 Mars 2013} 
-\paragraph{} la résolution ets correcte, si l'agent utilise la résolution pour interrgoer la base, alors les réponses sont correctes. Si on sais que  KB U $\neg\alpha$ produit al clause vide , alors la claque $\alpha$ est une vrai conséquence des connaissances de la base . exemple si on hésite entre deux cases pour un puits , et que plus tard, on apprend qu'une de ces cases est vide, alors c’est l'autre qui a le puits.\\ LA complétude nous dit que si on a une conséquence, alors la résolution peut prouver que c'est une conséquence(la résolution s’arrête sur la clause vide) 
+\paragraph{} la résolution ets correcte, si l'agent utilise la résolution pour interrgoer la base, alors les réponses sont correctes. Si on sais que  KB U $\neg\alpha$ produit al clause vide , alors la claque $\alpha$ est une vrai conséquence des connaissances de la base . exemple si on hésite entre deux cases pour un puits , et que plus tard, on apprend qu'une de ces cases est vide, alors c’est l'autre qui a le puits.\\ LA complétude nous dit que si on a une conséquence, alors la résolution peut prouver que c'est une conséquence(la résolution arrête sur la clause vide) \\\\
+\textbf{clauses de Horn} symbole de proposition $A_1 \cap ...\cap A_n -> B$\\
+Règle de déduction :\textit{Modus Ponen}(pour forme de Horn)
+\begin{center}
+$\frac{\alpha_1,...,\alpha_n,\alpha_1 \cap ...\cap \alpha_n -> B}{B}$
+\end{center}
+
+$KB = B_{regles} \cap B_{faits}$\\
+\paragraph{chaînage avant} Chaque connaissance est une règle avec des prémisses et une conclusion\\répéter jusqu’à saturation ou jusqu’à ce que l'expression à prouver soit trouvée
+\begin{itemize}
+\item activer les règles dont les prémisses sont satisfaites par des éléments de la KB
+\item ajouter la conclusion à la KB
+\end{itemize} 
+Représentation de la KB sous forme d'arbre(graphe) ET-OU.\\
+A chaque étape, on considère des règles, on regarde celles qui sont satisfaites, on valide la conclusion on on l'ajouter aux faits , et on boucle jusqu'à ce que l'on ne puisse plus rien ajouter.
+
+\paragraph{Chaînage arrière} ON est orienté objectif, pour prouver Q, il faut prouver P , pour prouver P , il faut prouver L et M, pour prouver L , il faut prouver soit , P et A, soit A et B. soit la chaîne de preuve a chercher suivante :\\
+Q\\P\\L,M\\P,A,M ou A,B,M\\A,B,M (on ne garde pas l'autre car elle boucle)\\B,M\\M\\B,L\\L(axiome)\\\\ \textbf{ATTENTION : }éviter les boucle, si un nouveau bu test déjà dans la pile de buts \\ éviter les taches répétées\\\\
+\textbf{le chaînage avant} est piloté par les données(data-driven), un agent déduit des propriétés et des catégories à partir de séquences perceptives\\il peux effectuer des taches non pertinentes par rapport à l'objectif\\le chaînage arrière est en complexité
+\paragraph{Construction de modèles} preuve de satisfiabilité d'un ensemble de connaissances\\$KB\models \alpha$ si et seulement si $KB \wedge \neg \alpha$ n'as pas de modèle. cette existence de modèle nous permet de résoudre $\alpha$\\
+\paragraph{Algo DPLL} prendre ne entrée un ensemble de clauses\\obj;  vérifier s'il existe une instanciation des symboles qui rend les clauses vérifiables\\Algo : énum récursive à chaque étape, évaluer avec affectation partielle, comme c'est des disjonctions de conjonctions, une clause est vraie si l'un des littéral est vrai\\si toute clause est vraie alors l'affectation partielle est un modèle, si une seule clause est non vraie, alors pas un modèle.
+\paragraph{recherche locale pour trouver des modèles} les algorithmes de recherche locales peuvent s'appliquer avec une bonne fonction d'évaluation, les états sont des interprétations possibles, la recherche locale cherche une interprétation  qui est un modèle\\Algorithme WalkSAT : à chaque étape, choisir une clause non satisfaite et un symbole, changer la valeur du symbole. TRES EFFICACE si le modèle existe, si terminaisons en echec alors : pas suffisamment d'itération, soit pas de modèle du tout\\\\Comment rendre notre agent prudent avec un algo de recherche : l'agent cherche a répondre à une question à l'aide de la base, pour savoir $KB \models W_{23}$ alors on cherche a repondre, $ \exists modele : KB \cup \{W_{23}\}$
+
+\paragraph{EXERCICE} écrire la fonction pour le Wumpus\\KB: base de connaissances\\on suppose que l'on a deux fonctions : \begin{itemize}
+\item TELL(KB,$\alpha$) : dit à la base que $\alpha$ ets dnas les faits et donc le rajouter (e.g: W23 : il y a un monstre en 2,3)
+\item ASK(KB,$\alpha$) : demande à la base la question y'a t'il $\alpha$
+\end{itemize}
+
+passons à l'algorithme du Wumpus: à chaque instant , il consulte ses connaissances, et doit répondre une action, 
+\begin{verbatim}
+function Agent_Wumpus retourner action
+Données :
+	KB : base de connaissances
+	breeze,smell,shine : trois sensors
+	x,y,dir // l'agent doit bouger
+	action : dernière action faite, initialement vide
+	dejaVues : ensemble des cases déja vues (sorte de chemin)
+	plan : plan d'actions à effectuer , initialement vide
+\end{verbatim}
 \end{document}

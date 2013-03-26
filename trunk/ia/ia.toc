@@ -65,3 +65,11 @@
 \contentsline {paragraph}{}{16}
 \contentsline {paragraph}{base du Wumpus}{16}
 \contentsline {paragraph}{R\IeC {\'e}solution}{17}
+\contentsline {paragraph}{Algo de r\IeC {\'e}solution}{17}
+\contentsline {section}{\numberline {11}26 Mars 2013}{17}
+\contentsline {paragraph}{}{17}
+\contentsline {paragraph}{cha\IeC {\^\i }nage avant}{17}
+\contentsline {paragraph}{Cha\IeC {\^\i }nage arri\IeC {\`e}re}{18}
+\contentsline {paragraph}{Construction de mod\IeC {\`e}les}{18}
+\contentsline {paragraph}{ALgo DPLL}{18}
+\contentsline {paragraph}{recherche locale pour trouver des mod\IeC {\`e}les}{18}
