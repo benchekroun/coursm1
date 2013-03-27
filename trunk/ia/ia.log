@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  26 MAR 2013 11:25
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  27 MAR 2013 11:49
 entering extended mode
  %&-line parsing enabled.
 **ia.tex
@@ -609,15 +609,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
-[18] [19] (./ia.aux) ) 
+[18]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 246.
+
+ (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+
+ []
+
+[19] [20] (./ia.aux) ) 
 Here is how much of TeX's memory you used:
- 1362 strings out of 493848
- 15403 string characters out of 1152824
+ 1381 strings out of 493848
+ 15994 string characters out of 1152824
  74231 words of memory out of 3000000
- 4663 multiletter control sequences out of 15000+50000
- 12452 words of font info for 31 fonts, out of 3000000 for 9000
+ 4678 multiletter control sequences out of 15000+50000
+ 12765 words of font info for 32 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 24i,6n,24p,1623b,193s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 24i,6n,24p,1623b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.en
 c}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-tex
@@ -631,10 +641,10 @@ c/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.
 pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.p
-fb>
-Output written on ia.pdf (19 pages, 264914 bytes).
+fb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on ia.pdf (20 pages, 302560 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

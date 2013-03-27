@@ -253,4 +253,75 @@ Données :
 	dejaVues : ensemble des cases déja vues (sorte de chemin)
 	plan : plan d'actions à effectuer , initialement vide
 \end{verbatim}
+
+pseudo-code\\
+\begin{verbatim}
+//maj
+	DejaVues <- ajouter(case(x,y))
+	si action = aller_gauche
+	{
+	dir <- ouest
+	x<- x-1
+	}	
+	si action = aller_droite
+	{
+	dir <- est
+	x <- x+1
+	}
+	//idem pour haut et bas
+//----renseignement de la base
+si odeur alors
+{
+TELL(KB,odeur(x,y))
+}
+sinon
+{
+TELL(KB, not odeur(x,y))
+}
+finsi
+
+si courantdair alors
+{
+TELL(KB,courantdair(x,y))
+}
+sinon
+{
+TELL(KB,not courantdair(x,y)
+}
+finsi
+
+si eclat alors
+{
+ retourner prendre_or
+}
+finsi
+ 
+//---------------trouver une action
+si plan d'action non vide
+{
+action <- 1ere action du plan
+plan <- plan - 1ere action
+}
+sinon
+{
+tester les cases accessibles qui ne snot pas dejavues
+accessible <- add voisins(x,y)
+si on trouver une case "SAFE" C alors
+si il exitse une case(i,j) de accessible telle que
+ASK(KB, notW(i,j) ^ notP(i,j)) == true;
+{
+calculer un chemin de notre position jusqu'a C
+plan <- construire_chemin((x,y),(i,j),dejavu) 
+(parcours dans dejavu : largeur ou profondeur ou autre)
+enrichir le plan d'action
+effectuer la 1ere action
+action <- sommet(plan) //car plan est une pile
+deplier(plan)
+}
+sinon
+{
+pareil mais avec une case au hasard
+}
+}
+\end{verbatim}
 \end{document}
