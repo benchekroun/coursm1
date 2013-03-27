@@ -258,6 +258,7 @@ pseudo-code\\
 \begin{verbatim}
 //maj
 	DejaVues <- ajouter(case(x,y))
+	accessible = accessible - case(x,y)
 	si action = aller_gauche
 	{
 	dir <- ouest
@@ -307,10 +308,10 @@ sinon
 tester les cases accessibles qui ne snot pas dejavues
 accessible <- add voisins(x,y)
 si on trouver une case "SAFE" C alors
-si il exitse une case(i,j) de accessible telle que
+si il existe une case(i,j) de accessible telle que
 ASK(KB, notW(i,j) ^ notP(i,j)) == true;
 {
-calculer un chemin de notre position jusqu'a C
+calculer un chemin de notre position jusqu’à C
 plan <- construire_chemin((x,y),(i,j),dejavu) 
 (parcours dans dejavu : largeur ou profondeur ou autre)
 enrichir le plan d'action
@@ -321,7 +322,10 @@ deplier(plan)
 sinon
 {
 pareil mais avec une case au hasard
+action <- alea(listeAction)
 }
+
 }
+retourner action
 \end{verbatim}
 \end{document}
