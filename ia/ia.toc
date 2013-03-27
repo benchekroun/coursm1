@@ -71,5 +71,6 @@
 \contentsline {paragraph}{cha\IeC {\^\i }nage avant}{17}
 \contentsline {paragraph}{Cha\IeC {\^\i }nage arri\IeC {\`e}re}{18}
 \contentsline {paragraph}{Construction de mod\IeC {\`e}les}{18}
-\contentsline {paragraph}{ALgo DPLL}{18}
+\contentsline {paragraph}{Algo DPLL}{18}
 \contentsline {paragraph}{recherche locale pour trouver des mod\IeC {\`e}les}{18}
+\contentsline {paragraph}{EXERCICE}{19}
