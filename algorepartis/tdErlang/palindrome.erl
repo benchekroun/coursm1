@@ -7,17 +7,16 @@
 %% Les autres noeuds reçoivent chacun une lettre et démarrent dans l'état letter.
 %% ainsi le mot abbabba est codé #abbabba où # représente le bord du mot.
 
-cell(L, R, A) ->
-	if A =:="#" -> io:format("bordercell~n"),border(L, R) ;
-	true ->  io:format("lettercell~n"),letter(L, R, A)
-	end.
+cell(L, R, 0) -> border(L, R) ;
+cell(L, R, A) -> letter(L, R, A).
 
 go(S) -> 
     register(monitor,self()),
-    biring:launch(biring:uniform(?MODULE, cell, "#" ++ S)),
+    theWho = spawn(log,afficherEtBoucler,[]),
+    biring:launch(biring:addproxy(log,miseEnLog,theWho,biring:uniform(?MODULE, cell, [0] ++ S))),
     receive
-        palindrome -> palindrome ;
-        notapalindrome -> notapalindrome     
+        palindrome -> unregister(monitor), palindrome ;
+        notapalindrome -> unregister(monitor), notapalindrome     
     end.
 
 absorb() ->
@@ -63,3 +62,4 @@ xchange(L, R, St) ->
                     xchange(L, R, bad)
             end
     end.
+
