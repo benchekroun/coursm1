@@ -1,0 +1,18 @@
+trackballcamera
+	-> Création d'un caméra trackball avec souris
+
+OBJlib
+	-> Librairie de chargement de fichiers OBJ et de son MTL (texture)
+
+scene
+	-> Fichier de dessin, définir et dessiner tous les objets ici !
+
+sdlglutils
+	-> fichier utilitaire, ie :
+		- chargement texture
+		- screenshot
+		- axe de repère (xyz en couleur)
+		- gestion plein écran
+
+main
+	-> Initialisation, gestion des touches, boucle de dessin

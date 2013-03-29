@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include "ObjetOFF.h"
 #include "Lumiere.h"
+#include "SkyBox.h"
 using namespace std;
 
 
@@ -31,141 +32,11 @@ float mat[16]={1,0,0,0,
 	       0,0,1,0,
 	       0,0,0,1};
 
-static GLfloat sommets[] = {-1,-1,-1,//0
-                            0,-1,-1,//1
-			    1,-1,-1,//2
-			    -1,0,-1,//3
-                            0,0,-1,//4
-			    1,0,-1,//5
-			    -1,1,-1,//6
-                            0,1,-1,//7
-			    1,1,-1,//8
-			    
-			    -1,-1,0,//9
-                            0,-1,0,//10
-			    1,-1,0,//11
-			    -1,0,0,//12
-                            0,0,0,//13
-			    1,0,0,//14
-			    -1,1,0,//15
-                            0,1,0,//16
-			    1,1,0,//17
-			    
-			    -1,-1,1,//18
-                            0,-1,1,//19
-			    1,-1,1,//20
-			    -1,0,1,//21
-                            0,0,1,//22
-			    1,0,1,//23
-			    -1,1,1,//24
-                            0,1,1,//25
-			    1,1,1	//26		  						 
-};
-		
-static GLfloat couleurs[] = { 1.0,0.0,0.0, 	                
-			      1.0,0.0,0.0, 	                      
-			      1.0,0.0,0.0, 	                      
-	                      1.0,0.0,0.0, 	                      
-			      1.0,0.0,0.0, 	                      
-			      1.0,0.0,0.0,			      
-			      1.0,0.0,0.0, 
-			      1.0,0.0,0.0,			      
-			      1.0,0.0,0.0,
-	                      0.0,1.0,0.0, 
-	                      0.0,1.0,0.0, 
-			      0.0,1.0,0.0, 
-			      0.0,1.0,0.0, 
-	                      0.0,1.0,0.0, 
-			      0.0,1.0,0.0, 
-			      0.0,1.0,0.0, 
-			      0.0,1.0,0.0, 
-	                      0.0,1.0,0.0, 
-	                      0.0,0.0,1.0, 
-	                      0.0,0.0,1.0, 
-	                      0.0,0.0,1.0, 			      
-	                      0.0,0.0,1.0, 
-			      0.0,0.0,1.0,
-			      0.0,0.0,1.0, 
-	                      0.0,0.0,1.0,
-			      0.0,0.0,1.0,
-			      0.0,0.0,1.0
-};
-	
-static unsigned int indices[] = {
-  //red
-  0,2,8,
-  0,6,8,
-  0,2,6,
-				 
-				 
-				 
-  //green
-  9,11,17,
-  9,15,17,
-  9,11,15,
-				 
-				
-
-  //blue
-  18,20,26,
-  18,24,26,
-  18,20,24
-};
-
-
-static GLfloat sommets2[] = {
-  /* 18,20,15,
-     18,20,17,*/
-
-                           
-  -1,1,-1,//6
-                         
-  1,1,-1,//8
-			    
-  -1,-1,0,//9
-                           
-  1,-1,0,//11
-			    
-  -1,1,0,//15
-                            
-  1,1,0,//17
-			    
-  -1,-1,1,//18
-                            
-  1,-1,1//20
-			   	  						 
-
-
-  /* 9,11,6,
-     9,11,8,*/
-};
-static GLfloat couleurs2[] = {
-  //rouge-vert
-  1.0,1.0,1.0,
-  1.0,1.0,1.0,
-  1.0,1.0,1.0,
-  1.0,1.0,1.0,
-
-  //vert-blue
-  1.0,1.0,1.0,
-  1.0,1.0,1.0,
-  1.0,1.0,1.0,
-  1.0,1.0,1.0
-};
-
-static unsigned int indices2[] = {
-  //green-blue
-  7,8,5,
-  7,8,6,
-  //green-red
-  3,4,1,
-  3,4,2
-
-};
 
 bool calculated;
 float alpha =0.0;
 float b=0.0;
+SkyBox *skybox;
 void init()
 {
   calculated=false;
@@ -176,6 +47,8 @@ void init()
   gluPerspective(70,1,0.001,100);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
+  skybox = new SkyBox();
+  skybox->Initialize();
   lum = new Lumiere();
   lapin.setFilename("./triceratops.off");
   lapin.charger();
@@ -192,7 +65,7 @@ void Display(void)
    lum->ActiveLight();
     
   //calcul bounding box
-  if(!calculated){
+ /* if(!calculated){
     calculated =true;
     float*	lesVertices = lapin.getVertices();
     cout<<"on recup les vertices"<<endl;
@@ -239,20 +112,26 @@ void Display(void)
       }
     }
     cout<<"fin de calcul bounding box"<<endl<<minX<<" "<<minY<<" "<<minZ<<" "<<maxX<<" "<<maxY<<" "<<maxZ<<endl;
-  }
-
-  gluLookAt(minX+((maxX-minX)/2.0),minY+((maxY-minY)/2.0),maxZ+alpha,minX+((maxX-minX)/2.0),minY+((maxY-minY)/2.0),minZ+((maxZ-minZ)/2.0),0,1,0);
-    
- // lapin.colorer(255,200,200,255);
-lapin.set_shininess(12);
-lapin.set_mat_Ambiente(0.9, 0.000000, 0.000000, 1.0);
-lapin.set_mat_Speculaire(0.0000, 0.00006, 0.00000, 1.00);
-lapin.set_mat_Diffuse(0.000000000, 0.0000000000, 0.6, 1.0);
- //lapin.setAngleY(b);
-  lapin.dessiner();
-  lapin.drawNormals();
-  // A obtenir
-  // Nouveau tableau d'indices et utiliser glArrayElement puis glDrawElements avec GL_TRIANGLES
+  }*/
+  
+  gluLookAt(0,0,10,0,0,0,0,1,0);
+ 
+  glRotatef(b,0,1,0);
+  //toit
+  glPushMatrix();
+  glTranslatef(0,2,0);
+  glRotatef(90,1,0,0);
+  GLUquadric * quadtoit = gluNewQuadric();
+  gluCylinder(quadtoit,0,2,2,8,8);
+  glPopMatrix();
+  //sol
+  glPushMatrix();
+  glTranslatef(0,-1,0);
+  glRotatef(90,1,0,0);
+  GLUquadric * quadsol = gluNewQuadric();
+  gluCylinder(quadsol,2,2,0.5,8,8);
+  glPopMatrix();
+  
   glutSwapBuffers();
     
 }

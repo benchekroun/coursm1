@@ -1,7 +1,24 @@
 -module(biring).
--export([launch/1,uniform/3,init/0]).
+-export([launch/1,uniform/3,init/0,proxy/3,addproxy/4]).
+
+%creation de proxy
+proxy(Left,Right,{ModP,FunP,AP,Mod,Fun,A})->
+	%on creer les deux node marqueurs left et right
+	NL = spawn(?MODULE,mark,[Left,self()]),
+	NR = spawn(?MODULE,mark,[Right,self()]),
+	%on lance l'execution du node,  avec NL, et NR en voisin
+	N = spawn(Mod,Fun,[NL,NR,A]),
+
+	%lancer l'execution du proxy 
+	ModP:FunP(N,Left,Right,AP).
 
 
+
+%ajouter un proxy à un argument de launch
+addproxy(ModP,FunP,AP,List)->
+ lists:map(fun({Mod,Fun,A})->{ModP,FunP,AP,Mod,Fun,A} end, List).
+
+%creation
 create(1) ->
     Pid = spawn(?MODULE,init,[]),
     {Pid,[Pid]} ;
@@ -86,7 +103,7 @@ wait(Mod,Fun,Left,Right,Val) ->
 	%acces Right
 	{right,Who} -> Who ! Right, wait(Mod,Fun,Left,Right,Val);
 	%changer le left 
-       {setL,NLeft,Who} -> Who ! ok, wait(Mod,Fun,NLeft,Right,Val) ;
+        {setL,NLeft,Who} -> Who ! ok, wait(Mod,Fun,NLeft,Right,Val) ;
 	%changer le right
 	{setR,Nright,Who} -> Who! ok, wait(Mod,Fun,Left,Nright,Val);
 	%Changer la valeur
