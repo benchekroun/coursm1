@@ -13,7 +13,9 @@ cell(L, R, A) -> letter(L, R, A).
 go(S) -> 
     register(monitor,self()),
     theWho = spawn(log,afficherEtBoucler,[]),
-    biring:launch(biring:addproxy(log,miseEnLog,theWho,biring:uniform(?MODULE, cell, [0] ++ S))),
+	%appeler avec {theWho,0} pour le time
+    biring:launch(biring:addproxy(log,miseEnLog,{theWho,0},biring:uniform(?MODULE, cell, [0] ++ S))),
+	theWho ! theend;
     receive
         palindrome -> unregister(monitor), palindrome ;
         notapalindrome -> unregister(monitor), notapalindrome     

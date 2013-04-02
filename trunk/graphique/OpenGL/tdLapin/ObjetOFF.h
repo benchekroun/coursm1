@@ -58,7 +58,7 @@ class ObjetOFF : public Objet3D
 
   void dessiner(float scale = 1.){
     m.ActiveMat();
-    glEnable(GL_DEPTH_TEST);
+    //glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);  
     glCullFace(GL_BACK);
     glEnableClientState(GL_VERTEX_ARRAY);
@@ -75,7 +75,7 @@ class ObjetOFF : public Objet3D
     glDrawElements(GL_TRIANGLES,_nb_index*3,GL_UNSIGNED_INT,_index);
     glDisableClientState(GL_VERTEX_ARRAY);
     glDisableClientState(GL_NORMAL_ARRAY);
-    glDisable(GL_DEPTH_TEST);
+    //glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
     glColor4f(1., 1., 1., 1.);
     //drawNormals();

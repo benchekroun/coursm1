@@ -1,5 +1,5 @@
 -module(biring).
--export([launch/1,uniform/3,init/0,proxy/3,addproxy/4]).
+-export([launch/1,uniform/3,init/0,proxy/3,addproxy/4,mark/2]).
 
 %creation de proxy
 proxy(Left,Right,{ModP,FunP,AP,Mod,Fun,A})->
