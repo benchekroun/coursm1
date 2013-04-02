@@ -11,60 +11,7 @@
 #include "SkyBox.h"
 using namespace std;
 
-
-
-float xRot = 0; 
-float yRot = 0;
-float zRot = 0;
-
-float zTrans = 0;
-
-int mouseXOld;
-int mouseYOld;
-bool leftbutton = false;
-bool rightbutton = false;
-int NbSommet, NbFacet, NbArete;
-
-Lumiere * lum;
-ObjetOFF lapin;
-float mat[16]={1,0,0,0,
-	       0,1,0,0,
-	       0,0,1,0,
-	       0,0,0,1};
-
-
-bool calculated;
-float alpha =0.0;
-float b=0.0;
-SkyBox *skybox;
-void init()
-{
-  calculated=false;
-  glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-  glClearDepth(1.0);
-  glEnable(GL_DEPTH_TEST);
-  glMatrixMode(GL_PROJECTION);
-  gluPerspective(70,1,0.001,100);
-  glMatrixMode(GL_MODELVIEW);
-  glLoadIdentity();
-  skybox = new SkyBox();
-  skybox->Initialize();
-  lum = new Lumiere();
-  lapin.setFilename("./triceratops.off");
-  lapin.charger();
-}
-float minX=0,minY=0,minZ=0,maxX=0,maxY=0,maxZ=0,atX=0,atY=0,atZ=0;
-void Display(void)
-{
-
- 
-
-  glMatrixMode(GL_MODELVIEW);
-  glLoadIdentity();
-  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-   lum->ActiveLight();
-    
-  //calcul bounding box
+//calcul bounding box
  /* if(!calculated){
     calculated =true;
     float*	lesVertices = lapin.getVertices();
@@ -113,28 +60,164 @@ void Display(void)
     }
     cout<<"fin de calcul bounding box"<<endl<<minX<<" "<<minY<<" "<<minZ<<" "<<maxX<<" "<<maxY<<" "<<maxZ<<endl;
   }*/
-  
-  gluLookAt(0,0,10,0,0,0,0,1,0);
- 
-  glRotatef(b,0,1,0);
-  //toit
+
+//------------ les variables globales
+
+float xRot = 0; 
+float yRot = 0;
+float zRot = 0;
+
+float zTrans = 0;
+
+int mouseXOld;
+int mouseYOld;
+bool leftbutton = false;
+bool rightbutton = false;
+int NbSommet, NbFacet, NbArete;
+
+Lumiere * lum;
+ObjetOFF lapin;
+ObjetOFF plane;
+float mat[16]={1,0,0,0,
+	       0,1,0,0,
+	       0,0,1,0,
+	       0,0,0,1};
+
+
+bool calculated;
+float alpha =0.0;
+double b=0.0;
+float minX=0,minY=0,minZ=0,maxX=0,maxY=0,maxZ=0,atX=0,atY=0,atZ=0;
+float theSize = 3.;
+//SkyBox *skybox;
+
+//-------------------------- les fonctions 
+
+void dessinerManege(){
+	//push général
+	glPushMatrix();
+	
+	//toit
   glPushMatrix();
-  glTranslatef(0,2,0);
+  glTranslatef(0,2*theSize,0);
   glRotatef(90,1,0,0);
-  GLUquadric * quadtoit = gluNewQuadric();
-  gluCylinder(quadtoit,0,2,2,8,8);
+  GLUquadricObj * quadtoit = gluNewQuadric();
+  gluQuadricNormals(quadtoit, GLU_SMOOTH); 
+  gluQuadricTexture(quadtoit, GL_TRUE); 
+  gluCylinder(quadtoit,0,2*theSize,1.2*theSize,16,16);
   glPopMatrix();
+  //bas du toit
+  glPushMatrix();
+   glTranslatef(0,0.8*theSize,0); //0.8 =2-1.2
+  glRotatef(90,1,0,0);
+  gluCylinder(quadtoit,0,2*theSize,0.01*theSize,16,16);
+  glPopMatrix();
+  
+  //core
+  glPushMatrix();
+  glTranslatef(0,1*theSize,0);
+  glRotatef(90,1,0,0);
+  GLUquadricObj * quadcore = gluNewQuadric();
+  gluQuadricNormals(quadcore, GLU_SMOOTH); 
+  gluQuadricTexture(quadcore, GL_TRUE); 
+  gluCylinder(quadcore,0.5*theSize,0.5*theSize,2*theSize,16,16);
+  glPopMatrix();
+  
+  
   //sol
+  
+  //tour du sol
   glPushMatrix();
-  glTranslatef(0,-1,0);
+  glTranslatef(0,-1*theSize,0);
   glRotatef(90,1,0,0);
-  GLUquadric * quadsol = gluNewQuadric();
-  gluCylinder(quadsol,2,2,0.5,8,8);
+  GLUquadricObj * quadsol = gluNewQuadric();
+   gluQuadricNormals(quadsol, GLU_SMOOTH); 
+  gluQuadricTexture(quadsol, GL_TRUE); 
+  gluCylinder(quadsol,2*theSize,2*theSize,0.25*theSize,16,16);
+  glPopMatrix();
+  //disque haut
+  glPushMatrix();
+  glTranslatef(0,-1*theSize,0);
+  glRotatef(90,1,0,0);
+  GLUquadricObj * quadDiscHautSol = gluNewQuadric();
+   gluQuadricNormals(quadDiscHautSol, GLU_SMOOTH); 
+  gluQuadricTexture(quadDiscHautSol, GL_TRUE); 
+  gluCylinder(quadDiscHautSol,0,2*theSize,0.001*theSize,16,16);
   glPopMatrix();
   
+  //disquebas
+  glPushMatrix();
+  glTranslatef(0,-1.25*theSize,0);
+  glRotatef(90,1,0,0);
+  GLUquadricObj * quadDiscBasSol = gluNewQuadric();
+   gluQuadricNormals(quadDiscBasSol, GLU_SMOOTH); 
+  gluQuadricTexture(quadDiscBasSol, GL_TRUE); 
+  gluCylinder(quadDiscBasSol,0,2*theSize,0.001*theSize,16,16);
+  glPopMatrix();
+  
+  //popgénéral
+  glPopMatrix();
+}
+
+
+//--------- les fonctinos GLUT
+void init()
+{
+  calculated=false;
+  glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+  glClearDepth(1.0);
+  glEnable(GL_DEPTH_TEST);
+  glMatrixMode(GL_PROJECTION);
+  gluPerspective(70,1,0.001,100);
+  glMatrixMode(GL_MODELVIEW);
+  glLoadIdentity();
+  //skybox = new SkyBox();
+  //skybox->Initialize();
+  lum = new Lumiere();
+  lapin.setFilename("./triceratops.off");
+  lapin.charger();
+  plane.setFilename("./x29_plane.off");
+  plane.charger();
+}
+
+void Display(void)
+{
+
+ 
+
+  glMatrixMode(GL_MODELVIEW);
+  glLoadIdentity();
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  
+    
+  
+  
+  gluLookAt(0,0,20,0,0,0,0,1,0);
+  //skybox->SetPosition(0,0,10);
+ // skybox->Activate();
+ lum->ActiveLight();
+  
+  glPushMatrix();
+  glRotatef(-b,0,1,0);
+
+
+//dessiner le manege à l'echelle scale
+  dessinerManege();
+  
+  plane.move(0,cos(b/20)*1.5,1.8*theSize);
+  plane.setAngleX(-90);
+  plane.setAngleZ(90);
+  glPushMatrix();
+  
+  plane.dessiner(0.04);
+  glPopMatrix();
+  //popgénéral
+  glPopMatrix();
   glutSwapBuffers();
     
 }
+
+
 
 void Reshape(int Width, int Height)
 {
@@ -144,9 +227,9 @@ void Reshape(int Width, int Height)
 
 void Idle()
 {
-	b += 0.05;
-    if (b>=360)
-        b = b -360;
+	b += 0.1;
+    if (b>=360.00)
+        b = 0.0;
     
   glutPostRedisplay();
 }

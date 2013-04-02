@@ -93,3 +93,7 @@ test.algae <- cleanTest
 plot(a1~.,data=algae,pch=15,cex=0.5,col="blue")
 lm.a1 <- lm(a1 ~ ., data = algae)
 abline(lm.a1,col="red")
+
+#--------------------------------------
+#on va tenter la régression multiple
+reg.mult <- lm(max03 ~ ., data = ozoneTrain)
