@@ -347,5 +347,41 @@ $P(\frac{|\bar{X}-\mu|}{S\sqrt{n}} \leq e') = 1-\alpha$ où e' =$ \frac{e}{S\sqr
 Ceci est i,e distribution de Student, elle est symétrique , centrée en 0 , dépend de la taille de l'échantillon, elle est plus plate que la normale, se rapproche de la loi normale quand $n_{->\infty}$. On dit qu'elle a n-1 degrés de liberté où n est la taille de l'échantillon.\\\\
 $\bar{X}-t(\frac{\alpha}{2},n-1)\frac{S}{\sqrt{n}} \leq \mu \leq \bar{X}+t(\frac{\alpha}{2},n-1)\frac{S}{\sqrt{n}}$\\\\
 
+\subsection{Test d'hypothese} Tester des hypothèses sur les caractéristiques de la population\\
+2 hypotheses\\
+$H_0, \mu =25$ hypothèse nulle\\
+$H_1, \mu > 25$ hypothèse alternative\\
+Si $H_0$ est vraie , pas de changement par rapport à l'année dernière\\\\
+\textbf{deux types d'erreurs}\\
+$\begin{pmatrix}
+ & Hypothese & vraie \\
+ Decision & H_0 & H_1 \\
+ accepter H_0 & 1-\alpha & \beta \\
+ rejetre H_0 & \alpha & 1-\beta \\
+\end{pmatrix}$\\
+
+$\alpha$ est appelée erreur de  première espace, rejeter $H_0$ alors qu'elle est vraie\\
+$\beta$ est appelée erreur de seconde espèce, accepter $H_0$ alors qu'$H_1$ est vraie.\\\\
+
+\textbf{Exemple : } \\
+$H_0, \mu =45$\\
+$H_1,\mu > 45$\\
+soit $\bar{x}$ la moyenne des heures d'études d'un échantillon\\
+$E(\bar{X}) = \mu_{\bar{X}} = \mu$\\
+$\sigma(\bar{X}) \approx \frac{\sigma}{\sqrt{n}}$ (en réalité, c'est légèrement différent)\\
+hyp:  N est assez grand pour corriger le facteur correctif\\\\
+\textbf{Hyp : } n assez grand ( n> 30) car $\bar{X} \sim N(\mu, \frac{\sigma^2}{n})$  $\sigma' = \frac{\sigma^2}{n}$\\$P(\bar{X}- \mu > \epsilon) = 1-\alpha$ \\
+ <=> $1-P(\bar{X}- \mu \leq \epsilon) = 1-\alpha$\\
+ <=> $P(\bar{X}- \mu \leq \epsilon) = \alpha$\\
+ <=> $\Phi(\epsilon) = \alpha$ \\
+ table de Gauss -> trouver $\epsilon$ tel que $\Phi(\epsilon)=\alpha$\\
+ si la moyenne de la population est 45 , la probabilité que la moyenne d'échantillonnage soit plus grande que 45+$\epsilon \sigma'$ est de 5\%.
+ 
+\paragraph{Application à la régression linéaire}
+$\hat{Y}= \hat{a}+\hat{b}X$\\test d'hypothèse sur la pente\\
+$H_0,\hat{b}=0$\\
+$H_1,\hat{b}>0$\\
+
+
 \end{document} 
 \end{document} 
