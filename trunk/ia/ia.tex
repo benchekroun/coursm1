@@ -328,4 +328,44 @@ action <- alea(listeAction)
 }
 retourner action
 \end{verbatim}
+
+\section{2 Avril 2013}
+\subsection{Agents Logiques}
+\paragraph{} la logique propositionnelle est déclarative : les éléments syntaxiques correspondent à des faits\\ Elle permet de décrire des info sous forme négative, conjonctive et disjonctive\\Elle est compositionnelle.
+
+\subsection{logique du premier ordre}
+\paragraph{} Elle permet de représenter des objets, contrairement à celle d'avant qui représente des faits, des faits sur les objets, la logique 1 ordre permet de représenter des objets dans des variables, comme dans le langage naturel. On peut donc définir des objets(personne, maisons, nombres, etc..), des relations(plus petit que, plus grand que, ... rond, gros, petit , grand, etc..), ainsi que des fonctions( le père, la mère, etc...)\\\\
+Par exemple le successeur : D -> D (du domaine au domaine, par exemple d'un entier vers un autre entier)
+\paragraph{le monde du wumpus en logique du premier ordre} la KB est passée en premier ordre, TELL(KB,e) ajoute e à la KB, mais maintenant ASK(KB,S) retourne les substitutions $\sigma$ telles que KB $\models$ S$\sigma$, par exemple si on interroge sur W(x,y) pour connaitre ou sont les monstres, il nous répond les différents couple où il y a un monstre.\\\\
+\textbf{représentation de l'environnement} perception au temps t. Percept([Smell/none,Breeze/none,Glitter/none],t).\\Actions:  ici des termes, Turn(Right), Turn(left), forward, Shoot, grab, release\\
+Cases: la case i,j est représentée par le terme [i,j]\\relation d'adjacence : comme en C++ , mais avec le prédicat Adjacent( [x,y],[a,b]) <=> $[a,b]\in \{[x+1,y],[x-1,y],[x,y+1],[x,y-1]\}$\\Puit , prédicat unaire Pit(L) où L=[x,y]\\
+Wumpus, constante, fonction Home(Wumpus) désigne la case de wumpus\\Position de l'agent au temps t est al case s : At(Agent,s,t).
+
+\paragraph{} règles relatives au perceptions\\
+ $\forall b,g,t(Percept([smell,b,g],t) =>Smelt(t))$\\
+$\forall s,b,t,(Percept([s,b,GLitter],t) => AtGold(t))$\\
+reflexe : $\forall t (AtGold(t) -> action(Grab,t))$\\
+reflexe avec etat interne : as t on déja l'or?\\
+$\forall t(AtGold(t) \wedge \neq Holding(Gold,t))=>Action(Grab,t)$\\\\
+Définition du prédicat Breezy : $\forall y Breezy(y) \equiv \exists x (Pit(x) \wedge Adjacent(x,y))$
+
+\paragraph{Garder une trace de changements} les faits n'ont pas une durée indéterminée, on rajoute donc un secodne param au prédicat pour indiquer l'instant
+
+pour la loi : un crime pour un américain de vendre des armes a des nations enemy des US, Nono is pays enemey des US , armes sold by Col.West, who is american\\
+
+$ American(x) \wedge Weapon(y) \wedge Sell(x,y,z) \wedge Hostile(z) -> criminel(x)$
+deduction : 
+american(Col.West).\\
+sold(Col.West,Nono).\\
+enemy(Nono).\\
+criminel(X):- american(X),sold(X,Y),enemy(Y).\\
+Skolemisation : remplacer une variable existentielle par une variable normale sans $\exists$ pour permettre l'unification, utile mais WHY?
+\paragraph{} propriété du chainage avant\\correct et complet, pour clause du 1 ordre\\
+datalog( OMG!!!!) clauses définies du premier ordre + sans fonctions.\\
+Simple observation  : à l'itération k , il n'est pas nécessaire de considéré un clause dont aucun des prémisses n'as été ajouté à l'iter k-1.\\
+l'unification peut être couteuse\\utilisée en KB déductive
+
+\paragraph{chainage arrière} procéder a partir du but, plus cool , on déroule les règles jusqu’à trouver des fait , ou etre bloqué, on peux l'effectuer en algo DFS, et donc espace utilisé linéaire, Incomplet à cause de boucle, utilisé en programmation logique.
+
+\paragraph{Résolution} pour résoudre $KB\models \alpha$ on ajoute $\neg \alpha$ dans la base
 \end{document}
