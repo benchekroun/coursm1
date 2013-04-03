@@ -72,3 +72,5 @@
 \contentsline {section}{\numberline {9}4 Avril 2013}{16}
 \contentsline {subsection}{\numberline {9.1}Intervalle de confiance d'une estimation}{16}
 \contentsline {paragraph}{}{16}
+\contentsline {subsection}{\numberline {9.2}Test d'hypothese}{17}
+\contentsline {paragraph}{Application \IeC {\`a} la r\IeC {\'e}gression lin\IeC {\'e}aire}{18}
