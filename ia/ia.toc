@@ -74,3 +74,14 @@
 \contentsline {paragraph}{Algo DPLL}{18}
 \contentsline {paragraph}{recherche locale pour trouver des mod\IeC {\`e}les}{18}
 \contentsline {paragraph}{EXERCICE}{19}
+\contentsline {section}{\numberline {12}2 Avril 2013}{21}
+\contentsline {subsection}{\numberline {12.1}Agents Logiques}{21}
+\contentsline {paragraph}{}{21}
+\contentsline {subsection}{\numberline {12.2}logique du premier ordre}{21}
+\contentsline {paragraph}{}{21}
+\contentsline {paragraph}{le monde du wumpus en logique du premier ordre}{21}
+\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{Garder une trace de changements}{22}
+\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{chainage arri\IeC {\`e}re}{22}
+\contentsline {paragraph}{R\IeC {\'e}solution}{22}

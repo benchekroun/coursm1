@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  27 MAR 2013 12:03
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  3 APR 2013 10:26
 entering extended mode
  %&-line parsing enabled.
 **ia.tex
@@ -619,7 +619,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
-[19] [20] [21] (./ia.aux) ) 
+[19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--343
+
+ []
+
+
+Overfull \hbox (145.51355pt too wide) in paragraph at lines 339--343
+\T1/cmr/bx/n/10 représentation de l'en-vi-ron-ne-ment \T1/cmr/m/n/10 per-cep-ti
+on au temps t. Per-cept([Smell/none,Breeze/none,Glitter/none],t). 
+ []
+
+
+Overfull \hbox (2.80396pt too wide) in paragraph at lines 339--343
+\T1/cmr/m/n/10 relation d'ad-ja-cence : comme en C++ , mais avec le pré-di-cat 
+Ad-ja-cent( [x,y],[a,b])
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--351
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+[22] (./ia.aux) ) 
 Here is how much of TeX's memory you used:
  1381 strings out of 493848
  15994 string characters out of 1152824
@@ -628,23 +660,23 @@ Here is how much of TeX's memory you used:
  12765 words of font info for 32 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  24i,6n,24p,1623b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-
-t1.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmr5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
-/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx
-1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1
-000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on ia.pdf (21 pages, 303768 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmr5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on ia.pdf (22 pages, 313222 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
