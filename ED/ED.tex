@@ -198,7 +198,7 @@ $2+ 4*2 = 10$ probabilités à calculer, c'est beaucoup\\
 $P(A_1=v_1, A_2=v_2,...,A_n=v_n|C)=P(A_1=v_1|C)*...*P(A_n=v_n|C)$
 \paragraph{Indépendance} $P(A \cap B) = P(A)*P(B)$
 \paragraph{Indépendance/à la classe} $P(A \cap B | C) = P(A|C) * P(B|C)$
-\subsection{\date{20 Février 2013}}
+\subsection{20 Février 2013}
 \paragraph{}On rappelle que l'ensemble $\Omega$ est l'ensemble des événements.\\\\\indent\textbf{fonction de répartition} $F(x) = P(X\leq x)$
 \begin{itemize}
 \item F est croissante
@@ -316,7 +316,7 @@ $\begin{pmatrix}
 $\bar{x} = \frac{x_1+...+x_n}{n}$\\\\
 
 $s^2 = \frac{1}{n} \sum_{i=1}^n (x_i -  \bar{x})$\\
-Il existe donc une valeur de $\bar{x}$ pour échantillon, on a donc $\bar{x}$ qui est un variable aléatoire , dont on peux calculer l'espérance, sur tous les échantillons possibles.\\
+Il existe donc une valeur de $\bar{x}$ pour échantillon, on a donc $\bar{x}$ qui est une variable aléatoire , dont on peux calculer l'espérance, sur tous les échantillons possibles.\\
 Si on a une population de taille N et si on choisit des échantillons de taille n , on a comme échantillons possibles $C_N^n = \begin{pmatrix}
 N \\ n
 \end{pmatrix}$ $=\frac{N!}{n!(N-n)!}$
@@ -328,4 +328,24 @@ P($- z_{\frac{\alpha}{2}} \leq Z \leq z_{\frac{\alpha}{2}}) = \Phi(z_{\frac{\alp
 $P(- z_{\frac{\alpha}{2}} \leq \frac{\bar{X}-\mu}{\sigma_{\bar{X}}} \leq z_{\frac{\alpha}{2}})$\\
 $P(\bar{X}- z_{\frac{\alpha}{2}}\sigma_{\bar{X}} \leq \mu \leq \bar{X}+z_{\frac{\alpha}{2}}\sigma_{\bar{X}})$
 
+\section{4 Avril 2013}
+\subsection{Intervalle de confiance d'une estimation} 
+\paragraph{} Quelle est la confiance que l'on peut avoir dans l'estimation d'un paramètre.\\deux loi : \\
+population :avec une certaine distribution de probabilité\\
+distribution d'échantillonnage, on calcul la moyenne sur un échantillon, cette moyenne n'est pas la même sur un autre échantillon, ne pas confondre\\\textbf{exemple} Estimation de la moyenne $\mu$à partir d'un échantillon $x_1,...,x_n$\\
+\begin{center}
+$\bar{x} = \frac{x_1+...+x_n}{n}$\\
+\end{center}
+
+Si n est suffisamment grand, la distribution d'échantillonnage de la moyenne est approximativement normale de moyenne $\mu$ et de variance $\frac{\sigma^2}{n}\frac{N-n}{N-1}$\\
+Trouver e tel que $ P(\bar{X}-e \leq \mu \leq \bar{X}+e)=1-\alpha$ où $\alpha$ est le paramètre donné (par exemple 5 pourcent) \\
+2 cas :\\
+si $\sigma$ connu  : déjà fait\\
+pour $\sigma$ inconnu, il faut l'estimer $S^2= \frac{1}{n-1} \sum_{i=1}^n (x_i -\bar{x})^2$\\
+Trouver e tel que $ P(|\bar{X}-\mu| \leq \epsilon)=1-\alpha$\\
+$P(\frac{|\bar{X}-\mu|}{S\sqrt{n}} \leq e') = 1-\alpha$ où e' =$ \frac{e}{S\sqrt{n}}$\\
+Ceci est i,e distribution de Student, elle est symétrique , centrée en 0 , dépend de la taille de l'échantillon, elle est plus plate que la normale, se rapproche de la loi normale quand $n_{->\infty}$. On dit qu'elle a n-1 degrés de liberté où n est la taille de l'échantillon.\\\\
+$\bar{X}-t(\frac{\alpha}{2},n-1)\frac{S}{\sqrt{n}} \leq \mu \leq \bar{X}+t(\frac{\alpha}{2},n-1)\frac{S}{\sqrt{n}}$\\\\
+
+\end{document} 
 \end{document} 
