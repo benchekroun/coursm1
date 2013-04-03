@@ -43,7 +43,7 @@
 \contentsline {paragraph}{Exemple concret}{10}
 \contentsline {paragraph}{Ind\IeC {\'e}pendance}{10}
 \contentsline {paragraph}{Ind\IeC {\'e}pendance/\IeC {\`a} la classe}{10}
-\contentsline {subsection}{\numberline {5.2}\date {20 F\IeC {\'e}vrier 2013}}{10}
+\contentsline {subsection}{\numberline {5.2}20 F\IeC {\'e}vrier 2013}{10}
 \contentsline {paragraph}{}{10}
 \contentsline {paragraph}{Formule}{10}
 \contentsline {subsection}{\numberline {5.3}Variable al\IeC {\'e}atoire continue}{11}
@@ -68,4 +68,7 @@
 \contentsline {subsubsection}{\numberline {8.2.1}Intervalle de confiance d'une estimation}{15}
 \contentsline {paragraph}{Param\IeC {\`e}tre}{15}
 \contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{16}
+\contentsline {section}{\numberline {9}4 Avril 2013}{16}
+\contentsline {subsection}{\numberline {9.1}Intervalle de confiance d'une estimation}{16}
 \contentsline {paragraph}{}{16}
