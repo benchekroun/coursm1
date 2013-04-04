@@ -1,0 +1,4 @@
+ifconfig eth0 inet6 up
+
+route -6 add default gw 2001:dead:beef::3
+
