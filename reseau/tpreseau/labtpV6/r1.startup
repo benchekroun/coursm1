@@ -1,0 +1,7 @@
+ifconfig eth0 up
+ifconfig eth1 up
+ifconfig eth0 add 2001:dead:beef::3/64
+ifconfig eth1 add 2001:cafe:babe::3/64
+echo 1 > /proc/sys/net/ipv6/conf/all/forwarding
+/etc/init.d/radvd start
+

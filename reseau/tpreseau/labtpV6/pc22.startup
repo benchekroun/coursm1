@@ -1,0 +1,5 @@
+ifconfig eth0 up
+ifconfig eth0 add 2001:cafe:babe::2/64
+route -6 add default gw 2001:cafe:babe::3
+ 
+
