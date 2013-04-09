@@ -177,9 +177,57 @@ soit $\phi$ une instance de 3SAT, on construit polynomialement $f(\phi)$  une in
 \item on les décomposent en deux zones
 \item celle de gauche code les variables,
 \item celle de droite code les clauses
-\item à chaque variable $x_i$ on associe un entier $N_{2i}$  et $N_{2i+1}$ qui est contruit de la manière suivante : que des zéro sauf , un 1 pour le chiffre qui correspond a $x_i$ et un 1 si $x_i$ apparaît dans la clause(ou 1 si x n’apparaît pas pour $n_{2i+1}$ qui code $\bar{x}$
-\item à chaque clause $C_j$ on associe $N_{2(n+j)}$ et $N_{2(n+j)+1}$identiques et égaux à que des 0 dnas la partie variables et un 1 dans le chiffre qui code la clause
+\item à chaque variable $x_i$ on associe un entier $N_{2i}$  et $N_{2i+1}$ qui est construit de la manière suivante : que des zéro sauf , un 1 pour le chiffre qui correspond a $x_i$ et un 1 si $x_i$ apparaît dans la clause(ou 1 si x n’apparaît pas pour $n_{2i+1}$ qui code $\bar{x}$
+\item à chaque clause $C_j$ on associe $N_{2(n+j)}$ et $N_{2(n+j)+1}$identiques et égaux à que des 0 dans la partie variables et un 1 dans le chiffre qui code la clause
 \end{itemize}
 \textbf{=>} Si $\phi$ ets satisfaite par $\sigma$, il suffit de choisir $N_ {2i}$ si $\sigma(x_i)$ = VRAI, $N_{2i+1}$ sinon.\\Et $N_{2(n+j)}$ ,$N_{2(N+j)+1}$ pour compter le chiffre de $C_j$ si il vaux 1 ou 2.\\\\
-\textbf{Proposition} Si $f(\phi)$ est satisfait par U. U force pour chaque $x_i$ le choix de $N_{2i}$ ou $N_{2i+1}$ fixant une instanciation $\sigma$ qui satisfait $\phi$.\\f ets calculable en temps polynomiale donc c’est une réduction \\3SAT $\leq_p$ SUBSET-SUM\\donc SUBSET-SUM est NP-Complet.\\
+\textbf{Proposition} Si $f(\phi)$ est satisfait par U. U force pour chaque $x_i$ le choix de $N_{2i}$ ou $N_{2i+1}$ fixant une instanciation $\sigma$ qui satisfait $\phi$.\\f est calculable en temps polynomiale donc c’est une réduction \\3SAT $\leq_p$ SUBSET-SUM\\donc SUBSET-SUM est NP-Complet.\\
+
+\section{3 Avril 2013}
+\subsection{Complexité en espace} 
+\paragraph{} DSPACE(f(n)) : ensemble des langages reconnus en espace f(n) par une MT.\\
+NSPACE(f(n)) : essentiellement la même chose mais avec des MTND.\\\\
+
+\textbf{Classes de complexités} :\\
+L = DSPACE(log(n)) : reconnu en espace log\\
+NL = NSPACE(log(n)) : idem mais avec MTND\\
+PSPACE = $\cup_{k>1} DSPACE(n^k)$\\
+NPSPACE = $\cup_{k>1} NSPACE(n^k)$\\\\
+
+exemple le parcours de graphe $\in$ NL\\\underline{Idée :} Parcourir le graphe en choisissant le prochain sommet au hasard. Borner le parcours en longueur $\leq$ n (\# sommets). \\
+\underline{prop : } pour f(n) $\geq$ log(n)\\
+$NTIME(f(n)) \subseteq_1 DSPACE(f(n)) \subseteq NSPACE(f(n)) \subseteq_2 DTIME(2^{O(f(n))})$\\
+$\subseteq_1$ : Simuler toutes les séquences de choix possibles en stockant la séquence courante comme un mot de f(n) bits. \\
+$\subseteq_2$ : parcourir le graphe des configurations d'un MTN
+D en espace f(n) pour trouver un chemin de la configuration initiale à une configuration acceptante.\\
+Ce graphe possède $2^{O(f(n))}$ sommets.\\
+Le parcours se fait en temps polynomial, $ DTIME(2^{O(f(n))})$\\
+\textbf{corollaire} ; $ L\subseteq NL \subseteq P \subseteq NP \subseteq PSPACE \subseteq EXP \subseteq NEXP$
+
+\subsection{QSAT}
+\paragraph{} entrée : une formule quantifiée $ \phi = Q_1 x_1Q_2X_2...Q_nx_n\Phi(x_1...x_n)$ ou $Q_n$ sont des qualificateur universel ou existentiel\\
+\textbf{Remarque} $\Phi(x_1,...,x_n) \in SAT$ ssi $\exists x_1\exists x_2...\exists x_n \Phi(x_1,...,x_n) \in QSAT$
+\\\\
+Prop  : QSAT est PSPACE-complet , ie QSAT $\in$ PSPACE et $\forall L \in PSPACE$ , $L \leq_m^p QSAT$
+
+\paragraph{théorème de Savitch} REACHABILITY $\in$ DSPACE($log^2$(n))\\
+\textbf{Cor.} Si f(n) $ \geq$ log(n) et f(n) constructible en espace, alors NSPACE(f(nàà $\subseteq$ DSPACE($f^2$(n))\\
+\textbf{Cor.} PSPACE = NPSPACE\\\textbf{idée de la preuve du THM} traitrer le problème récursivement \\
+\begin{center}
+CHERCHE(s,t,k) : \\
+si k = 0 : on regarde si t voisin de s, oui , sinon NON\\
+sinon pour tout x$\in$V\\
+	si CHERCHE(s,x,t-1) et CHERCHE(x,t,k-1) alors oui\\
+	finsinon\\
+	NON
+\end{center}
+du coup REACHABILITY(s,t) = CHERCHE(s,t,log(n))\\On fait au plus log(n) appels récursifs, la pile stocke x de taille (log(n)).\\l'espace utilisé est $\leq$ $log^2(n)$\\
+Donc REACHABILITY $\in$ DSPACE(log$^2$(n)).\\
+\paragraph{Pour aller plus loin} A $\leq_m^L$ B où on demande qye f soir calculable en espace logarithmique :\\
+\begin{center}
+x $\in $ A <=> f(x) $\in$ B
+\end{center}
+
+\subsection{Exercice} 
+\paragraph{} Montrer que $\leq_m^L$ est transitive
 \end{document} 

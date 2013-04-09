@@ -26,3 +26,8 @@
 \contentsline {paragraph}{}{8}
 \contentsline {paragraph}{}{8}
 \contentsline {paragraph}{SUBSET-SUM}{9}
+\contentsline {section}{\numberline {4}3 Avril 2013}{10}
+\contentsline {subsection}{\numberline {4.1}Complexit\IeC {\'e} en espace}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {subsection}{\numberline {4.2}QSAT}{10}
+\contentsline {paragraph}{th\IeC {\'e}or\IeC {\`e}me de Savitch}{11}

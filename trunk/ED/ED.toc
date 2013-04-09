@@ -74,3 +74,8 @@
 \contentsline {paragraph}{}{16}
 \contentsline {subsection}{\numberline {9.2}Test d'hypothese}{17}
 \contentsline {paragraph}{Application \IeC {\`a} la r\IeC {\'e}gression lin\IeC {\'e}aire}{18}
+\contentsline {section}{\numberline {10}8 avril 2013}{18}
+\contentsline {paragraph}{}{18}
+\contentsline {paragraph}{Correction du CC}{18}
+\contentsline {paragraph}{Second Exercice}{18}
+\contentsline {paragraph}{Exercice 3 }{18}
