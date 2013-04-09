@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  3 APR 2013 11:52
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.1)  9 APR 2013 11:39
 entering extended mode
  %&-line parsing enabled.
 **ia.tex
@@ -651,7 +651,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
-[22] (./ia.aux) ) 
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 385--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--403
+
+ []
+
+[23]
+Overfull \hbox (56.43834pt too wide) in paragraph at lines 405--407
+ \T1/cmr/bx/n/10 Exer-cice CT Dis-ney-land[] \T1/cmr/m/n/10 re-pré-sen-ter pb e
+n STRIPS $\OML/cmm/m/it/10 maison\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/
+n/10 )\OML/cmm/m/it/10 ; maison\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M\OT1/cmr/m/n/
+10 )\OML/cmm/m/it/10 ; maison\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10
+ )$ 
+ []
+
+[24] (./ia.aux) ) 
 Here is how much of TeX's memory you used:
  1381 strings out of 493848
  15994 string characters out of 1152824
@@ -674,9 +693,9 @@ super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb><
 ts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on ia.pdf (22 pages, 313222 bytes).
+Output written on ia.pdf (24 pages, 319694 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
