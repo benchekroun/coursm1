@@ -1,14 +1,17 @@
+#on pense bien a charger le package R RGtk2
 library(RGtk2)
-# Create window
+# creer la fenetre
 window = gtkWindow()
-# Add title
+# Ajout d'un titre
 window["title"] = "test rgtk"
-# Add a frame
+# On ajoute la frrame, ici c'ets ce qui va contenir tout le contenu
+# de notre fenetre
 frame = gtkFrameNew("Fenetre principal (panel principal)")
-#comme dans d'autyre biblio de GUI, on ajoute la frame dnas la window
+#comme dans d'autre biblio de GUI, on ajoute la frame dnas la window
 window$add(frame)
 
-# Create vertical container for file name entry
+# on cree un container vertical (alignement vertical)
+# pour mettre les textfields du choix de fichier
 vbox = gtkVBoxNew(FALSE, 8)
 #option de creation de bordure
 vbox$setBorderWidth(24)
