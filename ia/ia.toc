@@ -94,3 +94,5 @@
 \contentsline {paragraph}{}{23}
 \contentsline {paragraph}{Algo pour la plannif}{23}
 \contentsline {paragraph}{Exercice CT Disneyland}{24}
+\contentsline {paragraph}{TD7 -Barbie robot}{26}
+\contentsline {paragraph}{Exercice 4 : }{27}

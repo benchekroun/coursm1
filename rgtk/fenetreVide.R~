@@ -1,4 +1,7 @@
-#ton lie la librairie à utiliser
+#testAppli.r 
+#idee: faire une petite appli qui contient deux trois bases
+#de RGtk2
+#peut etre incorporer des onglets plus tard
 library(RGtk2)
 
 #fonction pour charger les donnees et mettre a jour
@@ -18,12 +21,12 @@ window["title"] = "titre fenetre"
 #on cree la "frame" , le conteneur général de tout ce qu'il y a dans
 # notre fenetre , le superPanel de Swing
 frame = gtkFrameNew("titre de la frame") 
-#ici on met un titre dnas le constructeur. Dans cet exemple, 
-#le titre n'est pas pertinent, mais il permet l'affichage d'un cadre,
-#ce qui permet de voir la diffférence entre la window et la frame
+#ici on ne met pas de titre dnas les paranthese, car dans notre cas
+#avoir un "onglet" seul et avec un titre, ne serai pas pertinent ,
+#ni utile
 
 #on l'ajoute dnas la window
 window$add(frame)
-}
+=
 
 

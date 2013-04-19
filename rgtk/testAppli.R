@@ -18,16 +18,16 @@ loader <- function(){
 		the.headers <- headersEntry$active
 		the.dec <- decEntry$getText()
 		#on charge le fichier
-		d <- read.table(filename$getText(),header=TRUE)				
-		return (d)
+		datas <<- read.table(filename$getText(),header=TRUE)				
+	
 }	
 
-	x <- loader()
+	loader()
 
-	print(ncol(x))
+	print(ncol(datas))
 	print("bien ouej")
 	filename$setText("bien-ouej.txt")
-	return(x)	
+	
 		
 }
 
@@ -134,14 +134,16 @@ label = gtkLabel(".csv")
 hbox$packStart(label,FALSE,FALSE,0)
 
 # Add button
-the.buttons = gtkHButtonBoxNew()
+#les boutons sont ajoutées dnas une buttonBox, 
+#une sorte de panel spécial pour les buttons
+the.buttons = gtkVButtonBoxNew()
 the.buttons$setBorderWidth(5)
 vbox$add(the.buttons)
 the.buttons$setLayout("spread")
 the.buttons$setSpacing(20)
-buttonOK = gtkButtonNewFromStock("gtk-ok")#btn ok
+buttonOK = gtkButton("testbtn")#btn ok
 #connecter un bouton a une fonction
-d <- gSignalConnect(buttonOK, "clicked", data=MAJ)
+d <- gSignalConnect(buttonOK, "clicked", MAJ)
 the.buttons$packStart(buttonOK,fill=F)
 buttonCancel = gtkButtonNewFromStock("gtk-close")#btn close
 gSignalConnect(buttonCancel, "clicked", window$destroy)

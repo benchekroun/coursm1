@@ -1,0 +1,18 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Principe de l'application}{3}
+\contentsline {subsection}{\numberline {1.1}Pourquoi faire cette application}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {subsection}{\numberline {1.2}RGtk}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {2}Comment fonctionne RGtk}{4}
+\contentsline {subsection}{\numberline {2.1}Fenetres et conteneurs}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {subsection}{\numberline {2.2}Boutons, checkboxs, labels et Champs de texte}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {2.3}Evenements }{5}
+\contentsline {section}{\numberline {3}Utilit\IeC {\'e} pour la suite}{5}
+\contentsline {paragraph}{}{5}

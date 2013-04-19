@@ -40,13 +40,28 @@ De ces composants graphiques nait un besoin : gérer les événements. Nous allo
 \newpage
 
 \section{Comment fonctionne RGtk}
+\subsection{Fenetres et conteneurs}
 \paragraph{} 
-D'après ce que nous avons pu tester jusqu'à présent, RGtk se base sur des conteneur , qui sont soit verticaux( Vbox) soit horizontaux(Hbox ), et c'est "cellules" s'imbriquent les une dans les autres, elle même contenues dans un fenêtre (window) qui contient une frame, qui contient tout le contenu de la fenêtre (elle s’approcherait de l'"onglet" dans d'autres systèmes de création d'interface.\\
+D'après ce que nous avons pu tester jusqu'à présent, RGtk se base sur des conteneur , qui sont soit verticaux( Vbox) soit horizontaux(Hbox ), et c'est "cellules" s'imbriquent les une dans les autres, elle même contenues dans un fenêtre (window) qui contient une frame, qui contient tout le contenu de la fenêtre (elle s’approcherait de l'"onglet" dans d'autres systèmes de création d'interface. C'est dans ces Box que nous pouvons ensuite ajouter des composants graphiques.\\
 
-Dans la figure suivante, on peut voir la window et la frame (grâce au titre de la frame, RGtk affiche un cadre pour la frame(l'onglet courant).\\
+Dans la figure suivante, on peut voir la window et la frame (grâce au titre de la frame, RGtk affiche un cadre autour de la frame(l'onglet courant).\\
 
 \includegraphics[scale=0.5]{fenetreVide.png}\\\\
 
+\paragraph{} 
+Pour obtenir la figure ci-dessus, il suffit du code suivant :\\
+
+\includegraphics[scale=0.5]{exempleCode.png}
+
+\subsection{Boutons, checkboxs, labels et Champs de texte}
+\paragraph{} 
+Nous allons maintenant présenter les boutons, checkbox et autres gadgets pour intéragir avec R depuis l'interface utilisateur. \\
+Comme la plupart des systèmes de création d'interface graphique, RGtk propose un certain nombre de composant qu'il suffit de parametrer, pour ensuite les ajouter dans une HBox ou Vbox suivant l'alignement recherché, 
+
+\subsection{Evenements }
+
 
 \section{Utilité pour la suite}
+\paragraph{}
+Dans cette section, nous allons expliquer en quoi et pourquoi RGtk sera utile si l'on veux effectuer un portage d'Explorer3D. Nous essayerons de décrire quel composant répond à quel besoin, et surtout comment, en mettant en avant la manière d'arriver au résultats souhaité, une sorte de petit didacticiel pour permettre à ceux qui predrons la suite de perdre le moins de temps possible à la découverte de cette technologie.
 \end{document}

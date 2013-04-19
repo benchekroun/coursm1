@@ -2,13 +2,47 @@
 \usepackage[utf8]{inputenc} % un package
 \usepackage[T1]{fontenc}      % un second package
 \usepackage[francais]{babel}  % un troisième package
+\usepackage{graphicx} %pour incorporer des figures
 
-
-\title{Réseau - Ali Ed-Bali}
+\title{Réseau - TpCC}
 \author{Alexandre Masson}
-\date{15 Janvier 2013}
+\date{16 Avril 2013}
 
 \begin{document}
 \maketitle
 \newpage
+
+\section{Configurer Statistiquement eth0 de box, et sa route par défaut}
+\paragraph{}
+Pour cela on active l'interface eth0 à l'aide de \textbf{ifconfig eth0 up}.\\ Puis on lui attribue l'adresse publique qui nous a été fournie pour ce TP \textbf{ifconfig eth0 110.169.6.205}. \\Enfin nous ajoutons la route par defaut, adresse qui connecte notre "box" à l'internet \textbf{route add default gw 110.0.0.1}. \\Et voilà , le tour est joué, notre première question est terminée.
+
+\section{Configurer un serveur DHCP sur box, dans notre réseau privé}
+\paragraph{}
+Le but de cette question est de réussir à pinger pc1 à partir de pc2.\\
+Du coté de box, nous activons d'abord son eth1 avec \textbf{ifconfig eth1 up} et ensuite nous lui fixons l'adresse ip donnée comme réseau privé, après un rapide calcul pour connaître notre plage d'ip a partir de l'adresse et du masque \textbf{10.10.156.0/23}, le calcul est disponible sur la figure suivante, ainsi que les commandes dans l'encadré rouge. Nous affectons donc \textbf{10.10.157.254} comme adresse (la dernière valide dans notre plage d'adressage) à l'aide de \textbf{ifconfig eth1 10.10.157.254}.\\ Nous lançons ensuite l'exécution du serveur dhcp avec \textbf{/etc/init.d/dhcp3-server start}. \\
+
+\includegraphics[scale=0.5]{q2-box-startup.png}\\\\
+
+C'est tout pour le .startup.\\
+Mais il a fallu aussi configurer le serveur DHCP, et pour cela, on créé dnas le dossier box, un sous dossier etc, dans lequel on crée un sous dossier dhcp3, dans lequel on place le fichier \textbf{dhcpd.conf}. Nous allons donc parler du fichier box/etc/dhcp3/dhcpd.conf, car c'est ce fichier qui contient les informations de configuration du serveur dhcp.
+\newpage
+
+On indique au serveur l'adresse du réseau, ainsi que le masque \textbf{subnet 10.10.156.0 netmask 255.255.254.0 (car masque/23)}, entre les accolades, on donne aussi quelques informations, comme la portée du réseau, i.e la plage d'adresse disponible \textbf{range 10.10.156.2 10.10.157.253} car .156.1 est prise par pc1 dans la suite et .157.254 c'est la box.\\On indique aussi au serveur( qui le transmettra aux clients) l'adresse de la passerelle avec \textbf{option routers 10.10.157.254}.\\
+
+\includegraphics[scale=0.5]{q2-box-dhcpd-conf.png}\\\\
+Et voilà il ne reste qu'à tester le ping. C'est chose faite \\
+
+\includegraphics[scale=0.3]{pingq2.png}
+\newpage
+
+\section{Faire du NAT dynamique, comment permettre à notre réseau privé d'aller voir à l'extérieur}
+Nous allons activer l'ipfowarding, pour cela on exécute les commandes suivantes\\
+
+\includegraphics[scale=0.5]{q3NAT.png}
+
+\newpage
+
+On va maintenant tester le ping de www et la connexion au term.\\\\
+
+\includegraphics[scale=0.3]{pingq3.png}
 \end{document}

@@ -386,7 +386,7 @@ les recherches standards ne fonctionnent pas , car l'heuristique ne s'applique p
 \textbf{calcul de situation} Situation : état du monde à l'instant t.\\Action : opérations permettant de changer de situations\\ les fluides sont des prédicats qui varient d'une situation à l'autre\\ on se dit: je dispose de trucs logique, je sais faire des enchaînements entre des clauses pour en produire d'autre . On rajoute Possible(a,s) qui est vrai si l'action a est possible dans la situation s. 
 
 
-\subsection{STRIPS} 
+-\subsection{STRIPS} 
 \paragraph{}
 les états sont représentés par : une conjonction d'atomes clos et sans symboles de fonction + CWA (closed world ass) , dans STRIPS on a le droit au $\neg$ seulement dans les effets des actions, pas le droit au négations pour décrire les faits, mais dans les effets le $\neg$ décrit le fait que l'on retire le fait de notre base de fait.
 
@@ -435,5 +435,55 @@ EF:dinerPris, $\neg$afaitPP(A), $\neg$afaitPP(M), $\neg$afaitSS(A), $\neg$afaitP
 allerHT:\\
 PC:dinerPris\\
 EF: $\neg$dinerPris, afaitHT
+\newpage
+\paragraph{TD7 -Barbie robot} Init : NoSock(L),NoSock(R),NoShoe(L),NoShoe(R),NoHat,NoBag,InSide\\
+End : OutSide\\\\
+
+\textbf{GoOut}\\
+PC : Shoe(L) $\wedge$ Shoe(R) $\wedge$ Hat $\wedge$ Bag $\wedge$ InSide\\
+EF : $\neg$InSide,OutSide\\\\
+
+\textbf{WearSock(X)}\\
+PC : NoSock(X)\\
+EF : $\neg$NoSocks(X),Sock(X) \\\\
+
+\textbf{WearShoe(X)}\\
+PC : NoShoe(X) $\wedge$ Sock(X)\\
+EF : $\neg$NoShoe(X),Shoe(X)\\\\
+
+\textbf{WearHat}\\
+PC : NoHat\\
+EF : $\neg$NoHat,Hat\\\\
+
+\textbf{TakeBag}\\
+PC : noBag\\
+EF : $\neg$NoBag,Bag\\\\
+
+\textbf{Debut}\\
+PC : $\emptyset$\\
+EF : Init\\\\
+
+\textbf{Fin}\\
+PC : End\\
+EF : $\emptyset$
+
+\newpage
+
+
+\paragraph{Exercice 4 : } singe-banane \\\\
+\textbf{Init : } lieu(singe,A),lieu(banane,B),lieu(boite,c),mobile(singe), poussable(boite), hauteur(singe,bas),hauteur(banane,haut), hauteur(boite,bas), prenable(banane),montable(boite)\\\\
+
+\textbf{aller(A,X,Y) : }\\
+PC : mobile(A), lieu(A,X), hauteur(A,bas)\\
+EF : $\neg$lieu(A,X), lieu(A,Y)\\\\
+
+\textbf{pousser(A,X,Y)}\\
+PC : lieu(singe,X), lieu(A,X), poussable(A), hauteur(singe, bas), hauteur(A,bas)\\
+EF : $\neg$lieu(singe,X) $\neg$lieu(A,X), lieu(singe,Y), lieu(A,Y)\\\\
+
+\textbf{monter()}\\
+PC : lieu(singe,X), lieu(A,X), hauteur(singe, bas), hauteur(A,bas), montable(a)\\
+EF : $\neg$hauteur(singe,bas), hauteur(singe, haut)\\\\
+
 
 \end{document}

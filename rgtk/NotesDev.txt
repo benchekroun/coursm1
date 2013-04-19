@@ -1,0 +1,16 @@
+LA super affectation marche pour pouvoir garder des choses
+crées dans des fonctions , et donc les donénes chargées ne sont donc 
+plus perdues en fin de fonction.
+
+On arrive a changer l'interface, 
+
+avancement du rapport, mise en place de la première structure, 
+mis en place de ptites application de démonstration
+
+-- aide de code
+
+ajouter des choses dnas un panel
+panel$add(autre panel)
+
+ajouter des widget dans un panel
+panel$packstart(widget,autres arguments)
