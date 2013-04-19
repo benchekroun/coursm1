@@ -1,0 +1,30 @@
+
+Pour le moment nous sommes plus ou moins convaincu que la gestion de l'interface se fais comme ceci
+Fonction générale(souvent appelée go() ) (){
+--sous fonction
+calcul d'une moyenne, 
+chargement d'une table (dataframe)
+--fonctions de compoortement suite à un évènement
+fonction connectée aux bouton, allant de la simple fermeture de la fenetre pour quitter, 
+en passant par une demande de calcul, une demande de mise a jour de l'interface, etc...
+
+
+--fonction de creation de l'interface
+dnas cette partie nous créons toute l'interface, c'ets ici que nous déclarons la fenetre, 
+ainsi que les Hbox et Vbox(panels horizontaux ou verticaux) qui contiendrons nos élements,
+Le petit bonus c'est que ces éléments sont accessibles depuis la console, 
+nous avons donc un accès direct sur (certaines)  propriétés de l'interface, 
+Comme la taille et la position de la fentre, les textes des boutons, 
+Utilités peut etre limitée, mais par exemple , 
+Cela laisse la possibilité de traduire l'interface depuis la console, (e.g, une fonction gui_spanish(), pourrai
+etre créer et invoquée depuis la console , elle changerais tousles textes des boutons et des labels
+en espagnol) . Ce n'est pas notre priorité mais celà reste une option, 
+
+
+Dans cette partie aussi , nous nous occuperons d'invoquer les gSignalConnect(bouton,event-type,fonction,...)
+pour connecter nos elements aux evenements.
+}
+
+
+Il nous reste a tester des façon pour récuperer les donénes des sous-fonctions(superaffectation, valeur de retour).
+nous allons continuer d'explorer rgtk, continuer de documenter,etc. Bon week end 

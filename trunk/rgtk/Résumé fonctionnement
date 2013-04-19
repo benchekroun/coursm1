@@ -1,0 +1,28 @@
+fonction générale {
+//------- fonctions de calculs
+fonction connectée(button, user.data ){
+
+//peut utiliser autant de fonction qu'elle veux
+
+// c'est elle qui doit modifier au besoin la GUI
+
+}
+
+// partie gtk (creation de GUI)
+
+
+//partie construction
+// Hbox,VBbox , etc.. 
+buttons 
+
+
+//-- Connexion
+
+gsignalConnect(button, event(souvent clicked), fonction (de calcul lié au bouton), etc...)
+//pas de return dans les fonctions de calcul
+//apparement tu ne peut faire
+x <- gsignal // impossibru
+//pas de modif ultérieure possible pour la GUI (i.e c'est aux fonctions connectée avec
+gsignal de gérer les modifications
+
+}
