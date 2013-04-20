@@ -16,8 +16,7 @@ go  <- function(){
 		leTextfield = gtkEntryNew() #champ d'entrée de texte
 		leTextfield$setText("un champ de texte")
 		panelafficher$packStart(leTextfield,FALSE,FALSE,0)
-		
-		
+			
 		
 		
 		
