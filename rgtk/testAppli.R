@@ -7,6 +7,10 @@ library(RGtk2)
 #fonction pour charger les donnees et mettre a jour
 #l'affichage apres le chargement
 
+
+
+
+
 go <- function(){
 
 MAJ <- function(button, user.data){
@@ -30,8 +34,6 @@ loader <- function(){
 	
 		
 }
-
-
 
 
 #on creer la fenetre
@@ -143,7 +145,7 @@ the.buttons$setLayout("spread")
 the.buttons$setSpacing(20)
 buttonOK = gtkButton("testbtn")#btn ok
 #connecter un bouton a une fonction
-d <- gSignalConnect(buttonOK, "clicked", MAJ)
+gSignalConnect(buttonOK, "clicked", MAJ)
 the.buttons$packStart(buttonOK,fill=F)
 buttonCancel = gtkButtonNewFromStock("gtk-close")#btn close
 gSignalConnect(buttonCancel, "clicked", window$destroy)
