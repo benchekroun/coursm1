@@ -1,6 +1,21 @@
 #fenetre simple avec quelques gadget de base
 library(RGtk2)
 
+go() <- function(){
+	
+	afficher <- function(button,user.data){
+		
+		#un bouton
+		
+		#un label
+		
+		#un champ de texte
+		
+		
+		
+	}
+
+
 #on créé ma fenetre
 fenetre = gtkWindow()
 
@@ -26,3 +41,4 @@ laFrame$add(buttonsPanel)
 afficherGagets = gtkButton("afficher les gadgets")
 
 buttonsPanel$packStart(afficherGagets,fill = F)
+}
