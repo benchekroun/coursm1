@@ -14,3 +14,10 @@ panel$add(autre panel)
 
 ajouter des widget dans un panel
 panel$packstart(widget,autres arguments)
+
+la plupart des objets ont un attribut visible qi peut etre changer 
+dynamiquement, on doit donc pouvoiri gérer un système de menu (peut être)
+
+sinon, il est possible de reallouer des panels en refaisant un new, 
+on peut donc changer dynamiquement le contenu , il suffit de recommencer
+à zéro
