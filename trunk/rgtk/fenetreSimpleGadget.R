@@ -4,7 +4,7 @@ library(RGtk2)
 go  <- function(){
 	
 	afficherWidget <- function(button, user.data){
-		panelafficher = gtkVBoxNew(FALSE,8)
+		panelafficher = gtkVBoxNew(TRUE,8)
 		superPanel$add(panelafficher)
 		#un bouton
 		leBouton = gtkButton("un bouton")
@@ -16,8 +16,33 @@ go  <- function(){
 		leTextfield = gtkEntryNew() #champ d'entrée de texte
 		leTextfield$setText("un champ de texte")
 		panelafficher$packStart(leTextfield,FALSE,FALSE,0)
-			
 		
+		#une checkbox deja cochée
+		checkCochee = gtkCheckButton()
+		checkCochee$active = TRUE;
+		
+		
+		#une checkbox pas cochée	
+		checkPasCochee = gtkCheckButton()
+		checkPasCochee$active = FALSE;
+		
+		#on a créé les checkbox , mais on voudrait mettre un label a coté
+		#on cherche donc un alignement horizontal
+		boxCochee = gtkHBoxNew(TRUE,8)
+		panelafficher$add(boxCochee)
+		boxPasCochee = gtkHBoxNew(TRUE,8)
+		panelafficher$add(boxPasCochee)
+		labelCochee = gtkLabelNewWithMnemonic("une checkBox cochée")
+		labelPasCochee = gtkLabelNewWithMnemonic("une checkBox pas cochée")
+		
+		#on ajoute dans les box
+		boxCochee$packStart(labelCochee,FALSE,FALSE,0)
+		boxCochee$packStart(checkCochee,FALSE,FALSE,0)
+		
+		boxPasCochee$packStart(labelPasCochee,FALSE,FALSE,0)
+		boxPasCochee$packStart(checkPasCochee,FALSE,FALSE,0)
+		
+		fileChooser = gtkFileChooserNew()
 		
 		
 	}
