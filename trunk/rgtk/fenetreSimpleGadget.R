@@ -4,7 +4,7 @@ library(RGtk2)
 go  <- function(){
 	
 	afficherWidget <- function(button, user.data){
-		panelafficher = gtkVBoxNew(TRUE,8)
+		panelafficher = gtkVBoxNew(FALSE,8)
 		superPanel$add(panelafficher)
 		#un bouton
 		leBouton = gtkButton("un bouton")
@@ -42,8 +42,60 @@ go  <- function(){
 		boxPasCochee$packStart(labelPasCochee,FALSE,FALSE,0)
 		boxPasCochee$packStart(checkPasCochee,FALSE,FALSE,0)
 		
-		fileChooser = gtkFileChooserNew()
 		
+		#on va faire la suite des item dans la liste item
+		
+		#fleche
+		panelArrow = gtkHBoxNew(TRUE,8)
+		panelafficher$add(panelArrow)
+		Arrow =gtkArrowNew()
+		labelArrow= gtkLabelNew("une fleche")
+		panelArrow$packStart(labelArrow,FALSE,FALSE,0)
+		panelArrow$packStart(Arrow,FALSE,FALSE,0)
+		
+		#image 
+		#http://rss.acs.unt.edu/Rdoc/library/RGtk2/html/GtkImage.html
+		#cette doc est tres utile pour l'image
+		panelImg = gtkHBoxNew(TRUE,8)
+		panelafficher$add(panelImg)
+		img = gtkImageNewFromFile("Cortus.gif")
+		labelImg= gtkLabelNew("Une image (ici un .gif)")
+		panelImg$packStart(labelImg,FALSE,FALSE,0)
+		panelImg$packStart(img,FALSE,FALSE,0)		
+		
+		#un bouton radio
+		panelRadio = gtkHBoxNew(TRUE,8)
+		panelafficher$add(panelRadio)
+		labelRadio = gtkLabel("un bouton radio")
+		radioBtn = gtkRadioButtonNew()
+		radioBtn$active=FALSE
+		panelRadio$packStart(labelRadio,FALSE,FALSE,0)
+		panelRadio$packStart(radioBtn,FALSE,FALSE,0)
+		
+		#selection d'une couleur
+		colored = gtkColorSelection()
+		panelafficher$add(colored)
+		
+		#un comboBox pour faire un choix parmis un liste
+		#je ne sais pas encore comment le remplir
+		combo = gtkComboBoxEntryNew()
+		panelafficher$add(combo)
+		
+	    #on va mettre la suite dans un autre panel
+	    #car sinn on ne verra rien
+	    panelSuivant = gtkVBoxNew(FALSE,8)
+	    superPanel$add(panelSuivant)
+		
+		notbk = gtkNotebookNew()
+		panelSuivant$packStart(notbk,FALSE,FALSE,0)
+		
+		
+		
+		#on essaie de faire un filechosser
+		# fileChooser = gtkFileChooserWidgetNew("Open File")
+		# fileChooser$title = "un fileSelection"
+		#mais pour le moment on ne sais pas comment binder des événements
+		#sur les boutons du fileChooser
 		
 	}
 
@@ -52,7 +104,7 @@ go  <- function(){
 fenetre = gtkWindow()
 
 #on change le titre
-fenetre["title"] = "Fenetre avec quelques gadgets"
+fenetre$title = "Fenetre avec quelques gadgets"
 
 #on crée la frame
 laFrame = gtkFrameNew("la frame principale")
@@ -64,7 +116,7 @@ fenetre$add(laFrame)
 #mais , la frame ne peut contenir qu'on seul objet dnas elle
 #l'astuce est alors d'utiliser une VBox intermédiare, dans laquelle
 #on pourra ajouter dynamiquement autant d'objets que l'on souhaite
-superPanel = gtkVBoxNew(FALSE,8)
+superPanel = gtkHBoxNew(FALSE,8)
 laFrame$add(superPanel)
 
 #on creer le panel pour mettre un/des bouton(s) dedans
