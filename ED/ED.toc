@@ -79,3 +79,5 @@
 \contentsline {paragraph}{Correction du CC}{18}
 \contentsline {paragraph}{Second Exercice}{18}
 \contentsline {paragraph}{Exercice 3 }{18}
+\contentsline {subsection}{\numberline {10.1}Feuille d'exercice}{19}
+\contentsline {paragraph}{Exercice 1}{19}
