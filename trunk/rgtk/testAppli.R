@@ -11,7 +11,6 @@ library(RGtk2)
 
 
 
-go <- function(){
 
 MAJ <- function(button, user.data){
 loader <- function(){
@@ -152,4 +151,4 @@ gSignalConnect(buttonCancel, "clicked", window$destroy)
 the.buttons$packStart(buttonCancel,fill=F)
 
 
-}
+
