@@ -485,5 +485,7 @@ EF : $\neg$lieu(singe,X) $\neg$lieu(A,X), lieu(singe,Y), lieu(A,Y)\\\\
 PC : lieu(singe,X), lieu(A,X), hauteur(singe, bas), hauteur(A,bas), montable(a)\\
 EF : $\neg$hauteur(singe,bas), hauteur(singe, haut)\\\\
 
+\section{notes}
+\paragraph{chainage} penser a rajouter les règles obvious, du genre la transitivité d'une règle, de plus lors de la scholémisation, (pour virer les $\exists$) on change le $\exists y (regle(y)) $ par règle(L), et règle(L) devient un fait dans la nouvelle base, e.g : dans l'exo sur les levrier et les lapins , on rajoute, plusRapid(x,y) $\wedge$ plusRapide(y,z) -> plusRapide(x,z), ainsi que pour il existe des levriers plus rapide que les lapins, $\forall x, \exists y (lapin(x),levrier(y) -> plusRapide(y,x)$ on scholémise(vire le $\exists$) et ça donne, $\forall x (lapin(x) ^ levrier(L) -> plusRapide(L,x))$ et on rajoute levrier(L) dans la base de faits 
 
 \end{document}
